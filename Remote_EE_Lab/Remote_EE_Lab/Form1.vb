@@ -78,7 +78,7 @@
                     Serial_Text_Test.Text = "No board is present: " + Board_IDNFR
                 Case "00000001"
                     'do something
-                    Main_Tab_1.SelectTab(0)
+                    Board1.SelectTab(0)
                     lbl_board_1_status.BackColor = Color.Green
                     lbl_board_1_status.Text = "Active"
                     lbl_board_2_status.BackColor = Color.Red
@@ -86,7 +86,7 @@
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "0000010"
                     'do something
-                    Main_Tab_1.SelectTab(1)
+                    Board1.SelectTab(1)
                     lbl_board_1_status.BackColor = Color.Red
                     lbl_board_1_status.Text = "Inactive"
                     lbl_board_2_status.BackColor = Color.Green
@@ -430,5 +430,13 @@
 
         'Call the message compiler
         Board_2_Compile_Serial_Message()
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class
