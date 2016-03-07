@@ -88,6 +88,66 @@ Partial Class Form1
         Me.lbl_C = New System.Windows.Forms.Label()
         Me.Board_1_Image = New System.Windows.Forms.PictureBox()
         Me.Main_Tab_1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.ComboBox12 = New System.Windows.Forms.ComboBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.ComboBox14 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox15 = New System.Windows.Forms.ComboBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.ComboBox16 = New System.Windows.Forms.ComboBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.ComboBox17 = New System.Windows.Forms.ComboBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox19 = New System.Windows.Forms.ComboBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.ComboBox20 = New System.Windows.Forms.ComboBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.CommControlGroup.SuspendLayout()
         Me.Board_2.SuspendLayout()
         Me.board_2_Circuit_Control.SuspendLayout()
@@ -100,6 +160,16 @@ Partial Class Form1
         Me.brd_1_ch1.SuspendLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Main_Tab_1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage4.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage5.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'board_detect
@@ -203,7 +273,7 @@ Partial Class Form1
         Me.Board_2.Padding = New System.Windows.Forms.Padding(3)
         Me.Board_2.Size = New System.Drawing.Size(851, 418)
         Me.Board_2.TabIndex = 1
-        Me.Board_2.Text = "EE 233 Lab 2"
+        Me.Board_2.Text = "Experiment 2"
         Me.Board_2.UseVisualStyleBackColor = True
         '
         'lbl_board_2
@@ -502,7 +572,7 @@ Partial Class Form1
         Me.Board_1.Padding = New System.Windows.Forms.Padding(3)
         Me.Board_1.Size = New System.Drawing.Size(851, 418)
         Me.Board_1.TabIndex = 0
-        Me.Board_1.Text = "EE 233 Lab 1"
+        Me.Board_1.Text = "Experiment 1"
         '
         'lbl_board_1_status
         '
@@ -687,8 +757,8 @@ Partial Class Form1
         'lbl_1k
         '
         Me.lbl_1k.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbl_1k.AutoSize = True
         Me.lbl_1k.Location = New System.Drawing.Point(54, 195)
         Me.lbl_1k.Name = "lbl_1k"
@@ -783,11 +853,691 @@ Partial Class Form1
         '
         Me.Main_Tab_1.Controls.Add(Me.Board_1)
         Me.Main_Tab_1.Controls.Add(Me.Board_2)
+        Me.Main_Tab_1.Controls.Add(Me.TabPage2)
+        Me.Main_Tab_1.Controls.Add(Me.TabPage1)
+        Me.Main_Tab_1.Controls.Add(Me.TabPage3)
+        Me.Main_Tab_1.Controls.Add(Me.TabPage4)
+        Me.Main_Tab_1.Controls.Add(Me.TabPage5)
         Me.Main_Tab_1.Location = New System.Drawing.Point(21, 83)
         Me.Main_Tab_1.Name = "Main_Tab_1"
         Me.Main_Tab_1.SelectedIndex = 0
         Me.Main_Tab_1.Size = New System.Drawing.Size(859, 444)
         Me.Main_Tab_1.TabIndex = 5
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.ComboBox4)
+        Me.TabPage1.Controls.Add(Me.Label10)
+        Me.TabPage1.Controls.Add(Me.Label11)
+        Me.TabPage1.Controls.Add(Me.ComboBox5)
+        Me.TabPage1.Controls.Add(Me.ComboBox6)
+        Me.TabPage1.Controls.Add(Me.Label13)
+        Me.TabPage1.Controls.Add(Me.ComboBox8)
+        Me.TabPage1.Controls.Add(Me.Label14)
+        Me.TabPage1.Controls.Add(Me.PictureBox1)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(851, 418)
+        Me.TabPage1.TabIndex = 2
+        Me.TabPage1.Text = "Experiment 4"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(271, 17)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(146, 13)
+        Me.Label1.TabIndex = 17
+        Me.Label1.Text = "Precision Half-Wave Rectifier"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Red
+        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(6, 26)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(47, 15)
+        Me.Label2.TabIndex = 16
+        Me.Label2.Text = "Inactive"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox4.Location = New System.Drawing.Point(349, 196)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox4.TabIndex = 4
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(205, 73)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(20, 13)
+        Me.Label10.TabIndex = 13
+        Me.Label10.Text = "C2"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(363, 179)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(21, 13)
+        Me.Label11.TabIndex = 5
+        Me.Label11.Text = "R4"
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"0.01 uF", "0.1   uF", "0.22 uF"})
+        Me.ComboBox5.Location = New System.Drawing.Point(229, 58)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(65, 21)
+        Me.ComboBox5.TabIndex = 12
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox6.Location = New System.Drawing.Point(258, 196)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox6.TabIndex = 6
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(273, 181)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(21, 13)
+        Me.Label13.TabIndex = 7
+        Me.Label13.Text = "R3"
+        '
+        'ComboBox8
+        '
+        Me.ComboBox8.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox8.Location = New System.Drawing.Point(26, 122)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox8.TabIndex = 8
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(42, 106)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(21, 13)
+        Me.Label14.TabIndex = 9
+        Me.Label14.Text = "R1"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 44)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(842, 340)
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.Label3)
+        Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Controls.Add(Me.ComboBox1)
+        Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Controls.Add(Me.Label6)
+        Me.TabPage2.Controls.Add(Me.ComboBox2)
+        Me.TabPage2.Controls.Add(Me.ComboBox3)
+        Me.TabPage2.Controls.Add(Me.Label7)
+        Me.TabPage2.Controls.Add(Me.ComboBox7)
+        Me.TabPage2.Controls.Add(Me.Label8)
+        Me.TabPage2.Controls.Add(Me.PictureBox2)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(851, 418)
+        Me.TabPage2.TabIndex = 3
+        Me.TabPage2.Text = "Experiment 3"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(271, 17)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(247, 13)
+        Me.Label3.TabIndex = 17
+        Me.Label3.Text = "Current Mirror and Widlar Reducing Current Source"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Red
+        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(6, 26)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(47, 15)
+        Me.Label4.TabIndex = 16
+        Me.Label4.Text = "Inactive"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox1.Location = New System.Drawing.Point(349, 196)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox1.TabIndex = 4
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(205, 73)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(20, 13)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "C2"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(363, 179)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(21, 13)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "R4"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"0.01 uF", "0.1   uF", "0.22 uF"})
+        Me.ComboBox2.Location = New System.Drawing.Point(229, 58)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(65, 21)
+        Me.ComboBox2.TabIndex = 12
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox3.Location = New System.Drawing.Point(258, 196)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox3.TabIndex = 6
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(273, 181)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(21, 13)
+        Me.Label7.TabIndex = 7
+        Me.Label7.Text = "R3"
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox7.Location = New System.Drawing.Point(26, 122)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox7.TabIndex = 8
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(42, 106)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(21, 13)
+        Me.Label8.TabIndex = 9
+        Me.Label8.Text = "R1"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox2.Location = New System.Drawing.Point(3, 44)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(842, 340)
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.Label9)
+        Me.TabPage3.Controls.Add(Me.Label12)
+        Me.TabPage3.Controls.Add(Me.ComboBox9)
+        Me.TabPage3.Controls.Add(Me.Label15)
+        Me.TabPage3.Controls.Add(Me.Label16)
+        Me.TabPage3.Controls.Add(Me.ComboBox10)
+        Me.TabPage3.Controls.Add(Me.ComboBox11)
+        Me.TabPage3.Controls.Add(Me.Label17)
+        Me.TabPage3.Controls.Add(Me.ComboBox12)
+        Me.TabPage3.Controls.Add(Me.Label18)
+        Me.TabPage3.Controls.Add(Me.PictureBox3)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(851, 418)
+        Me.TabPage3.TabIndex = 4
+        Me.TabPage3.Text = "Experiment 5"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(271, 17)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(240, 13)
+        Me.Label9.TabIndex = 17
+        Me.Label9.Text = "Integrator With Shunt Resistor vs. Low-Pass Filter"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Red
+        Me.Label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(6, 26)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(47, 15)
+        Me.Label12.TabIndex = 16
+        Me.Label12.Text = "Inactive"
+        '
+        'ComboBox9
+        '
+        Me.ComboBox9.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox9.FormattingEnabled = True
+        Me.ComboBox9.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox9.Location = New System.Drawing.Point(349, 196)
+        Me.ComboBox9.Name = "ComboBox9"
+        Me.ComboBox9.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox9.TabIndex = 4
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(205, 73)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(20, 13)
+        Me.Label15.TabIndex = 13
+        Me.Label15.Text = "C2"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(363, 179)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(21, 13)
+        Me.Label16.TabIndex = 5
+        Me.Label16.Text = "R4"
+        '
+        'ComboBox10
+        '
+        Me.ComboBox10.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox10.FormattingEnabled = True
+        Me.ComboBox10.Items.AddRange(New Object() {"0.01 uF", "0.1   uF", "0.22 uF"})
+        Me.ComboBox10.Location = New System.Drawing.Point(229, 58)
+        Me.ComboBox10.Name = "ComboBox10"
+        Me.ComboBox10.Size = New System.Drawing.Size(65, 21)
+        Me.ComboBox10.TabIndex = 12
+        '
+        'ComboBox11
+        '
+        Me.ComboBox11.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox11.FormattingEnabled = True
+        Me.ComboBox11.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox11.Location = New System.Drawing.Point(258, 196)
+        Me.ComboBox11.Name = "ComboBox11"
+        Me.ComboBox11.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox11.TabIndex = 6
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(273, 181)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(21, 13)
+        Me.Label17.TabIndex = 7
+        Me.Label17.Text = "R3"
+        '
+        'ComboBox12
+        '
+        Me.ComboBox12.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox12.FormattingEnabled = True
+        Me.ComboBox12.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox12.Location = New System.Drawing.Point(26, 122)
+        Me.ComboBox12.Name = "ComboBox12"
+        Me.ComboBox12.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox12.TabIndex = 8
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(42, 106)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(21, 13)
+        Me.Label18.TabIndex = 9
+        Me.Label18.Text = "R1"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox3.Location = New System.Drawing.Point(3, 44)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(842, 340)
+        Me.PictureBox3.TabIndex = 3
+        Me.PictureBox3.TabStop = False
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.Label19)
+        Me.TabPage4.Controls.Add(Me.Label20)
+        Me.TabPage4.Controls.Add(Me.ComboBox13)
+        Me.TabPage4.Controls.Add(Me.Label21)
+        Me.TabPage4.Controls.Add(Me.Label22)
+        Me.TabPage4.Controls.Add(Me.ComboBox14)
+        Me.TabPage4.Controls.Add(Me.ComboBox15)
+        Me.TabPage4.Controls.Add(Me.Label23)
+        Me.TabPage4.Controls.Add(Me.ComboBox16)
+        Me.TabPage4.Controls.Add(Me.Label24)
+        Me.TabPage4.Controls.Add(Me.PictureBox4)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(851, 418)
+        Me.TabPage4.TabIndex = 5
+        Me.TabPage4.Text = "Experiment 6"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(271, 17)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(175, 13)
+        Me.Label19.TabIndex = 17
+        Me.Label19.Text = "Debugging a Microprocessor Circuit"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.BackColor = System.Drawing.Color.Red
+        Me.Label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label20.ForeColor = System.Drawing.Color.White
+        Me.Label20.Location = New System.Drawing.Point(6, 26)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(47, 15)
+        Me.Label20.TabIndex = 16
+        Me.Label20.Text = "Inactive"
+        '
+        'ComboBox13
+        '
+        Me.ComboBox13.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox13.FormattingEnabled = True
+        Me.ComboBox13.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox13.Location = New System.Drawing.Point(349, 196)
+        Me.ComboBox13.Name = "ComboBox13"
+        Me.ComboBox13.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox13.TabIndex = 4
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(205, 73)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(20, 13)
+        Me.Label21.TabIndex = 13
+        Me.Label21.Text = "C2"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(363, 179)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(21, 13)
+        Me.Label22.TabIndex = 5
+        Me.Label22.Text = "R4"
+        '
+        'ComboBox14
+        '
+        Me.ComboBox14.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox14.FormattingEnabled = True
+        Me.ComboBox14.Items.AddRange(New Object() {"0.01 uF", "0.1   uF", "0.22 uF"})
+        Me.ComboBox14.Location = New System.Drawing.Point(229, 58)
+        Me.ComboBox14.Name = "ComboBox14"
+        Me.ComboBox14.Size = New System.Drawing.Size(65, 21)
+        Me.ComboBox14.TabIndex = 12
+        '
+        'ComboBox15
+        '
+        Me.ComboBox15.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox15.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox15.FormattingEnabled = True
+        Me.ComboBox15.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox15.Location = New System.Drawing.Point(258, 196)
+        Me.ComboBox15.Name = "ComboBox15"
+        Me.ComboBox15.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox15.TabIndex = 6
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(273, 181)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(21, 13)
+        Me.Label23.TabIndex = 7
+        Me.Label23.Text = "R3"
+        '
+        'ComboBox16
+        '
+        Me.ComboBox16.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox16.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox16.FormattingEnabled = True
+        Me.ComboBox16.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox16.Location = New System.Drawing.Point(26, 122)
+        Me.ComboBox16.Name = "ComboBox16"
+        Me.ComboBox16.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox16.TabIndex = 8
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(42, 106)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(21, 13)
+        Me.Label24.TabIndex = 9
+        Me.Label24.Text = "R1"
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox4.Location = New System.Drawing.Point(3, 44)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(842, 340)
+        Me.PictureBox4.TabIndex = 3
+        Me.PictureBox4.TabStop = False
+        '
+        'TabPage5
+        '
+        Me.TabPage5.Controls.Add(Me.Label25)
+        Me.TabPage5.Controls.Add(Me.Label26)
+        Me.TabPage5.Controls.Add(Me.ComboBox17)
+        Me.TabPage5.Controls.Add(Me.Label27)
+        Me.TabPage5.Controls.Add(Me.Label28)
+        Me.TabPage5.Controls.Add(Me.ComboBox18)
+        Me.TabPage5.Controls.Add(Me.ComboBox19)
+        Me.TabPage5.Controls.Add(Me.Label29)
+        Me.TabPage5.Controls.Add(Me.ComboBox20)
+        Me.TabPage5.Controls.Add(Me.Label30)
+        Me.TabPage5.Controls.Add(Me.PictureBox5)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(851, 418)
+        Me.TabPage5.TabIndex = 6
+        Me.TabPage5.Text = "Experiment 7"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(271, 17)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(172, 13)
+        Me.Label25.TabIndex = 17
+        Me.Label25.Text = "Learning to Use the Logic Analyzer"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.BackColor = System.Drawing.Color.Red
+        Me.Label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label26.ForeColor = System.Drawing.Color.White
+        Me.Label26.Location = New System.Drawing.Point(6, 26)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(47, 15)
+        Me.Label26.TabIndex = 16
+        Me.Label26.Text = "Inactive"
+        '
+        'ComboBox17
+        '
+        Me.ComboBox17.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox17.FormattingEnabled = True
+        Me.ComboBox17.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox17.Location = New System.Drawing.Point(349, 196)
+        Me.ComboBox17.Name = "ComboBox17"
+        Me.ComboBox17.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox17.TabIndex = 4
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(205, 73)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(20, 13)
+        Me.Label27.TabIndex = 13
+        Me.Label27.Text = "C2"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(363, 179)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(21, 13)
+        Me.Label28.TabIndex = 5
+        Me.Label28.Text = "R4"
+        '
+        'ComboBox18
+        '
+        Me.ComboBox18.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox18.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox18.FormattingEnabled = True
+        Me.ComboBox18.Items.AddRange(New Object() {"0.01 uF", "0.1   uF", "0.22 uF"})
+        Me.ComboBox18.Location = New System.Drawing.Point(229, 58)
+        Me.ComboBox18.Name = "ComboBox18"
+        Me.ComboBox18.Size = New System.Drawing.Size(65, 21)
+        Me.ComboBox18.TabIndex = 12
+        '
+        'ComboBox19
+        '
+        Me.ComboBox19.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox19.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox19.FormattingEnabled = True
+        Me.ComboBox19.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox19.Location = New System.Drawing.Point(258, 196)
+        Me.ComboBox19.Name = "ComboBox19"
+        Me.ComboBox19.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox19.TabIndex = 6
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(273, 181)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(21, 13)
+        Me.Label29.TabIndex = 7
+        Me.Label29.Text = "R3"
+        '
+        'ComboBox20
+        '
+        Me.ComboBox20.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox20.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox20.FormattingEnabled = True
+        Me.ComboBox20.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.ComboBox20.Location = New System.Drawing.Point(26, 122)
+        Me.ComboBox20.Name = "ComboBox20"
+        Me.ComboBox20.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox20.TabIndex = 8
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(42, 106)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(21, 13)
+        Me.Label30.TabIndex = 9
+        Me.Label30.Text = "R1"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox5.Location = New System.Drawing.Point(3, 44)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(842, 340)
+        Me.PictureBox5.TabIndex = 3
+        Me.PictureBox5.TabStop = False
         '
         'Form1
         '
@@ -818,6 +1568,21 @@ Partial Class Form1
         Me.brd_1_ch1.PerformLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Main_Tab_1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -885,5 +1650,64 @@ Partial Class Form1
     Friend WithEvents Board_1_Image As System.Windows.Forms.PictureBox
     Friend WithEvents Main_Tab_1 As System.Windows.Forms.TabControl
     Friend WithEvents lbl_serial As System.Windows.Forms.Label
-
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents ComboBox7 As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents ComboBox8 As ComboBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents ComboBox9 As ComboBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents ComboBox10 As ComboBox
+    Friend WithEvents ComboBox11 As ComboBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents ComboBox12 As ComboBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents ComboBox13 As ComboBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents ComboBox14 As ComboBox
+    Friend WithEvents ComboBox15 As ComboBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents ComboBox16 As ComboBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents ComboBox17 As ComboBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents ComboBox18 As ComboBox
+    Friend WithEvents ComboBox19 As ComboBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents ComboBox20 As ComboBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents PictureBox5 As PictureBox
 End Class
