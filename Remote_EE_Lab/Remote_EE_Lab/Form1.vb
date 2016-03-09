@@ -439,4 +439,12 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) 
+
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles SelectProgram.Enter
+
+    End Sub
 End Class
