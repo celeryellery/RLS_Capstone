@@ -34,21 +34,30 @@ Partial Class Form1
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.Board7 = New System.Windows.Forms.TabPage()
+        Me.ComboBox22 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox17 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox16 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox15 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.ComboBox17 = New System.Windows.Forms.ComboBox()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
         Me.ComboBox19 = New System.Windows.Forms.ComboBox()
-        Me.Label29 = New System.Windows.Forms.Label()
         Me.ComboBox20 = New System.Windows.Forms.ComboBox()
-        Me.Label30 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Board6 = New System.Windows.Forms.TabPage()
+        Me.SelectProgram = New System.Windows.Forms.GroupBox()
+        Me.ComboBox14 = New System.Windows.Forms.ComboBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.ComboBox14 = New System.Windows.Forms.ComboBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Board5 = New System.Windows.Forms.TabPage()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -69,12 +78,20 @@ Partial Class Form1
         Me.ComboBox8 = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Board3b = New System.Windows.Forms.TabPage()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.ComboBox21 = New System.Windows.Forms.ComboBox()
         Me.ComboBox23 = New System.Windows.Forms.ComboBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Board3a = New System.Windows.Forms.TabPage()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -134,11 +151,11 @@ Partial Class Form1
         Me.lbl_C = New System.Windows.Forms.Label()
         Me.Board_1_Image = New System.Windows.Forms.PictureBox()
         Me.Board1 = New System.Windows.Forms.TabControl()
-        Me.SelectProgram = New System.Windows.Forms.GroupBox()
         Me.CommControlGroup.SuspendLayout()
         Me.Board7.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board6.SuspendLayout()
+        Me.SelectProgram.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board5.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -147,8 +164,10 @@ Partial Class Form1
         Me.Diode1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board3b.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board3a.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board_2.SuspendLayout()
         Me.board_2_Circuit_Control.SuspendLayout()
@@ -161,7 +180,6 @@ Partial Class Form1
         Me.brd_1_ch1.SuspendLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board1.SuspendLayout()
-        Me.SelectProgram.SuspendLayout()
         Me.SuspendLayout()
         '
         'board_detect
@@ -185,7 +203,7 @@ Partial Class Form1
         Me.CommControlGroup.Controls.Add(Me.board_detect)
         Me.CommControlGroup.Location = New System.Drawing.Point(21, 12)
         Me.CommControlGroup.Name = "CommControlGroup"
-        Me.CommControlGroup.Size = New System.Drawing.Size(859, 65)
+        Me.CommControlGroup.Size = New System.Drawing.Size(911, 65)
         Me.CommControlGroup.TabIndex = 1
         Me.CommControlGroup.TabStop = False
         Me.CommControlGroup.Text = "Communication Control"
@@ -193,7 +211,7 @@ Partial Class Form1
         'lbl_serial
         '
         Me.lbl_serial.AutoSize = True
-        Me.lbl_serial.Location = New System.Drawing.Point(284, 24)
+        Me.lbl_serial.Location = New System.Drawing.Point(228, 24)
         Me.lbl_serial.Name = "lbl_serial"
         Me.lbl_serial.Size = New System.Drawing.Size(96, 13)
         Me.lbl_serial.TabIndex = 5
@@ -202,7 +220,7 @@ Partial Class Form1
         'btn_test_2
         '
         Me.btn_test_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_test_2.Location = New System.Drawing.Point(740, 19)
+        Me.btn_test_2.Location = New System.Drawing.Point(816, 19)
         Me.btn_test_2.Name = "btn_test_2"
         Me.btn_test_2.Size = New System.Drawing.Size(87, 23)
         Me.btn_test_2.TabIndex = 4
@@ -212,16 +230,16 @@ Partial Class Form1
         'btn_Dev_Test
         '
         Me.btn_Dev_Test.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_Dev_Test.Location = New System.Drawing.Point(659, 19)
+        Me.btn_Dev_Test.Location = New System.Drawing.Point(603, 19)
         Me.btn_Dev_Test.Name = "btn_Dev_Test"
-        Me.btn_Dev_Test.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Dev_Test.Size = New System.Drawing.Size(207, 23)
         Me.btn_Dev_Test.TabIndex = 3
-        Me.btn_Dev_Test.Text = "Vellman"
+        Me.btn_Dev_Test.Text = "Oscilloscope/Function Generator"
         Me.btn_Dev_Test.UseVisualStyleBackColor = True
         '
         'Serial_Text_Test
         '
-        Me.Serial_Text_Test.Location = New System.Drawing.Point(386, 19)
+        Me.Serial_Text_Test.Location = New System.Drawing.Point(330, 19)
         Me.Serial_Text_Test.Name = "Serial_Text_Test"
         Me.Serial_Text_Test.Size = New System.Drawing.Size(255, 23)
         Me.Serial_Text_Test.TabIndex = 2
@@ -244,29 +262,202 @@ Partial Class Form1
         '
         'Board7
         '
+        Me.Board7.Controls.Add(Me.ComboBox22)
+        Me.Board7.Controls.Add(Me.ComboBox18)
+        Me.Board7.Controls.Add(Me.ComboBox17)
+        Me.Board7.Controls.Add(Me.ComboBox16)
+        Me.Board7.Controls.Add(Me.ComboBox15)
+        Me.Board7.Controls.Add(Me.ComboBox13)
+        Me.Board7.Controls.Add(Me.Button1)
+        Me.Board7.Controls.Add(Me.ComboBox11)
+        Me.Board7.Controls.Add(Me.ComboBox7)
+        Me.Board7.Controls.Add(Me.ComboBox6)
+        Me.Board7.Controls.Add(Me.ComboBox5)
+        Me.Board7.Controls.Add(Me.ComboBox4)
+        Me.Board7.Controls.Add(Me.ComboBox3)
+        Me.Board7.Controls.Add(Me.ComboBox2)
         Me.Board7.Controls.Add(Me.Label25)
         Me.Board7.Controls.Add(Me.Label26)
-        Me.Board7.Controls.Add(Me.ComboBox17)
-        Me.Board7.Controls.Add(Me.Label27)
-        Me.Board7.Controls.Add(Me.Label28)
-        Me.Board7.Controls.Add(Me.ComboBox18)
         Me.Board7.Controls.Add(Me.ComboBox19)
-        Me.Board7.Controls.Add(Me.Label29)
         Me.Board7.Controls.Add(Me.ComboBox20)
-        Me.Board7.Controls.Add(Me.Label30)
         Me.Board7.Controls.Add(Me.PictureBox5)
         Me.Board7.Location = New System.Drawing.Point(4, 22)
         Me.Board7.Name = "Board7"
         Me.Board7.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board7.Size = New System.Drawing.Size(851, 418)
+        Me.Board7.Size = New System.Drawing.Size(903, 414)
         Me.Board7.TabIndex = 6
         Me.Board7.Text = "Experiment 7"
         Me.Board7.UseVisualStyleBackColor = True
         '
+        'ComboBox22
+        '
+        Me.ComboBox22.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox22.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox22.FormattingEnabled = True
+        Me.ComboBox22.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
+        Me.ComboBox22.Location = New System.Drawing.Point(1019, 222)
+        Me.ComboBox22.Name = "ComboBox22"
+        Me.ComboBox22.Size = New System.Drawing.Size(96, 21)
+        Me.ComboBox22.TabIndex = 31
+        '
+        'ComboBox18
+        '
+        Me.ComboBox18.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox18.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox18.FormattingEnabled = True
+        Me.ComboBox18.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
+        Me.ComboBox18.Location = New System.Drawing.Point(868, 222)
+        Me.ComboBox18.Name = "ComboBox18"
+        Me.ComboBox18.Size = New System.Drawing.Size(96, 21)
+        Me.ComboBox18.TabIndex = 30
+        '
+        'ComboBox17
+        '
+        Me.ComboBox17.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox17.FormattingEnabled = True
+        Me.ComboBox17.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
+        Me.ComboBox17.Location = New System.Drawing.Point(709, 222)
+        Me.ComboBox17.Name = "ComboBox17"
+        Me.ComboBox17.Size = New System.Drawing.Size(96, 21)
+        Me.ComboBox17.TabIndex = 29
+        '
+        'ComboBox16
+        '
+        Me.ComboBox16.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox16.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox16.FormattingEnabled = True
+        Me.ComboBox16.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
+        Me.ComboBox16.Location = New System.Drawing.Point(559, 222)
+        Me.ComboBox16.Name = "ComboBox16"
+        Me.ComboBox16.Size = New System.Drawing.Size(96, 21)
+        Me.ComboBox16.TabIndex = 28
+        '
+        'ComboBox15
+        '
+        Me.ComboBox15.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox15.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox15.FormattingEnabled = True
+        Me.ComboBox15.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
+        Me.ComboBox15.Location = New System.Drawing.Point(415, 222)
+        Me.ComboBox15.Name = "ComboBox15"
+        Me.ComboBox15.Size = New System.Drawing.Size(96, 21)
+        Me.ComboBox15.TabIndex = 27
+        '
+        'ComboBox13
+        '
+        Me.ComboBox13.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox13.FormattingEnabled = True
+        Me.ComboBox13.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
+        Me.ComboBox13.Location = New System.Drawing.Point(258, 222)
+        Me.ComboBox13.Name = "ComboBox13"
+        Me.ComboBox13.Size = New System.Drawing.Size(96, 21)
+        Me.ComboBox13.TabIndex = 26
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(69, 240)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(41, 32)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "Clear"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ComboBox11
+        '
+        Me.ComboBox11.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox11.FormattingEnabled = True
+        Me.ComboBox11.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox11.Location = New System.Drawing.Point(1129, 89)
+        Me.ComboBox11.Name = "ComboBox11"
+        Me.ComboBox11.Size = New System.Drawing.Size(40, 21)
+        Me.ComboBox11.TabIndex = 24
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox7.Location = New System.Drawing.Point(978, 89)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(40, 21)
+        Me.ComboBox7.TabIndex = 23
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox6.Location = New System.Drawing.Point(826, 89)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(40, 21)
+        Me.ComboBox6.TabIndex = 22
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox5.Location = New System.Drawing.Point(674, 89)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(40, 21)
+        Me.ComboBox5.TabIndex = 21
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox4.Location = New System.Drawing.Point(523, 89)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(40, 21)
+        Me.ComboBox4.TabIndex = 20
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox3.Location = New System.Drawing.Point(373, 89)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(40, 21)
+        Me.ComboBox3.TabIndex = 19
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox2.Location = New System.Drawing.Point(221, 89)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(40, 21)
+        Me.ComboBox2.TabIndex = 18
+        '
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(271, 17)
+        Me.Label25.Location = New System.Drawing.Point(542, 17)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(172, 13)
         Me.Label25.TabIndex = 17
@@ -284,68 +475,17 @@ Partial Class Form1
         Me.Label26.TabIndex = 16
         Me.Label26.Text = "Inactive"
         '
-        'ComboBox17
-        '
-        Me.ComboBox17.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox17.FormattingEnabled = True
-        Me.ComboBox17.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.ComboBox17.Location = New System.Drawing.Point(349, 196)
-        Me.ComboBox17.Name = "ComboBox17"
-        Me.ComboBox17.Size = New System.Drawing.Size(54, 21)
-        Me.ComboBox17.TabIndex = 4
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(205, 73)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(20, 13)
-        Me.Label27.TabIndex = 13
-        Me.Label27.Text = "C2"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(363, 179)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(21, 13)
-        Me.Label28.TabIndex = 5
-        Me.Label28.Text = "R4"
-        '
-        'ComboBox18
-        '
-        Me.ComboBox18.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox18.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox18.FormattingEnabled = True
-        Me.ComboBox18.Items.AddRange(New Object() {"0.01 uF", "0.1   uF", "0.22 uF"})
-        Me.ComboBox18.Location = New System.Drawing.Point(229, 58)
-        Me.ComboBox18.Name = "ComboBox18"
-        Me.ComboBox18.Size = New System.Drawing.Size(65, 21)
-        Me.ComboBox18.TabIndex = 12
-        '
         'ComboBox19
         '
         Me.ComboBox19.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ComboBox19.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox19.FormattingEnabled = True
-        Me.ComboBox19.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.ComboBox19.Location = New System.Drawing.Point(258, 196)
+        Me.ComboBox19.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
+        Me.ComboBox19.Location = New System.Drawing.Point(113, 222)
         Me.ComboBox19.Name = "ComboBox19"
-        Me.ComboBox19.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox19.Size = New System.Drawing.Size(96, 21)
         Me.ComboBox19.TabIndex = 6
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(273, 181)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(21, 13)
-        Me.Label29.TabIndex = 7
-        Me.Label29.Text = "R3"
         '
         'ComboBox20
         '
@@ -353,27 +493,19 @@ Partial Class Form1
         Me.ComboBox20.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox20.FormattingEnabled = True
-        Me.ComboBox20.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.ComboBox20.Location = New System.Drawing.Point(26, 122)
+        Me.ComboBox20.Items.AddRange(New Object() {"0", "1"})
+        Me.ComboBox20.Location = New System.Drawing.Point(70, 89)
         Me.ComboBox20.Name = "ComboBox20"
-        Me.ComboBox20.Size = New System.Drawing.Size(54, 21)
+        Me.ComboBox20.Size = New System.Drawing.Size(40, 21)
         Me.ComboBox20.TabIndex = 8
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(42, 106)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(21, 13)
-        Me.Label30.TabIndex = 9
-        Me.Label30.Text = "R1"
         '
         'PictureBox5
         '
         Me.PictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
         Me.PictureBox5.Location = New System.Drawing.Point(3, 44)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(842, 340)
+        Me.PictureBox5.Size = New System.Drawing.Size(1196, 340)
         Me.PictureBox5.TabIndex = 3
         Me.PictureBox5.TabStop = False
         '
@@ -386,10 +518,32 @@ Partial Class Form1
         Me.Board6.Location = New System.Drawing.Point(4, 22)
         Me.Board6.Name = "Board6"
         Me.Board6.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board6.Size = New System.Drawing.Size(851, 418)
+        Me.Board6.Size = New System.Drawing.Size(903, 414)
         Me.Board6.TabIndex = 5
         Me.Board6.Text = "Experiment 6"
         Me.Board6.UseVisualStyleBackColor = True
+        '
+        'SelectProgram
+        '
+        Me.SelectProgram.Controls.Add(Me.ComboBox14)
+        Me.SelectProgram.Location = New System.Drawing.Point(736, 120)
+        Me.SelectProgram.Name = "SelectProgram"
+        Me.SelectProgram.Size = New System.Drawing.Size(109, 79)
+        Me.SelectProgram.TabIndex = 18
+        Me.SelectProgram.TabStop = False
+        Me.SelectProgram.Text = "Select Program"
+        '
+        'ComboBox14
+        '
+        Me.ComboBox14.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.ComboBox14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox14.FormattingEnabled = True
+        Me.ComboBox14.Items.AddRange(New Object() {"Program A", "Program B", "Program C", "Program D", "Program E"})
+        Me.ComboBox14.Location = New System.Drawing.Point(6, 32)
+        Me.ComboBox14.Name = "ComboBox14"
+        Me.ComboBox14.Size = New System.Drawing.Size(97, 21)
+        Me.ComboBox14.TabIndex = 12
         '
         'Label19
         '
@@ -412,18 +566,6 @@ Partial Class Form1
         Me.Label20.TabIndex = 16
         Me.Label20.Text = "Inactive"
         '
-        'ComboBox14
-        '
-        Me.ComboBox14.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox14.FormattingEnabled = True
-        Me.ComboBox14.Items.AddRange(New Object() {"Program A", "Program B", "Program C", "Program D", "Program E"})
-        Me.ComboBox14.Location = New System.Drawing.Point(6, 32)
-        Me.ComboBox14.Name = "ComboBox14"
-        Me.ComboBox14.Size = New System.Drawing.Size(97, 21)
-        Me.ComboBox14.TabIndex = 12
-        '
         'PictureBox4
         '
         Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -445,7 +587,7 @@ Partial Class Form1
         Me.Board5.Location = New System.Drawing.Point(4, 22)
         Me.Board5.Name = "Board5"
         Me.Board5.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board5.Size = New System.Drawing.Size(851, 418)
+        Me.Board5.Size = New System.Drawing.Size(903, 414)
         Me.Board5.TabIndex = 4
         Me.Board5.Text = "Experiment 5"
         Me.Board5.UseVisualStyleBackColor = True
@@ -528,7 +670,7 @@ Partial Class Form1
         Me.Board4.Location = New System.Drawing.Point(4, 22)
         Me.Board4.Name = "Board4"
         Me.Board4.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board4.Size = New System.Drawing.Size(851, 418)
+        Me.Board4.Size = New System.Drawing.Size(903, 414)
         Me.Board4.TabIndex = 2
         Me.Board4.Text = "Experiment 4"
         Me.Board4.UseVisualStyleBackColor = True
@@ -639,12 +781,13 @@ Partial Class Form1
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(3, 44)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(842, 371)
+        Me.PictureBox1.Size = New System.Drawing.Size(842, 360)
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
         'Board3b
         '
+        Me.Board3b.Controls.Add(Me.GroupBox3)
         Me.Board3b.Controls.Add(Me.Label31)
         Me.Board3b.Controls.Add(Me.Label32)
         Me.Board3b.Controls.Add(Me.ComboBox21)
@@ -653,10 +796,48 @@ Partial Class Form1
         Me.Board3b.Location = New System.Drawing.Point(4, 22)
         Me.Board3b.Name = "Board3b"
         Me.Board3b.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board3b.Size = New System.Drawing.Size(851, 418)
+        Me.Board3b.Size = New System.Drawing.Size(903, 414)
         Me.Board3b.TabIndex = 7
         Me.Board3b.Text = "Experiment 3b"
         Me.Board3b.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Button3)
+        Me.GroupBox3.Controls.Add(Me.Label6)
+        Me.GroupBox3.Controls.Add(Me.RichTextBox2)
+        Me.GroupBox3.Location = New System.Drawing.Point(551, 151)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(200, 100)
+        Me.GroupBox3.TabIndex = 19
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Multimeter Reading"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(7, 62)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(141, 23)
+        Me.Button3.TabIndex = 20
+        Me.Button3.Text = "Refresh Output"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(154, 37)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(22, 13)
+        Me.Label6.TabIndex = 19
+        Me.Label6.Text = "mA"
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.Location = New System.Drawing.Point(6, 34)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(142, 21)
+        Me.RichTextBox2.TabIndex = 3
+        Me.RichTextBox2.Text = ""
         '
         'Label31
         '
@@ -707,7 +888,7 @@ Partial Class Form1
         '
         Me.PictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(154, 55)
+        Me.PictureBox6.Location = New System.Drawing.Point(81, 54)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(464, 348)
         Me.PictureBox6.TabIndex = 3
@@ -715,6 +896,7 @@ Partial Class Form1
         '
         'Board3a
         '
+        Me.Board3a.Controls.Add(Me.GroupBox1)
         Me.Board3a.Controls.Add(Me.Label3)
         Me.Board3a.Controls.Add(Me.Label4)
         Me.Board3a.Controls.Add(Me.ComboBox1)
@@ -722,10 +904,48 @@ Partial Class Form1
         Me.Board3a.Location = New System.Drawing.Point(4, 22)
         Me.Board3a.Name = "Board3a"
         Me.Board3a.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board3a.Size = New System.Drawing.Size(851, 418)
+        Me.Board3a.Size = New System.Drawing.Size(903, 414)
         Me.Board3a.TabIndex = 3
         Me.Board3a.Text = "Experiment 3a"
         Me.Board3a.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.RichTextBox1)
+        Me.GroupBox1.Location = New System.Drawing.Point(582, 151)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(200, 100)
+        Me.GroupBox1.TabIndex = 18
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Multimeter Reading"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(7, 62)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(141, 23)
+        Me.Button2.TabIndex = 20
+        Me.Button2.Text = "Refresh Output"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(154, 37)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(22, 13)
+        Me.Label5.TabIndex = 19
+        Me.Label5.Text = "mA"
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(6, 34)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(142, 21)
+        Me.RichTextBox1.TabIndex = 3
+        Me.RichTextBox1.Text = ""
         '
         'Label3
         '
@@ -792,7 +1012,7 @@ Partial Class Form1
         Me.Board_2.Location = New System.Drawing.Point(4, 22)
         Me.Board_2.Name = "Board_2"
         Me.Board_2.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board_2.Size = New System.Drawing.Size(851, 418)
+        Me.Board_2.Size = New System.Drawing.Size(903, 414)
         Me.Board_2.TabIndex = 1
         Me.Board_2.Text = "Experiment 2"
         Me.Board_2.UseVisualStyleBackColor = True
@@ -1091,7 +1311,7 @@ Partial Class Form1
         Me.Board_1.Location = New System.Drawing.Point(4, 22)
         Me.Board_1.Name = "Board_1"
         Me.Board_1.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board_1.Size = New System.Drawing.Size(851, 418)
+        Me.Board_1.Size = New System.Drawing.Size(903, 414)
         Me.Board_1.TabIndex = 0
         Me.Board_1.Text = "Experiment 1"
         '
@@ -1372,6 +1592,7 @@ Partial Class Form1
         '
         'Board1
         '
+        Me.Board1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Board1.Controls.Add(Me.Board_1)
         Me.Board1.Controls.Add(Me.Board_2)
         Me.Board1.Controls.Add(Me.Board3a)
@@ -1383,25 +1604,15 @@ Partial Class Form1
         Me.Board1.Location = New System.Drawing.Point(21, 83)
         Me.Board1.Name = "Board1"
         Me.Board1.SelectedIndex = 0
-        Me.Board1.Size = New System.Drawing.Size(859, 444)
+        Me.Board1.Size = New System.Drawing.Size(911, 440)
         Me.Board1.TabIndex = 5
-        '
-        'SelectProgram
-        '
-        Me.SelectProgram.Controls.Add(Me.ComboBox14)
-        Me.SelectProgram.Location = New System.Drawing.Point(736, 120)
-        Me.SelectProgram.Name = "SelectProgram"
-        Me.SelectProgram.Size = New System.Drawing.Size(109, 79)
-        Me.SelectProgram.TabIndex = 18
-        Me.SelectProgram.TabStop = False
-        Me.SelectProgram.Text = "Select Program"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(900, 540)
+        Me.ClientSize = New System.Drawing.Size(961, 535)
         Me.Controls.Add(Me.Board1)
         Me.Controls.Add(Me.CommControlGroup)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1414,6 +1625,7 @@ Partial Class Form1
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board6.ResumeLayout(False)
         Me.Board6.PerformLayout()
+        Me.SelectProgram.ResumeLayout(False)
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board5.ResumeLayout(False)
         Me.Board5.PerformLayout()
@@ -1427,9 +1639,13 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board3b.ResumeLayout(False)
         Me.Board3b.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board3a.ResumeLayout(False)
         Me.Board3a.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board_2.ResumeLayout(False)
         Me.Board_2.PerformLayout()
@@ -1448,7 +1664,6 @@ Partial Class Form1
         Me.brd_1_ch1.PerformLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board1.ResumeLayout(False)
-        Me.SelectProgram.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1464,14 +1679,7 @@ Partial Class Form1
     Friend WithEvents Board7 As TabPage
     Friend WithEvents Label25 As Label
     Friend WithEvents Label26 As Label
-    Friend WithEvents ComboBox17 As ComboBox
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label28 As Label
-    Friend WithEvents ComboBox18 As ComboBox
     Friend WithEvents ComboBox19 As ComboBox
-    Friend WithEvents Label29 As Label
-    Friend WithEvents ComboBox20 As ComboBox
-    Friend WithEvents Label30 As Label
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Board6 As TabPage
     Friend WithEvents Label19 As Label
@@ -1563,4 +1771,38 @@ Partial Class Form1
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents SelectProgram As GroupBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents ComboBox11 As ComboBox
+    Friend WithEvents ComboBox7 As ComboBox
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox20 As ComboBox
+    Friend WithEvents ComboBox22 As ComboBox
+    Friend WithEvents ComboBox18 As ComboBox
+    Friend WithEvents ComboBox17 As ComboBox
+    Friend WithEvents ComboBox16 As ComboBox
+    Friend WithEvents ComboBox15 As ComboBox
+    Friend WithEvents ComboBox13 As ComboBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
+
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        Me.Board7.AutoScroll = True
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
 End Class
