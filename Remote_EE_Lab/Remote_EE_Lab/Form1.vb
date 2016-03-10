@@ -80,7 +80,7 @@
                     lbl_board_2_status.BackColor = Color.Red
                     lbl_board_2_status.Text = "Inactive"
                     Serial_Text_Test.Text = Board_IDNFR
-                Case "0000010"
+                Case "00000010"
                     'do something
                     Board1.SelectTab(1)
                     lbl_board_1_status.BackColor = Color.Red
@@ -88,7 +88,7 @@
                     lbl_board_2_status.BackColor = Color.Green
                     lbl_board_2_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
-                Case "0000101" 'Daughterboard 5: Integrator/Low-Pass Filter
+                Case "00000101" 'Daughterboard 5: Integrator/Low-Pass Filter
                     'do something
                     Board1.SelectTab(5)
                     lbl_board_1_status.BackColor = Color.Red
@@ -140,6 +140,8 @@
                     Serial_Message = Board_1_Serial_Message
                 Case "00000010"
                     Serial_Message = Board_2_Serial_Message
+                Case "00000101"
+                    Serial_Message = Board_5_Serial_Message
                 Case Else
                     'don't do anything
                     Serial_Text_Test.Text = "WARNING: No board is present"
