@@ -25,6 +25,12 @@
     Dim Board_2_Scope_Ch1_gain As String = "01"
     Dim Board_2_Scope_Ch2_gain As String = "01"
 
+    'Declare the variables for Board_5
+    Dim Board_5_Serial_Message As String = "board_5,1,1,1" 'default message
+    Dim Board_5_R2_State As String = "1"
+    Dim Board_5_R3_State As String = "1"
+    Dim Board_5_C1_State As String = "1"
+
 
 
 
