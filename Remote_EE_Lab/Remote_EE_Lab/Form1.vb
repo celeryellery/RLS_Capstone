@@ -438,6 +438,63 @@
         Board_2_Compile_Serial_Message()
     End Sub
 
+
+
+
+
+
+
+
+    'Board 5 Subroutines 
+
+    'Board_5: Serial Message Compiler
+    'This subroutine takes the individual board_5 variables and
+    'combines them into one string.
+    Sub Board_5_Compile_Serial_Message()
+        Board_5_Serial_Message = "board_5," +
+                         Board_5_R2_State + "," +
+                         Board_5_R3_State + "," +
+                         Board_5_C1_State
+        'this statement exists exclusively for debuginng purposes
+        Serial_Text_Test.Text = Board_5_Serial_Message
+        'Change the 'Send Data' button collor to orange, to indicate that
+        'a change in the board configuration has occured.
+        btn_Send_Config.BackColor = Color.Orange
+    End Sub
+
+    'Board 5: R2 control
+    Private Sub board_5_R2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_5_R2.SelectedIndexChanged
+        If board_5_R2.SelectedIndex = 0 Then
+            Board_5_R2_State = "1"
+        Else
+            Board_5_R2_State = "0"
+        End If
+        'Call the message compiler
+        Board_5_Compile_Serial_Message()
+    End Sub
+
+    'Board 5: R2 control
+    Private Sub board_5_R3_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_5_R3.SelectedIndexChanged
+        If board_5_R3.SelectedIndex = 0 Then
+            Board_5_R3_State = "1"
+        Else
+            Board_5_R3_State = "0"
+        End If
+        'Call the message compiler
+        Board_5_Compile_Serial_Message()
+    End Sub
+
+    'Board 5: C1 control
+    Private Sub board_5_C1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_5_C1.SelectedIndexChanged
+        If board_5_C1.SelectedIndex = 0 Then
+            Board_5_C1_State = "1"
+        Else
+            Board_5_C1_State = "0"
+        End If
+        'Call the message compiler
+        Board_5_Compile_Serial_Message()
+    End Sub
+
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
     End Sub

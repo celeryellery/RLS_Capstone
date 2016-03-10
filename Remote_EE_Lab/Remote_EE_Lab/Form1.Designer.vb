@@ -62,9 +62,9 @@ Partial Class Form1
         Me.Board5 = New System.Windows.Forms.TabPage()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox12 = New System.Windows.Forms.ComboBox()
+        Me.board_5_R3 = New System.Windows.Forms.ComboBox()
+        Me.board_5_R2 = New System.Windows.Forms.ComboBox()
+        Me.board_5_C1 = New System.Windows.Forms.ComboBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Board4 = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -580,9 +580,9 @@ Partial Class Form1
         '
         Me.Board5.Controls.Add(Me.Label9)
         Me.Board5.Controls.Add(Me.Label12)
-        Me.Board5.Controls.Add(Me.ComboBox9)
-        Me.Board5.Controls.Add(Me.ComboBox10)
-        Me.Board5.Controls.Add(Me.ComboBox12)
+        Me.Board5.Controls.Add(Me.board_5_R3)
+        Me.Board5.Controls.Add(Me.board_5_R2)
+        Me.Board5.Controls.Add(Me.board_5_C1)
         Me.Board5.Controls.Add(Me.PictureBox3)
         Me.Board5.Location = New System.Drawing.Point(4, 22)
         Me.Board5.Name = "Board5"
@@ -613,41 +613,41 @@ Partial Class Form1
         Me.Label12.TabIndex = 16
         Me.Label12.Text = "Inactive"
         '
-        'ComboBox9
+        'board_5_R3
         '
-        Me.ComboBox9.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox9.FormattingEnabled = True
-        Me.ComboBox9.Items.AddRange(New Object() {"Open", "10 kꭥ  "})
-        Me.ComboBox9.Location = New System.Drawing.Point(501, 310)
-        Me.ComboBox9.Name = "ComboBox9"
-        Me.ComboBox9.Size = New System.Drawing.Size(65, 21)
-        Me.ComboBox9.TabIndex = 4
+        Me.board_5_R3.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.board_5_R3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_5_R3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.board_5_R3.FormattingEnabled = True
+        Me.board_5_R3.Items.AddRange(New Object() {"Open", "10 kꭥ  "})
+        Me.board_5_R3.Location = New System.Drawing.Point(501, 310)
+        Me.board_5_R3.Name = "board_5_R3"
+        Me.board_5_R3.Size = New System.Drawing.Size(65, 21)
+        Me.board_5_R3.TabIndex = 4
         '
-        'ComboBox10
+        'board_5_R2
         '
-        Me.ComboBox10.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox10.FormattingEnabled = True
-        Me.ComboBox10.Items.AddRange(New Object() {"10 kꭥ", "20 kꭥ "})
-        Me.ComboBox10.Location = New System.Drawing.Point(311, 93)
-        Me.ComboBox10.Name = "ComboBox10"
-        Me.ComboBox10.Size = New System.Drawing.Size(65, 21)
-        Me.ComboBox10.TabIndex = 12
+        Me.board_5_R2.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.board_5_R2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_5_R2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.board_5_R2.FormattingEnabled = True
+        Me.board_5_R2.Items.AddRange(New Object() {"10 kꭥ", "20 kꭥ "})
+        Me.board_5_R2.Location = New System.Drawing.Point(311, 93)
+        Me.board_5_R2.Name = "board_5_R2"
+        Me.board_5_R2.Size = New System.Drawing.Size(65, 21)
+        Me.board_5_R2.TabIndex = 12
         '
-        'ComboBox12
+        'board_5_C1
         '
-        Me.ComboBox12.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox12.FormattingEnabled = True
-        Me.ComboBox12.Items.AddRange(New Object() {"0.22 uF", "0.01 uF"})
-        Me.ComboBox12.Location = New System.Drawing.Point(448, 166)
-        Me.ComboBox12.Name = "ComboBox12"
-        Me.ComboBox12.Size = New System.Drawing.Size(65, 21)
-        Me.ComboBox12.TabIndex = 8
+        Me.board_5_C1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.board_5_C1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_5_C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.board_5_C1.FormattingEnabled = True
+        Me.board_5_C1.Items.AddRange(New Object() {"0.22 uF", "0.01 uF"})
+        Me.board_5_C1.Location = New System.Drawing.Point(448, 166)
+        Me.board_5_C1.Name = "board_5_C1"
+        Me.board_5_C1.Size = New System.Drawing.Size(65, 21)
+        Me.board_5_C1.TabIndex = 8
         '
         'PictureBox3
         '
@@ -1689,9 +1689,9 @@ Partial Class Form1
     Friend WithEvents Board5 As TabPage
     Friend WithEvents Label9 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents ComboBox9 As ComboBox
-    Friend WithEvents ComboBox10 As ComboBox
-    Friend WithEvents ComboBox12 As ComboBox
+    Friend WithEvents board_5_R3 As ComboBox
+    Friend WithEvents board_5_R2 As ComboBox
+    Friend WithEvents board_5_C1 As ComboBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Board4 As TabPage
     Friend WithEvents Label1 As Label
