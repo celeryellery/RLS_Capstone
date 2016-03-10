@@ -32,8 +32,6 @@
     Dim Board_5_C1_State As String = "1"
 
 
-
-
     Private Sub btn_Dev_Test_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Dev_Test.Click
         Shell("C:\Program Files (x86)\Velleman\PcLab2000LT\PcLab2000LT.exe")
 
@@ -44,14 +42,6 @@
     Private Sub btn_test_2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_test_2.Click
         Shell("C:\Program Files (x86)\LogicPort\LogicPort.exe")
     End Sub
-
-
-
-
-
-
-
-
 
 
     'Board ID Check
@@ -93,6 +83,14 @@
                 Case "0000010"
                     'do something
                     Board1.SelectTab(1)
+                    lbl_board_1_status.BackColor = Color.Red
+                    lbl_board_1_status.Text = "Inactive"
+                    lbl_board_2_status.BackColor = Color.Green
+                    lbl_board_2_status.Text = "Active"
+                    Serial_Text_Test.Text = Board_IDNFR
+                Case "0000101" 'Daughterboard 5: Integrator/Low-Pass Filter
+                    'do something
+                    Board1.SelectTab(5)
                     lbl_board_1_status.BackColor = Color.Red
                     lbl_board_1_status.Text = "Inactive"
                     lbl_board_2_status.BackColor = Color.Green
