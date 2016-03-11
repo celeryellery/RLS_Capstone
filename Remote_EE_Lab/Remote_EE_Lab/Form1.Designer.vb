@@ -49,7 +49,7 @@ Partial Class Form1
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
+        Me.lbl_board_7_status = New System.Windows.Forms.Label()
         Me.ComboBox19 = New System.Windows.Forms.ComboBox()
         Me.ComboBox20 = New System.Windows.Forms.ComboBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
@@ -57,11 +57,11 @@ Partial Class Form1
         Me.SelectProgram = New System.Windows.Forms.GroupBox()
         Me.ComboBox14 = New System.Windows.Forms.ComboBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
+        Me.lbl_board_6_status = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Board5 = New System.Windows.Forms.TabPage()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lbl_board_5_status = New System.Windows.Forms.Label()
         Me.board_5_R3 = New System.Windows.Forms.ComboBox()
         Me.board_5_R2 = New System.Windows.Forms.ComboBox()
         Me.board_5_C1 = New System.Windows.Forms.ComboBox()
@@ -74,7 +74,7 @@ Partial Class Form1
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lbl_board_4_status = New System.Windows.Forms.Label()
         Me.ComboBox8 = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Board3b = New System.Windows.Forms.TabPage()
@@ -83,7 +83,7 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
+        Me.lbl_board_3b_status = New System.Windows.Forms.Label()
         Me.ComboBox21 = New System.Windows.Forms.ComboBox()
         Me.ComboBox23 = New System.Windows.Forms.ComboBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
@@ -93,7 +93,7 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lbl_board_3a_status = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Board_2 = New System.Windows.Forms.TabPage()
@@ -277,7 +277,7 @@ Partial Class Form1
         Me.Board7.Controls.Add(Me.ComboBox3)
         Me.Board7.Controls.Add(Me.ComboBox2)
         Me.Board7.Controls.Add(Me.Label25)
-        Me.Board7.Controls.Add(Me.Label26)
+        Me.Board7.Controls.Add(Me.lbl_board_7_status)
         Me.Board7.Controls.Add(Me.ComboBox19)
         Me.Board7.Controls.Add(Me.ComboBox20)
         Me.Board7.Controls.Add(Me.PictureBox5)
@@ -463,17 +463,17 @@ Partial Class Form1
         Me.Label25.TabIndex = 17
         Me.Label25.Text = "Learning to Use the Logic Analyzer"
         '
-        'Label26
+        'lbl_board_7_status
         '
-        Me.Label26.AutoSize = True
-        Me.Label26.BackColor = System.Drawing.Color.Red
-        Me.Label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label26.ForeColor = System.Drawing.Color.White
-        Me.Label26.Location = New System.Drawing.Point(6, 26)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(47, 15)
-        Me.Label26.TabIndex = 16
-        Me.Label26.Text = "Inactive"
+        Me.lbl_board_7_status.AutoSize = True
+        Me.lbl_board_7_status.BackColor = System.Drawing.Color.Red
+        Me.lbl_board_7_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_board_7_status.ForeColor = System.Drawing.Color.White
+        Me.lbl_board_7_status.Location = New System.Drawing.Point(6, 26)
+        Me.lbl_board_7_status.Name = "lbl_board_7_status"
+        Me.lbl_board_7_status.Size = New System.Drawing.Size(47, 15)
+        Me.lbl_board_7_status.TabIndex = 16
+        Me.lbl_board_7_status.Text = "Inactive"
         '
         'ComboBox19
         '
@@ -513,7 +513,7 @@ Partial Class Form1
         '
         Me.Board6.Controls.Add(Me.SelectProgram)
         Me.Board6.Controls.Add(Me.Label19)
-        Me.Board6.Controls.Add(Me.Label20)
+        Me.Board6.Controls.Add(Me.lbl_board_6_status)
         Me.Board6.Controls.Add(Me.PictureBox4)
         Me.Board6.Location = New System.Drawing.Point(4, 22)
         Me.Board6.Name = "Board6"
@@ -554,17 +554,17 @@ Partial Class Form1
         Me.Label19.TabIndex = 17
         Me.Label19.Text = "Debugging a Microprocessor Circuit"
         '
-        'Label20
+        'lbl_board_6_status
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.Color.Red
-        Me.Label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label20.ForeColor = System.Drawing.Color.White
-        Me.Label20.Location = New System.Drawing.Point(6, 26)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(47, 15)
-        Me.Label20.TabIndex = 16
-        Me.Label20.Text = "Inactive"
+        Me.lbl_board_6_status.AutoSize = True
+        Me.lbl_board_6_status.BackColor = System.Drawing.Color.Red
+        Me.lbl_board_6_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_board_6_status.ForeColor = System.Drawing.Color.White
+        Me.lbl_board_6_status.Location = New System.Drawing.Point(6, 26)
+        Me.lbl_board_6_status.Name = "lbl_board_6_status"
+        Me.lbl_board_6_status.Size = New System.Drawing.Size(47, 15)
+        Me.lbl_board_6_status.TabIndex = 16
+        Me.lbl_board_6_status.Text = "Inactive"
         '
         'PictureBox4
         '
@@ -579,7 +579,7 @@ Partial Class Form1
         'Board5
         '
         Me.Board5.Controls.Add(Me.Label9)
-        Me.Board5.Controls.Add(Me.Label12)
+        Me.Board5.Controls.Add(Me.lbl_board_5_status)
         Me.Board5.Controls.Add(Me.board_5_R3)
         Me.Board5.Controls.Add(Me.board_5_R2)
         Me.Board5.Controls.Add(Me.board_5_C1)
@@ -601,17 +601,17 @@ Partial Class Form1
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "Integrator With Shunt Resistor vs. Low-Pass Filter"
         '
-        'Label12
+        'lbl_board_5_status
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Red
-        Me.Label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(6, 26)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(47, 15)
-        Me.Label12.TabIndex = 16
-        Me.Label12.Text = "Inactive"
+        Me.lbl_board_5_status.AutoSize = True
+        Me.lbl_board_5_status.BackColor = System.Drawing.Color.Red
+        Me.lbl_board_5_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_board_5_status.ForeColor = System.Drawing.Color.White
+        Me.lbl_board_5_status.Location = New System.Drawing.Point(6, 26)
+        Me.lbl_board_5_status.Name = "lbl_board_5_status"
+        Me.lbl_board_5_status.Size = New System.Drawing.Size(47, 15)
+        Me.lbl_board_5_status.TabIndex = 16
+        Me.lbl_board_5_status.Text = "Inactive"
         '
         'board_5_R3
         '
@@ -664,7 +664,7 @@ Partial Class Form1
         Me.Board4.Controls.Add(Me.GroupBox2)
         Me.Board4.Controls.Add(Me.Diode1)
         Me.Board4.Controls.Add(Me.Label1)
-        Me.Board4.Controls.Add(Me.Label2)
+        Me.Board4.Controls.Add(Me.lbl_board_4_status)
         Me.Board4.Controls.Add(Me.ComboBox8)
         Me.Board4.Controls.Add(Me.PictureBox1)
         Me.Board4.Location = New System.Drawing.Point(4, 22)
@@ -750,17 +750,17 @@ Partial Class Form1
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Precision Half-Wave Rectifier"
         '
-        'Label2
+        'lbl_board_4_status
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Red
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(6, 26)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 15)
-        Me.Label2.TabIndex = 16
-        Me.Label2.Text = "Inactive"
+        Me.lbl_board_4_status.AutoSize = True
+        Me.lbl_board_4_status.BackColor = System.Drawing.Color.Red
+        Me.lbl_board_4_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_board_4_status.ForeColor = System.Drawing.Color.White
+        Me.lbl_board_4_status.Location = New System.Drawing.Point(6, 26)
+        Me.lbl_board_4_status.Name = "lbl_board_4_status"
+        Me.lbl_board_4_status.Size = New System.Drawing.Size(47, 15)
+        Me.lbl_board_4_status.TabIndex = 16
+        Me.lbl_board_4_status.Text = "Inactive"
         '
         'ComboBox8
         '
@@ -789,7 +789,7 @@ Partial Class Form1
         '
         Me.Board3b.Controls.Add(Me.GroupBox3)
         Me.Board3b.Controls.Add(Me.Label31)
-        Me.Board3b.Controls.Add(Me.Label32)
+        Me.Board3b.Controls.Add(Me.lbl_board_3b_status)
         Me.Board3b.Controls.Add(Me.ComboBox21)
         Me.Board3b.Controls.Add(Me.ComboBox23)
         Me.Board3b.Controls.Add(Me.PictureBox6)
@@ -848,17 +848,17 @@ Partial Class Form1
         Me.Label31.TabIndex = 17
         Me.Label31.Text = "Widlar Reducing Current Source"
         '
-        'Label32
+        'lbl_board_3b_status
         '
-        Me.Label32.AutoSize = True
-        Me.Label32.BackColor = System.Drawing.Color.Red
-        Me.Label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label32.ForeColor = System.Drawing.Color.White
-        Me.Label32.Location = New System.Drawing.Point(6, 26)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(47, 15)
-        Me.Label32.TabIndex = 16
-        Me.Label32.Text = "Inactive"
+        Me.lbl_board_3b_status.AutoSize = True
+        Me.lbl_board_3b_status.BackColor = System.Drawing.Color.Red
+        Me.lbl_board_3b_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_board_3b_status.ForeColor = System.Drawing.Color.White
+        Me.lbl_board_3b_status.Location = New System.Drawing.Point(6, 26)
+        Me.lbl_board_3b_status.Name = "lbl_board_3b_status"
+        Me.lbl_board_3b_status.Size = New System.Drawing.Size(47, 15)
+        Me.lbl_board_3b_status.TabIndex = 16
+        Me.lbl_board_3b_status.Text = "Inactive"
         '
         'ComboBox21
         '
@@ -898,7 +898,7 @@ Partial Class Form1
         '
         Me.Board3a.Controls.Add(Me.GroupBox1)
         Me.Board3a.Controls.Add(Me.Label3)
-        Me.Board3a.Controls.Add(Me.Label4)
+        Me.Board3a.Controls.Add(Me.lbl_board_3a_status)
         Me.Board3a.Controls.Add(Me.ComboBox1)
         Me.Board3a.Controls.Add(Me.PictureBox2)
         Me.Board3a.Location = New System.Drawing.Point(4, 22)
@@ -956,17 +956,17 @@ Partial Class Form1
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Current Mirror"
         '
-        'Label4
+        'lbl_board_3a_status
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Red
-        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(6, 26)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(47, 15)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Inactive"
+        Me.lbl_board_3a_status.AutoSize = True
+        Me.lbl_board_3a_status.BackColor = System.Drawing.Color.Red
+        Me.lbl_board_3a_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_board_3a_status.ForeColor = System.Drawing.Color.White
+        Me.lbl_board_3a_status.Location = New System.Drawing.Point(6, 26)
+        Me.lbl_board_3a_status.Name = "lbl_board_3a_status"
+        Me.lbl_board_3a_status.Size = New System.Drawing.Size(47, 15)
+        Me.lbl_board_3a_status.TabIndex = 16
+        Me.lbl_board_3a_status.Text = "Inactive"
         '
         'ComboBox1
         '
@@ -1678,35 +1678,35 @@ Partial Class Form1
     Friend WithEvents lbl_serial As System.Windows.Forms.Label
     Friend WithEvents Board7 As TabPage
     Friend WithEvents Label25 As Label
-    Friend WithEvents Label26 As Label
+    Friend WithEvents lbl_board_7_status As Label
     Friend WithEvents ComboBox19 As ComboBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Board6 As TabPage
     Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
+    Friend WithEvents lbl_board_6_status As Label
     Friend WithEvents ComboBox14 As ComboBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Board5 As TabPage
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label12 As Label
+    Friend WithEvents lbl_board_5_status As Label
     Friend WithEvents board_5_R3 As ComboBox
     Friend WithEvents board_5_R2 As ComboBox
     Friend WithEvents board_5_C1 As ComboBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Board4 As TabPage
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lbl_board_4_status As Label
     Friend WithEvents ComboBox8 As ComboBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Board3b As TabPage
     Friend WithEvents Label31 As Label
-    Friend WithEvents Label32 As Label
+    Friend WithEvents lbl_board_3b_status As Label
     Friend WithEvents ComboBox21 As ComboBox
     Friend WithEvents ComboBox23 As ComboBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents Board3a As TabPage
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lbl_board_3a_status As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Board_2 As TabPage

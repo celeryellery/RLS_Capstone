@@ -67,46 +67,56 @@
             Select Case Board_IDNFR
                 Case "00000000"
                     'do something
-                    lbl_board_1_status.BackColor = Color.Red
-                    lbl_board_1_status.Text = "Inactive"
-                    lbl_board_2_status.BackColor = Color.Red
-                    lbl_board_2_status.Text = "Inactive"
+                    Deactivate()
                     Serial_Text_Test.Text = "No board is present: " + Board_IDNFR
                 Case "00000001"
                     'do something
                     Board1.SelectTab(0)
+                    Deactivate()
                     lbl_board_1_status.BackColor = Color.Green
                     lbl_board_1_status.Text = "Active"
-                    lbl_board_2_status.BackColor = Color.Red
-                    lbl_board_2_status.Text = "Inactive"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "00000010"
                     'do something
                     Board1.SelectTab(1)
-                    lbl_board_1_status.BackColor = Color.Red
-                    lbl_board_1_status.Text = "Inactive"
+                    Deactivate()
                     lbl_board_2_status.BackColor = Color.Green
                     lbl_board_2_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "00000101" 'Daughterboard 5: Integrator/Low-Pass Filter
                     'do something
                     Board1.SelectTab(5)
-                    lbl_board_1_status.BackColor = Color.Red
-                    lbl_board_1_status.Text = "Inactive"
-                    lbl_board_2_status.BackColor = Color.Green
-                    lbl_board_2_status.Text = "Active"
+                    Deactivate()
+                    lbl_board_5_status.BackColor = Color.Green
+                    lbl_board_5_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case Else
                     'don't do anything
-                    lbl_board_1_status.BackColor = Color.Red
-                    lbl_board_1_status.Text = "Inactive"
-                    lbl_board_2_status.BackColor = Color.Red
-                    lbl_board_2_status.Text = "Inactive"
+                    Deactivate()
                     Serial_Text_Test.Text = Board_IDNFR
             End Select
         Catch ex As Exception
             Serial_Text_Test.Text = "WARNING: Recheck Board ID"
         End Try
+    End Sub
+
+    Private Sub Deactivate()
+        lbl_board_1_status.BackColor = Color.Red
+        lbl_board_1_status.Text = "Inactive"
+        lbl_board_2_status.BackColor = Color.Red
+        lbl_board_2_status.Text = "Inactive"
+        lbl_board_3a_status.BackColor = Color.Red
+        lbl_board_3a_status.Text = "Inactive"
+        lbl_board_3b_status.BackColor = Color.Red
+        lbl_board_3b_status.Text = "Inactive"
+        lbl_board_4_status.BackColor = Color.Red
+        lbl_board_4_status.Text = "Inactive"
+        lbl_board_5_status.BackColor = Color.Red
+        lbl_board_5_status.Text = "Inactive"
+        lbl_board_6_status.BackColor = Color.Red
+        lbl_board_6_status.Text = "Inactive"
+        lbl_board_7_status.BackColor = Color.Red
+        lbl_board_7_status.Text = "Inactive"
     End Sub
 
 
