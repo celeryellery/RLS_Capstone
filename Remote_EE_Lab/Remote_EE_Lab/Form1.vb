@@ -374,7 +374,7 @@
         Else
             Board_2_R3_State = "5"
         End If
-        
+
         'Call the message compiler
         Board_2_Compile_Serial_Message()
     End Sub
@@ -392,7 +392,7 @@
         Else
             Board_2_R4_State = "5"
         End If
-        
+
         'Call the message compiler
         Board_2_Compile_Serial_Message()
     End Sub
@@ -406,7 +406,7 @@
         Else
             Board_2_C1_State = "3"
         End If
-        
+
         'Call the message compiler
         Board_2_Compile_Serial_Message()
     End Sub
@@ -420,7 +420,7 @@
         Else
             Board_2_C2_State = "3"
         End If
-        
+
         'Call the message compiler
         Board_2_Compile_Serial_Message()
     End Sub
@@ -432,7 +432,7 @@
         Else
             Board_2_Scope_Ch1_gain = "10"
         End If
-        
+
         'Call the message compiler
         Board_2_Compile_Serial_Message()
     End Sub
@@ -513,7 +513,7 @@
 
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) 
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs)
 
     End Sub
 

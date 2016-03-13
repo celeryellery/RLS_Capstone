@@ -620,7 +620,7 @@ Partial Class Form1
         Me.board_5_R3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_5_R3.FormattingEnabled = True
         Me.board_5_R3.Items.AddRange(New Object() {"Open", "10 kꭥ  "})
-        Me.board_5_R3.Location = New System.Drawing.Point(501, 310)
+        Me.board_5_R3.Location = New System.Drawing.Point(408, 256)
         Me.board_5_R3.Name = "board_5_R3"
         Me.board_5_R3.Size = New System.Drawing.Size(65, 21)
         Me.board_5_R3.TabIndex = 4
@@ -632,7 +632,7 @@ Partial Class Form1
         Me.board_5_R2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_5_R2.FormattingEnabled = True
         Me.board_5_R2.Items.AddRange(New Object() {"10 kꭥ", "20 kꭥ "})
-        Me.board_5_R2.Location = New System.Drawing.Point(311, 93)
+        Me.board_5_R2.Location = New System.Drawing.Point(246, 86)
         Me.board_5_R2.Name = "board_5_R2"
         Me.board_5_R2.Size = New System.Drawing.Size(65, 21)
         Me.board_5_R2.TabIndex = 12
@@ -644,7 +644,7 @@ Partial Class Form1
         Me.board_5_C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_5_C1.FormattingEnabled = True
         Me.board_5_C1.Items.AddRange(New Object() {"0.22 uF", "0.01 uF"})
-        Me.board_5_C1.Location = New System.Drawing.Point(448, 166)
+        Me.board_5_C1.Location = New System.Drawing.Point(362, 144)
         Me.board_5_C1.Name = "board_5_C1"
         Me.board_5_C1.Size = New System.Drawing.Size(65, 21)
         Me.board_5_C1.TabIndex = 8
@@ -867,7 +867,7 @@ Partial Class Form1
         Me.ComboBox21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox21.FormattingEnabled = True
         Me.ComboBox21.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.ComboBox21.Location = New System.Drawing.Point(444, 320)
+        Me.ComboBox21.Location = New System.Drawing.Point(377, 320)
         Me.ComboBox21.Name = "ComboBox21"
         Me.ComboBox21.Size = New System.Drawing.Size(54, 21)
         Me.ComboBox21.TabIndex = 4
@@ -879,7 +879,7 @@ Partial Class Form1
         Me.ComboBox23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox23.FormattingEnabled = True
         Me.ComboBox23.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.ComboBox23.Location = New System.Drawing.Point(444, 151)
+        Me.ComboBox23.Location = New System.Drawing.Point(377, 151)
         Me.ComboBox23.Name = "ComboBox23"
         Me.ComboBox23.Size = New System.Drawing.Size(54, 21)
         Me.ComboBox23.TabIndex = 6
