@@ -28,10 +28,10 @@
     'Declare the variables for Board_4
     Dim Board_4_Serial_Message As String = "board_4,1,1,1,1,1" 'default message
     Dim Board_4_R1_State As String = "1"
-    Dim Board_4_Diode1_RadioButton1_State As String = "1"
-    Dim Board_4_Diode1_RadioButton2_State As String = "1"
-    Dim Board_4_Diode2_RadioButton1_State As String = "1"
-    Dim Board_4_Diode2_RadioButton2_State As String = "1"
+    Dim Board_4_Diode1_RadioButton1_State As String = "0"
+    Dim Board_4_Diode1_RadioButton2_State As String = "0"
+    Dim Board_4_Diode2_RadioButton1_State As String = "0"
+    Dim Board_4_Diode2_RadioButton2_State As String = "0"
 
     'Declare the variables for Board_5
     Dim Board_5_Serial_Message As String = "board_5,1,1,1" 'default message
@@ -493,25 +493,25 @@
 
     'Board 4: R1 control
     Private Sub board_4_R1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_4_R1.SelectedIndexChanged
-        If board_2_R1.SelectedIndex = 0 Then
+        If board_4_R1.SelectedIndex = 0 Then
             Board_4_R1_State = "1"
-        ElseIf board_2_R1.SelectedIndex = 1 Then
+        ElseIf board_4_R1.SelectedIndex = 1 Then
             Board_4_R1_State = "2"
-        ElseIf board_2_R1.SelectedIndex = 2 Then
+        ElseIf board_4_R1.SelectedIndex = 2 Then
             Board_4_R1_State = "3"
         Else
             Board_4_R1_State = "4"
         End If
         'Call the message compiler
-        Board_5_Compile_Serial_Message()
+        Board_4_Compile_Serial_Message()
     End Sub
 
     'Board 4: Diode 1 control
-    Private Sub Diode1_RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles board4_Diode1_RadioButton1.CheckedChanged
-        If board4_Diode1_RadioButton1.Checked = False Then
-            Board_4_Diode1_RadioButton1_State = "0"
-        Else
+    Private Sub board4_Diode1_RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board4_Diode1_RadioButton1.CheckedChanged
+        If board4_Diode1_RadioButton1.Checked = True Then
             Board_4_Diode1_RadioButton1_State = "1"
+        Else
+            Board_4_Diode1_RadioButton1_State = "0"
         End If
     End Sub
 

@@ -727,7 +727,6 @@ Partial Class Form1
         Me.board4_Diode1_RadioButton2.Name = "board4_Diode1_RadioButton2"
         Me.board4_Diode1_RadioButton2.Size = New System.Drawing.Size(53, 22)
         Me.board4_Diode1_RadioButton2.TabIndex = 1
-        Me.board4_Diode1_RadioButton2.TabStop = True
         Me.board4_Diode1_RadioButton2.UseVisualStyleBackColor = True
         '
         'board4_Diode1_RadioButton1
@@ -738,7 +737,6 @@ Partial Class Form1
         Me.board4_Diode1_RadioButton1.Name = "board4_Diode1_RadioButton1"
         Me.board4_Diode1_RadioButton1.Size = New System.Drawing.Size(53, 22)
         Me.board4_Diode1_RadioButton1.TabIndex = 0
-        Me.board4_Diode1_RadioButton1.TabStop = True
         Me.board4_Diode1_RadioButton1.UseVisualStyleBackColor = True
         '
         'Label1
