@@ -68,14 +68,14 @@ Partial Class Form1
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Board4 = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
+        Me.board4_Diode2_RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.board4_Diode2_RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Diode1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.board4_Diode1_RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.board4_Diode1_RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_board_4_status = New System.Windows.Forms.Label()
-        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.board_4_R1 = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Board3b = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -665,7 +665,7 @@ Partial Class Form1
         Me.Board4.Controls.Add(Me.Diode1)
         Me.Board4.Controls.Add(Me.Label1)
         Me.Board4.Controls.Add(Me.lbl_board_4_status)
-        Me.Board4.Controls.Add(Me.ComboBox8)
+        Me.Board4.Controls.Add(Me.board_4_R1)
         Me.Board4.Controls.Add(Me.PictureBox1)
         Me.Board4.Location = New System.Drawing.Point(4, 22)
         Me.Board4.Name = "Board4"
@@ -678,68 +678,68 @@ Partial Class Form1
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox2.Controls.Add(Me.RadioButton5)
-        Me.GroupBox2.Controls.Add(Me.RadioButton6)
+        Me.GroupBox2.Controls.Add(Me.board4_Diode2_RadioButton2)
+        Me.GroupBox2.Controls.Add(Me.board4_Diode2_RadioButton1)
         Me.GroupBox2.Location = New System.Drawing.Point(445, 278)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(62, 71)
         Me.GroupBox2.TabIndex = 23
         Me.GroupBox2.TabStop = False
         '
-        'RadioButton5
+        'board4_Diode2_RadioButton2
         '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Image = CType(resources.GetObject("RadioButton5.Image"), System.Drawing.Image)
-        Me.RadioButton5.Location = New System.Drawing.Point(6, 46)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(53, 22)
-        Me.RadioButton5.TabIndex = 1
-        Me.RadioButton5.TabStop = True
-        Me.RadioButton5.UseVisualStyleBackColor = True
+        Me.board4_Diode2_RadioButton2.AutoSize = True
+        Me.board4_Diode2_RadioButton2.Image = CType(resources.GetObject("board4_Diode2_RadioButton2.Image"), System.Drawing.Image)
+        Me.board4_Diode2_RadioButton2.Location = New System.Drawing.Point(6, 46)
+        Me.board4_Diode2_RadioButton2.Name = "board4_Diode2_RadioButton2"
+        Me.board4_Diode2_RadioButton2.Size = New System.Drawing.Size(53, 22)
+        Me.board4_Diode2_RadioButton2.TabIndex = 1
+        Me.board4_Diode2_RadioButton2.TabStop = True
+        Me.board4_Diode2_RadioButton2.UseVisualStyleBackColor = True
         '
-        'RadioButton6
+        'board4_Diode2_RadioButton1
         '
-        Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Image = CType(resources.GetObject("RadioButton6.Image"), System.Drawing.Image)
-        Me.RadioButton6.Location = New System.Drawing.Point(6, 19)
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(53, 22)
-        Me.RadioButton6.TabIndex = 0
-        Me.RadioButton6.TabStop = True
-        Me.RadioButton6.UseVisualStyleBackColor = True
+        Me.board4_Diode2_RadioButton1.AutoSize = True
+        Me.board4_Diode2_RadioButton1.Image = CType(resources.GetObject("board4_Diode2_RadioButton1.Image"), System.Drawing.Image)
+        Me.board4_Diode2_RadioButton1.Location = New System.Drawing.Point(6, 19)
+        Me.board4_Diode2_RadioButton1.Name = "board4_Diode2_RadioButton1"
+        Me.board4_Diode2_RadioButton1.Size = New System.Drawing.Size(53, 22)
+        Me.board4_Diode2_RadioButton1.TabIndex = 0
+        Me.board4_Diode2_RadioButton1.TabStop = True
+        Me.board4_Diode2_RadioButton1.UseVisualStyleBackColor = True
         '
         'Diode1
         '
         Me.Diode1.BackColor = System.Drawing.Color.Transparent
-        Me.Diode1.Controls.Add(Me.RadioButton2)
-        Me.Diode1.Controls.Add(Me.RadioButton1)
+        Me.Diode1.Controls.Add(Me.board4_Diode1_RadioButton2)
+        Me.Diode1.Controls.Add(Me.board4_Diode1_RadioButton1)
         Me.Diode1.Location = New System.Drawing.Point(355, 79)
         Me.Diode1.Name = "Diode1"
         Me.Diode1.Size = New System.Drawing.Size(62, 71)
         Me.Diode1.TabIndex = 22
         Me.Diode1.TabStop = False
         '
-        'RadioButton2
+        'board4_Diode1_RadioButton2
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Image = CType(resources.GetObject("RadioButton2.Image"), System.Drawing.Image)
-        Me.RadioButton2.Location = New System.Drawing.Point(6, 46)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(53, 22)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.board4_Diode1_RadioButton2.AutoSize = True
+        Me.board4_Diode1_RadioButton2.Image = CType(resources.GetObject("board4_Diode1_RadioButton2.Image"), System.Drawing.Image)
+        Me.board4_Diode1_RadioButton2.Location = New System.Drawing.Point(6, 46)
+        Me.board4_Diode1_RadioButton2.Name = "board4_Diode1_RadioButton2"
+        Me.board4_Diode1_RadioButton2.Size = New System.Drawing.Size(53, 22)
+        Me.board4_Diode1_RadioButton2.TabIndex = 1
+        Me.board4_Diode1_RadioButton2.TabStop = True
+        Me.board4_Diode1_RadioButton2.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'board4_Diode1_RadioButton1
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Image = CType(resources.GetObject("RadioButton1.Image"), System.Drawing.Image)
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 19)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(53, 22)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.board4_Diode1_RadioButton1.AutoSize = True
+        Me.board4_Diode1_RadioButton1.Image = CType(resources.GetObject("board4_Diode1_RadioButton1.Image"), System.Drawing.Image)
+        Me.board4_Diode1_RadioButton1.Location = New System.Drawing.Point(6, 19)
+        Me.board4_Diode1_RadioButton1.Name = "board4_Diode1_RadioButton1"
+        Me.board4_Diode1_RadioButton1.Size = New System.Drawing.Size(53, 22)
+        Me.board4_Diode1_RadioButton1.TabIndex = 0
+        Me.board4_Diode1_RadioButton1.TabStop = True
+        Me.board4_Diode1_RadioButton1.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -762,18 +762,18 @@ Partial Class Form1
         Me.lbl_board_4_status.TabIndex = 16
         Me.lbl_board_4_status.Text = "Inactive"
         '
-        'ComboBox8
+        'board_4_R1
         '
-        Me.ComboBox8.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox8.DropDownWidth = 60
-        Me.ComboBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox8.FormattingEnabled = True
-        Me.ComboBox8.Items.AddRange(New Object() {"0.5 k", "1 k", "1.5 k ", "5 k"})
-        Me.ComboBox8.Location = New System.Drawing.Point(264, 64)
-        Me.ComboBox8.Name = "ComboBox8"
-        Me.ComboBox8.Size = New System.Drawing.Size(54, 21)
-        Me.ComboBox8.TabIndex = 8
+        Me.board_4_R1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.board_4_R1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_4_R1.DropDownWidth = 60
+        Me.board_4_R1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.board_4_R1.FormattingEnabled = True
+        Me.board_4_R1.Items.AddRange(New Object() {"0.5 k", "1 k", "1.5 k ", "5 k"})
+        Me.board_4_R1.Location = New System.Drawing.Point(264, 64)
+        Me.board_4_R1.Name = "board_4_R1"
+        Me.board_4_R1.Size = New System.Drawing.Size(54, 21)
+        Me.board_4_R1.TabIndex = 8
         '
         'PictureBox1
         '
@@ -1696,7 +1696,7 @@ Partial Class Form1
     Friend WithEvents Board4 As TabPage
     Friend WithEvents Label1 As Label
     Friend WithEvents lbl_board_4_status As Label
-    Friend WithEvents ComboBox8 As ComboBox
+    Friend WithEvents board_4_R1 As ComboBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Board3b As TabPage
     Friend WithEvents Label31 As Label
@@ -1765,11 +1765,11 @@ Partial Class Form1
     Friend WithEvents Board_1_Image As PictureBox
     Friend WithEvents Board1 As TabControl
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents RadioButton5 As RadioButton
-    Friend WithEvents RadioButton6 As RadioButton
+    Friend WithEvents board4_Diode2_RadioButton2 As RadioButton
+    Friend WithEvents board4_Diode2_RadioButton1 As RadioButton
     Friend WithEvents Diode1 As GroupBox
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents board4_Diode1_RadioButton2 As RadioButton
+    Friend WithEvents board4_Diode1_RadioButton1 As RadioButton
     Friend WithEvents SelectProgram As GroupBox
     Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox11 As ComboBox

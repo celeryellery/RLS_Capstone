@@ -26,10 +26,12 @@
     Dim Board_2_Scope_Ch2_gain As String = "01"
 
     'Declare the variables for Board_4
-    Dim Board_4_Serial_Message As String = "board_4,1,1,1" 'default message
+    Dim Board_4_Serial_Message As String = "board_4,1,1,1,1,1" 'default message
     Dim Board_4_R1_State As String = "1"
-    Dim Board_4_Diode1_State As String = "1"
-    Dim Board_4_Diode2_State As String = "1"
+    Dim Board_4_Diode1_RadioButton1_State As String = "1"
+    Dim Board_4_Diode1_RadioButton2_State As String = "1"
+    Dim Board_4_Diode2_RadioButton1_State As String = "1"
+    Dim Board_4_Diode2_RadioButton2_State As String = "1"
 
     'Declare the variables for Board_5
     Dim Board_5_Serial_Message As String = "board_5,1,1,1" 'default message
@@ -478,8 +480,10 @@
     Sub Board_4_Compile_Serial_Message()
         Board_4_Serial_Message = "board_4," +
                          Board_4_R1_State + "," +
-                         Board_4_Diode1_State + "," +
-                         Board_4_Diode2_State
+                         Board_4_Diode1_RadioButton1_State + "," +
+                         Board_4_Diode1_RadioButton2_State + "," +
+                         Board_4_Diode2_RadioButton1_State + "," +
+                         Board_4_Diode2_RadioButton2_State
         'this statement exists exclusively for debuginng purposes
         Serial_Text_Test.Text = Board_4_Serial_Message
         'Change the 'Send Data' button collor to orange, to indicate that
@@ -488,7 +492,7 @@
     End Sub
 
     'Board 4: R1 control
-    Private Sub board_4_R1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_2_R1.SelectedIndexChanged
+    Private Sub board_4_R1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_4_R1.SelectedIndexChanged
         If board_2_R1.SelectedIndex = 0 Then
             Board_4_R1_State = "1"
         ElseIf board_2_R1.SelectedIndex = 1 Then
@@ -502,6 +506,16 @@
         Board_5_Compile_Serial_Message()
     End Sub
 
+    'Board 4: Diode 1 control
+    Private Sub Diode1_RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles board4_Diode1_RadioButton1.CheckedChanged
+        If board4_Diode1_RadioButton1.Checked = False Then
+            Board_4_Diode1_RadioButton1_State = "0"
+        Else
+            Board_4_Diode1_RadioButton1_State = "1"
+        End If
+    End Sub
+
+    'Board 4: Diode 2 control
 
 
 
@@ -566,10 +580,6 @@
 
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles SelectProgram.Enter
 
     End Sub
@@ -579,6 +589,10 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles board4_Diode1_RadioButton2.CheckedChanged
 
     End Sub
 End Class
