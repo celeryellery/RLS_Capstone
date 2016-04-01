@@ -25,6 +25,12 @@
     Dim Board_2_Scope_Ch1_gain As String = "01"
     Dim Board_2_Scope_Ch2_gain As String = "01"
 
+    'Declare the variables for Board_4
+    Dim Board_4_Serial_Message As String = "board_4,1,1,1" 'default message
+    Dim Board_4_R1_State As String = "1"
+    Dim Board_4_Diode1_State As String = "1"
+    Dim Board_4_Diode2_State As String = "1"
+
     'Declare the variables for Board_5
     Dim Board_5_Serial_Message As String = "board_5,1,1,1" 'default message
     Dim Board_5_R2_State As String = "1"
@@ -82,6 +88,13 @@
                     Deactivate()
                     lbl_board_2_status.BackColor = Color.Green
                     lbl_board_2_status.Text = "Active"
+                    Serial_Text_Test.Text = Board_IDNFR
+                Case "00000100" 'Daughterboard 4: Half-Wave Rectifier
+                    ' do something
+                    Board1.SelectTab(4)
+                    Deactivate()
+                    lbl_board_4_status.BackColor = Color.Green
+                    lbl_board_4_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "00000101" 'Daughterboard 5: Integrator/Low-Pass Filter
                     'do something
@@ -150,6 +163,8 @@
                     Serial_Message = Board_1_Serial_Message
                 Case "00000010"
                     Serial_Message = Board_2_Serial_Message
+                Case "00000100"
+                    Serial_Message = Board_4_Serial_Message
                 Case "00000101"
                     Serial_Message = Board_5_Serial_Message
                 Case Else

@@ -619,7 +619,7 @@ Partial Class Form1
         Me.board_5_R3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.board_5_R3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_5_R3.FormattingEnabled = True
-        Me.board_5_R3.Items.AddRange(New Object() {"Open", "10 kꭥ  "})
+        Me.board_5_R3.Items.AddRange(New Object() {"Open", "10 k"})
         Me.board_5_R3.Location = New System.Drawing.Point(408, 256)
         Me.board_5_R3.Name = "board_5_R3"
         Me.board_5_R3.Size = New System.Drawing.Size(65, 21)
@@ -631,7 +631,7 @@ Partial Class Form1
         Me.board_5_R2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.board_5_R2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_5_R2.FormattingEnabled = True
-        Me.board_5_R2.Items.AddRange(New Object() {"10 kꭥ", "20 kꭥ "})
+        Me.board_5_R2.Items.AddRange(New Object() {"10 k", "20 k"})
         Me.board_5_R2.Location = New System.Drawing.Point(246, 86)
         Me.board_5_R2.Name = "board_5_R2"
         Me.board_5_R2.Size = New System.Drawing.Size(65, 21)
@@ -769,7 +769,7 @@ Partial Class Form1
         Me.ComboBox8.DropDownWidth = 60
         Me.ComboBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox8.FormattingEnabled = True
-        Me.ComboBox8.Items.AddRange(New Object() {"0.5 kꭥ ", "1 kꭥ", "1.5 kꭥ ", "5 kꭥ"})
+        Me.ComboBox8.Items.AddRange(New Object() {"0.5 k", "1 k", "1.5 k ", "5 k"})
         Me.ComboBox8.Location = New System.Drawing.Point(264, 64)
         Me.ComboBox8.Name = "ComboBox8"
         Me.ComboBox8.Size = New System.Drawing.Size(54, 21)
