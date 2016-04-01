@@ -112,15 +112,15 @@ Partial Class Form1
         Me.board_2_lbl1 = New System.Windows.Forms.Label()
         Me.board_2_lbl_C1 = New System.Windows.Forms.Label()
         Me.board_2_C1 = New System.Windows.Forms.ComboBox()
-        Me.board_4_R4 = New System.Windows.Forms.ComboBox()
+        Me.board_2_R4 = New System.Windows.Forms.ComboBox()
         Me.board_2_lbl_C2 = New System.Windows.Forms.Label()
-        Me.board_2_R4 = New System.Windows.Forms.Label()
+        Me.board_2_lbl_R4 = New System.Windows.Forms.Label()
         Me.board_2_C2 = New System.Windows.Forms.ComboBox()
-        Me.board_4_R3 = New System.Windows.Forms.ComboBox()
+        Me.board_2_R3 = New System.Windows.Forms.ComboBox()
         Me.board_2_lbl_R2 = New System.Windows.Forms.Label()
         Me.board_2_lbl_R3 = New System.Windows.Forms.Label()
-        Me.board_4_R2 = New System.Windows.Forms.ComboBox()
-        Me.board_4_R1 = New System.Windows.Forms.ComboBox()
+        Me.board_2_R2 = New System.Windows.Forms.ComboBox()
+        Me.board_2_R1 = New System.Windows.Forms.ComboBox()
         Me.board_2_lbl_R1 = New System.Windows.Forms.Label()
         Me.board_2_chematic = New System.Windows.Forms.PictureBox()
         Me.Board_1 = New System.Windows.Forms.TabPage()
@@ -998,15 +998,15 @@ Partial Class Form1
         Me.Board_2.Controls.Add(Me.board_2_Circuit_Control)
         Me.Board_2.Controls.Add(Me.board_2_lbl_C1)
         Me.Board_2.Controls.Add(Me.board_2_C1)
-        Me.Board_2.Controls.Add(Me.board_4_R4)
-        Me.Board_2.Controls.Add(Me.board_2_lbl_C2)
         Me.Board_2.Controls.Add(Me.board_2_R4)
+        Me.Board_2.Controls.Add(Me.board_2_lbl_C2)
+        Me.Board_2.Controls.Add(Me.board_2_lbl_R4)
         Me.Board_2.Controls.Add(Me.board_2_C2)
-        Me.Board_2.Controls.Add(Me.board_4_R3)
+        Me.Board_2.Controls.Add(Me.board_2_R3)
         Me.Board_2.Controls.Add(Me.board_2_lbl_R2)
         Me.Board_2.Controls.Add(Me.board_2_lbl_R3)
-        Me.Board_2.Controls.Add(Me.board_4_R2)
-        Me.Board_2.Controls.Add(Me.board_4_R1)
+        Me.Board_2.Controls.Add(Me.board_2_R2)
+        Me.Board_2.Controls.Add(Me.board_2_R1)
         Me.Board_2.Controls.Add(Me.board_2_lbl_R1)
         Me.Board_2.Controls.Add(Me.board_2_chematic)
         Me.Board_2.Location = New System.Drawing.Point(4, 22)
@@ -1176,17 +1176,17 @@ Partial Class Form1
         Me.board_2_C1.Size = New System.Drawing.Size(58, 21)
         Me.board_2_C1.TabIndex = 14
         '
-        'board_4_R4
+        'board_2_R4
         '
-        Me.board_4_R4.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.board_4_R4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.board_4_R4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.board_4_R4.FormattingEnabled = True
-        Me.board_4_R4.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.board_4_R4.Location = New System.Drawing.Point(349, 196)
-        Me.board_4_R4.Name = "board_4_R4"
-        Me.board_4_R4.Size = New System.Drawing.Size(54, 21)
-        Me.board_4_R4.TabIndex = 4
+        Me.board_2_R4.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.board_2_R4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_R4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.board_2_R4.FormattingEnabled = True
+        Me.board_2_R4.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.board_2_R4.Location = New System.Drawing.Point(349, 196)
+        Me.board_2_R4.Name = "board_2_R4"
+        Me.board_2_R4.Size = New System.Drawing.Size(54, 21)
+        Me.board_2_R4.TabIndex = 4
         '
         'board_2_lbl_C2
         '
@@ -1197,14 +1197,14 @@ Partial Class Form1
         Me.board_2_lbl_C2.TabIndex = 13
         Me.board_2_lbl_C2.Text = "C2"
         '
-        'board_2_R4
+        'board_2_lbl_R4
         '
-        Me.board_2_R4.AutoSize = True
-        Me.board_2_R4.Location = New System.Drawing.Point(363, 179)
-        Me.board_2_R4.Name = "board_2_R4"
-        Me.board_2_R4.Size = New System.Drawing.Size(21, 13)
-        Me.board_2_R4.TabIndex = 5
-        Me.board_2_R4.Text = "R4"
+        Me.board_2_lbl_R4.AutoSize = True
+        Me.board_2_lbl_R4.Location = New System.Drawing.Point(363, 179)
+        Me.board_2_lbl_R4.Name = "board_2_lbl_R4"
+        Me.board_2_lbl_R4.Size = New System.Drawing.Size(21, 13)
+        Me.board_2_lbl_R4.TabIndex = 5
+        Me.board_2_lbl_R4.Text = "R4"
         '
         'board_2_C2
         '
@@ -1218,17 +1218,17 @@ Partial Class Form1
         Me.board_2_C2.Size = New System.Drawing.Size(65, 21)
         Me.board_2_C2.TabIndex = 12
         '
-        'board_4_R3
+        'board_2_R3
         '
-        Me.board_4_R3.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.board_4_R3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.board_4_R3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.board_4_R3.FormattingEnabled = True
-        Me.board_4_R3.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.board_4_R3.Location = New System.Drawing.Point(258, 196)
-        Me.board_4_R3.Name = "board_4_R3"
-        Me.board_4_R3.Size = New System.Drawing.Size(54, 21)
-        Me.board_4_R3.TabIndex = 6
+        Me.board_2_R3.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.board_2_R3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_R3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.board_2_R3.FormattingEnabled = True
+        Me.board_2_R3.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.board_2_R3.Location = New System.Drawing.Point(258, 196)
+        Me.board_2_R3.Name = "board_2_R3"
+        Me.board_2_R3.Size = New System.Drawing.Size(54, 21)
+        Me.board_2_R3.TabIndex = 6
         '
         'board_2_lbl_R2
         '
@@ -1248,29 +1248,29 @@ Partial Class Form1
         Me.board_2_lbl_R3.TabIndex = 7
         Me.board_2_lbl_R3.Text = "R3"
         '
-        'board_4_R2
+        'board_2_R2
         '
-        Me.board_4_R2.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.board_4_R2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.board_4_R2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.board_4_R2.FormattingEnabled = True
-        Me.board_4_R2.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.board_4_R2.Location = New System.Drawing.Point(108, 122)
-        Me.board_4_R2.Name = "board_4_R2"
-        Me.board_4_R2.Size = New System.Drawing.Size(54, 21)
-        Me.board_4_R2.TabIndex = 10
+        Me.board_2_R2.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.board_2_R2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_R2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.board_2_R2.FormattingEnabled = True
+        Me.board_2_R2.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.board_2_R2.Location = New System.Drawing.Point(108, 122)
+        Me.board_2_R2.Name = "board_2_R2"
+        Me.board_2_R2.Size = New System.Drawing.Size(54, 21)
+        Me.board_2_R2.TabIndex = 10
         '
-        'board_4_R1
+        'board_2_R1
         '
-        Me.board_4_R1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.board_4_R1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.board_4_R1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.board_4_R1.FormattingEnabled = True
-        Me.board_4_R1.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.board_4_R1.Location = New System.Drawing.Point(26, 122)
-        Me.board_4_R1.Name = "board_4_R1"
-        Me.board_4_R1.Size = New System.Drawing.Size(54, 21)
-        Me.board_4_R1.TabIndex = 8
+        Me.board_2_R1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.board_2_R1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_2_R1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.board_2_R1.FormattingEnabled = True
+        Me.board_2_R1.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.board_2_R1.Location = New System.Drawing.Point(26, 122)
+        Me.board_2_R1.Name = "board_2_R1"
+        Me.board_2_R1.Size = New System.Drawing.Size(54, 21)
+        Me.board_2_R1.TabIndex = 8
         '
         'board_2_lbl_R1
         '
@@ -1725,15 +1725,15 @@ Partial Class Form1
     Friend WithEvents board_2_lbl1 As Label
     Friend WithEvents board_2_lbl_C1 As Label
     Friend WithEvents board_2_C1 As ComboBox
-    Friend WithEvents board_4_R4 As ComboBox
+    Friend WithEvents board_2_R4 As ComboBox
     Friend WithEvents board_2_lbl_C2 As Label
-    Friend WithEvents board_2_R4 As Label
+    Friend WithEvents board_2_lbl_R4 As Label
     Friend WithEvents board_2_C2 As ComboBox
-    Friend WithEvents board_4_R3 As ComboBox
+    Friend WithEvents board_2_R3 As ComboBox
     Friend WithEvents board_2_lbl_R2 As Label
     Friend WithEvents board_2_lbl_R3 As Label
-    Friend WithEvents board_4_R2 As ComboBox
-    Friend WithEvents board_4_R1 As ComboBox
+    Friend WithEvents board_2_R2 As ComboBox
+    Friend WithEvents board_2_R1 As ComboBox
     Friend WithEvents board_2_lbl_R1 As Label
     Friend WithEvents board_2_chematic As PictureBox
     Friend WithEvents Board_1 As TabPage

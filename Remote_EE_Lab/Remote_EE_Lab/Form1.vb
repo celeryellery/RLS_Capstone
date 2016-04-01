@@ -321,7 +321,7 @@
 
     'Board 2 Subroutines 
 
-    'Board_3: Serial Message Compiler
+    'Board_2: Serial Message Compiler
     'This subroutine takes the individual board_2 variables and
     'combines them into one string.
     Sub Board_2_Compile_Serial_Message()
@@ -341,14 +341,14 @@
     End Sub
 
     'Board_2: R1 control
-    Private Sub board_4_R1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_4_R1.SelectedIndexChanged
-        If board_4_R1.SelectedIndex = 0 Then
+    Private Sub board_2_R1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_2_R1.SelectedIndexChanged
+        If board_2_R1.SelectedIndex = 0 Then
             Board_2_R1_State = "1"
-        ElseIf board_4_R1.SelectedIndex = 1 Then
+        ElseIf board_2_R1.SelectedIndex = 1 Then
             Board_2_R1_State = "2"
-        ElseIf board_4_R1.SelectedIndex = 2 Then
+        ElseIf board_2_R1.SelectedIndex = 2 Then
             Board_2_R1_State = "3"
-        ElseIf board_4_R1.SelectedIndex = 3 Then
+        ElseIf board_2_R1.SelectedIndex = 3 Then
             Board_2_R1_State = "4"
         Else
             Board_2_R1_State = "5"
@@ -359,14 +359,14 @@
     End Sub
 
     'Board_2: R2 control
-    Private Sub board_4_R2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_4_R2.SelectedIndexChanged
-        If board_4_R2.SelectedIndex = 0 Then
+    Private Sub board_2_R2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_2_R2.SelectedIndexChanged
+        If board_2_R2.SelectedIndex = 0 Then
             Board_2_R2_State = "1"
-        ElseIf board_4_R2.SelectedIndex = 1 Then
+        ElseIf board_2_R2.SelectedIndex = 1 Then
             Board_2_R2_State = "2"
-        ElseIf board_4_R2.SelectedIndex = 2 Then
+        ElseIf board_2_R2.SelectedIndex = 2 Then
             Board_2_R2_State = "3"
-        ElseIf board_4_R2.SelectedIndex = 3 Then
+        ElseIf board_2_R2.SelectedIndex = 3 Then
             Board_2_R2_State = "4"
         Else
             Board_2_R2_State = "5"
@@ -377,14 +377,14 @@
     End Sub
 
     'Board_2: R3 control
-    Private Sub board_4_R3_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_4_R3.SelectedIndexChanged
-        If board_4_R3.SelectedIndex = 0 Then
+    Private Sub board_2_R3_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_2_R3.SelectedIndexChanged
+        If board_2_R3.SelectedIndex = 0 Then
             Board_2_R3_State = "1"
-        ElseIf board_4_R3.SelectedIndex = 1 Then
+        ElseIf board_2_R3.SelectedIndex = 1 Then
             Board_2_R3_State = "2"
-        ElseIf board_4_R3.SelectedIndex = 2 Then
+        ElseIf board_2_R3.SelectedIndex = 2 Then
             Board_2_R3_State = "3"
-        ElseIf board_4_R3.SelectedIndex = 3 Then
+        ElseIf board_2_R3.SelectedIndex = 3 Then
             Board_2_R3_State = "4"
         Else
             Board_2_R3_State = "5"
@@ -395,14 +395,14 @@
     End Sub
 
     'Board_2: R4 control
-    Private Sub board_4_R4_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_4_R4.SelectedIndexChanged
-        If board_4_R4.SelectedIndex = 0 Then
+    Private Sub board_2_R4_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_2_R4.SelectedIndexChanged
+        If board_2_R4.SelectedIndex = 0 Then
             Board_2_R4_State = "1"
-        ElseIf board_4_R4.SelectedIndex = 1 Then
+        ElseIf board_2_R4.SelectedIndex = 1 Then
             Board_2_R4_State = "2"
-        ElseIf board_4_R4.SelectedIndex = 2 Then
+        ElseIf board_2_R4.SelectedIndex = 2 Then
             Board_2_R4_State = "3"
-        ElseIf board_4_R4.SelectedIndex = 3 Then
+        ElseIf board_2_R4.SelectedIndex = 3 Then
             Board_2_R4_State = "4"
         Else
             Board_2_R4_State = "5"
@@ -463,6 +463,44 @@
         Board_2_Compile_Serial_Message()
     End Sub
 
+
+
+
+
+
+
+
+    'Board 4 Subroutines 
+
+    'Board_4: Serial Message Compiler
+    'This subroutine takes the individual board_4 variables and
+    'combines them into one string.
+    Sub Board_4_Compile_Serial_Message()
+        Board_4_Serial_Message = "board_4," +
+                         Board_4_R1_State + "," +
+                         Board_4_Diode1_State + "," +
+                         Board_4_Diode2_State
+        'this statement exists exclusively for debuginng purposes
+        Serial_Text_Test.Text = Board_4_Serial_Message
+        'Change the 'Send Data' button collor to orange, to indicate that
+        'a change in the board configuration has occured.
+        btn_Send_Config.BackColor = Color.Orange
+    End Sub
+
+    'Board 4: R1 control
+    Private Sub board_4_R1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_2_R1.SelectedIndexChanged
+        If board_2_R1.SelectedIndex = 0 Then
+            Board_4_R1_State = "1"
+        ElseIf board_2_R1.SelectedIndex = 1 Then
+            Board_4_R1_State = "2"
+        ElseIf board_2_R1.SelectedIndex = 2 Then
+            Board_4_R1_State = "3"
+        Else
+            Board_4_R1_State = "4"
+        End If
+        'Call the message compiler
+        Board_5_Compile_Serial_Message()
+    End Sub
 
 
 
