@@ -852,7 +852,7 @@ Partial Class Form1
         Me.board_3_R3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.board_3_R3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.board_3_R3.FormattingEnabled = True
-        Me.board_3_R3.Items.AddRange(New Object() {"short (for current mirror only)", "1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.board_3_R3.Items.AddRange(New Object() {"short (for current mirror only)", "1 K", "5.1 K", "10 K", "20 K"})
         Me.board_3_R3.Location = New System.Drawing.Point(377, 320)
         Me.board_3_R3.Name = "board_3_R3"
         Me.board_3_R3.Size = New System.Drawing.Size(166, 21)

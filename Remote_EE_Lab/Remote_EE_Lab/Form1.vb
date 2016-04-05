@@ -209,10 +209,10 @@
 
 
 
-    'Board 2 Subroutines 
+    'Board 1 Subroutines 
 
-    'Board_2: Serial Message Compiler
-    'This subroutine takes the individual board_2 variables and
+    'Board_1: Serial Message Compiler
+    'This subroutine takes the individual board_1 variables and
     'combines them into one string.
     Sub Board_1_Compile_Serial_Message()
         Board_1_Serial_Message = "board_1," + Board_1_R1_State + "," +
@@ -485,6 +485,66 @@
 
 
 
+
+    'Board 3 Subroutines 
+
+    'Board_3: Serial Message Compiler
+    'This subroutine takes the individual board_3 variables and
+    'combines them into one string.
+    Sub Board_3_Compile_Serial_Message()
+        Board_3_Serial_Message = "board_3," +
+                         Board_3_R2_State + "," +
+                         Board_3_R3_State
+        'this statement exists exclusively for debuginng purposes
+        Serial_Text_Test.Text = Board_3_Serial_Message
+        'Change the 'Send Data' button color to orange, to indicate that
+        'a change in the board configuration has occured.
+        btn_Send_Config.BackColor = Color.Orange
+    End Sub
+
+    'Board 3: R2 control
+    Private Sub board_3_R2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_3_R2.SelectedIndexChanged
+        If board_3_R2.SelectedIndex = 0 Then
+            Board_3_R2_State = "1"
+        ElseIf board_3_R2.SelectedIndex = 1 Then
+            Board_3_R2_State = "2"
+        ElseIf board_3_R2.SelectedIndex = 2 Then
+            Board_3_R2_State = "3"
+        ElseIf board_3_R2.SelectedIndex = 3 Then
+            Board_3_R2_State = "4"
+        Else
+            Board_3_R2_State = "5"
+        End If
+        'Call the message compiler
+        Board_3_Compile_Serial_Message()
+    End Sub
+
+    'Board 3: R3 control
+    Private Sub board_3_R3_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_3_R3.SelectedIndexChanged
+        If board_3_R3.SelectedIndex = 0 Then
+            Board_3_R3_State = "1"
+        ElseIf board_3_R3.SelectedIndex = 1 Then
+            Board_3_R3_State = "2"
+        ElseIf board_3_R3.SelectedIndex = 2 Then
+            Board_3_R3_State = "3"
+        ElseIf board_3_R3.SelectedIndex = 3 Then
+            Board_3_R3_State = "4"
+        Else
+            Board_3_R3_State = "5"
+        End If
+        'Call the message compiler
+        Board_3_Compile_Serial_Message()
+    End Sub
+
+
+
+
+
+
+
+
+
+
     'Board 4 Subroutines 
 
     'Board_4: Serial Message Compiler
@@ -613,7 +673,4 @@
 
     End Sub
 
-    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles board4_Diode1_RadioButton2.CheckedChanged
-
-    End Sub
 End Class
