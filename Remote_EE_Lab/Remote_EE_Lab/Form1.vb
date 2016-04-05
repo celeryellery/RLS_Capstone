@@ -25,13 +25,18 @@
     Dim Board_2_Scope_Ch1_gain As String = "01"
     Dim Board_2_Scope_Ch2_gain As String = "01"
 
+    'Declare the variables for Board_3, parts a and b
+    Dim Board_3_Serial_Message As String = "board_3,1,1,1,1,1" 'default message
+    'Dim Board_3_Serial_Message
+
+    'Declare the variables for Board_3b
+    Dim Board_3b_Serial_Message As String = "board_3b,1,1,1,1,1" 'default message
+
     'Declare the variables for Board_4
-    Dim Board_4_Serial_Message As String = "board_4,1,1,1,1,1" 'default message
+    Dim Board_4_Serial_Message As String = "board_4,1,1,1" 'default message
     Dim Board_4_R1_State As String = "1"
-    Dim Board_4_Diode1_RadioButton1_State As String = "0"
-    Dim Board_4_Diode1_RadioButton2_State As String = "0"
-    Dim Board_4_Diode2_RadioButton1_State As String = "0"
-    Dim Board_4_Diode2_RadioButton2_State As String = "0"
+    Dim Board_4_Diode1_State As String = "1" '1 means forward, 0 means backward
+    Dim Board_4_Diode2_State As String = "1" '1 means forward, 0 means backward
 
     'Declare the variables for Board_5
     Dim Board_5_Serial_Message As String = "board_5,1,1,1" 'default message
@@ -39,6 +44,9 @@
     Dim Board_5_R3_State As String = "1"
     Dim Board_5_C1_State As String = "1"
 
+    'Declare the variables for Board_6
+
+    'Declare the variables for Board_7
 
     Private Sub btn_Dev_Test_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Dev_Test.Click
         Shell("C:\Program Files (x86)\Velleman\PcLab2000LT\PcLab2000LT.exe")
@@ -480,10 +488,8 @@
     Sub Board_4_Compile_Serial_Message()
         Board_4_Serial_Message = "board_4," +
                          Board_4_R1_State + "," +
-                         Board_4_Diode1_RadioButton1_State + "," +
-                         Board_4_Diode1_RadioButton2_State + "," +
-                         Board_4_Diode2_RadioButton1_State + "," +
-                         Board_4_Diode2_RadioButton2_State
+                         Board_4_Diode1_State + "," +
+                         Board_4_Diode2_State
         'this statement exists exclusively for debuginng purposes
         Serial_Text_Test.Text = Board_4_Serial_Message
         'Change the 'Send Data' button collor to orange, to indicate that
@@ -509,14 +515,24 @@
     'Board 4: Diode 1 control
     Private Sub board4_Diode1_RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board4_Diode1_RadioButton1.CheckedChanged
         If board4_Diode1_RadioButton1.Checked = True Then
-            Board_4_Diode1_RadioButton1_State = "1"
+            Board_4_Diode1_State = "1"
         Else
-            Board_4_Diode1_RadioButton1_State = "0"
+            Board_4_Diode1_State = "0"
         End If
+        'Call the message compiler
+        Board_4_Compile_Serial_Message()
     End Sub
 
     'Board 4: Diode 2 control
-
+    Private Sub board4_Diode2_RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board4_Diode2_RadioButton1.CheckedChanged
+        If board4_Diode2_RadioButton1.Checked = True Then
+            Board_4_Diode2_State = "1"
+        Else
+            Board_4_Diode2_State = "0"
+        End If
+        'Call the message compiler
+        Board_4_Compile_Serial_Message()
+    End Sub
 
 
 

@@ -67,7 +67,7 @@ Partial Class Form1
         Me.board_5_C1 = New System.Windows.Forms.ComboBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Board4 = New System.Windows.Forms.TabPage()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Diode2 = New System.Windows.Forms.GroupBox()
         Me.board4_Diode2_RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.board4_Diode2_RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Diode1 = New System.Windows.Forms.GroupBox()
@@ -160,7 +160,7 @@ Partial Class Form1
         Me.Board5.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board4.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.Diode2.SuspendLayout()
         Me.Diode1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board3b.SuspendLayout()
@@ -661,7 +661,7 @@ Partial Class Form1
         '
         'Board4
         '
-        Me.Board4.Controls.Add(Me.GroupBox2)
+        Me.Board4.Controls.Add(Me.Diode2)
         Me.Board4.Controls.Add(Me.Diode1)
         Me.Board4.Controls.Add(Me.Label1)
         Me.Board4.Controls.Add(Me.lbl_board_4_status)
@@ -675,16 +675,16 @@ Partial Class Form1
         Me.Board4.Text = "Experiment 4"
         Me.Board4.UseVisualStyleBackColor = True
         '
-        'GroupBox2
+        'Diode2
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox2.Controls.Add(Me.board4_Diode2_RadioButton2)
-        Me.GroupBox2.Controls.Add(Me.board4_Diode2_RadioButton1)
-        Me.GroupBox2.Location = New System.Drawing.Point(445, 278)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(62, 71)
-        Me.GroupBox2.TabIndex = 23
-        Me.GroupBox2.TabStop = False
+        Me.Diode2.BackColor = System.Drawing.Color.Transparent
+        Me.Diode2.Controls.Add(Me.board4_Diode2_RadioButton2)
+        Me.Diode2.Controls.Add(Me.board4_Diode2_RadioButton1)
+        Me.Diode2.Location = New System.Drawing.Point(445, 278)
+        Me.Diode2.Name = "Diode2"
+        Me.Diode2.Size = New System.Drawing.Size(62, 71)
+        Me.Diode2.TabIndex = 23
+        Me.Diode2.TabStop = False
         '
         'board4_Diode2_RadioButton2
         '
@@ -1630,8 +1630,8 @@ Partial Class Form1
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board4.ResumeLayout(False)
         Me.Board4.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.Diode2.ResumeLayout(False)
+        Me.Diode2.PerformLayout()
         Me.Diode1.ResumeLayout(False)
         Me.Diode1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1762,7 +1762,7 @@ Partial Class Form1
     Friend WithEvents lbl_C As Label
     Friend WithEvents Board_1_Image As PictureBox
     Friend WithEvents Board1 As TabControl
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Diode2 As GroupBox
     Friend WithEvents board4_Diode2_RadioButton2 As RadioButton
     Friend WithEvents board4_Diode2_RadioButton1 As RadioButton
     Friend WithEvents Diode1 As GroupBox
