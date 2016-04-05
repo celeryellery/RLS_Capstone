@@ -87,15 +87,6 @@ Partial Class Form1
         Me.ComboBox21 = New System.Windows.Forms.ComboBox()
         Me.ComboBox23 = New System.Windows.Forms.ComboBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.Board3a = New System.Windows.Forms.TabPage()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.lbl_board_3a_status = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Board_2 = New System.Windows.Forms.TabPage()
         Me.lbl_board_2 = New System.Windows.Forms.Label()
         Me.lbl_board_2_status = New System.Windows.Forms.Label()
@@ -166,9 +157,6 @@ Partial Class Form1
         Me.Board3b.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Board3a.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board_2.SuspendLayout()
         Me.board_2_Circuit_Control.SuspendLayout()
         Me.board_2_ch2.SuspendLayout()
@@ -892,103 +880,6 @@ Partial Class Form1
         Me.PictureBox6.TabIndex = 3
         Me.PictureBox6.TabStop = False
         '
-        'Board3a
-        '
-        Me.Board3a.Controls.Add(Me.GroupBox1)
-        Me.Board3a.Controls.Add(Me.Label3)
-        Me.Board3a.Controls.Add(Me.lbl_board_3a_status)
-        Me.Board3a.Controls.Add(Me.ComboBox1)
-        Me.Board3a.Controls.Add(Me.PictureBox2)
-        Me.Board3a.Location = New System.Drawing.Point(4, 22)
-        Me.Board3a.Name = "Board3a"
-        Me.Board3a.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board3a.Size = New System.Drawing.Size(903, 414)
-        Me.Board3a.TabIndex = 3
-        Me.Board3a.Text = "Experiment 3a"
-        Me.Board3a.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(582, 151)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(200, 100)
-        Me.GroupBox1.TabIndex = 18
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Multimeter Reading"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(7, 62)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(141, 23)
-        Me.Button2.TabIndex = 20
-        Me.Button2.Text = "Refresh Output"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(154, 37)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(22, 13)
-        Me.Label5.TabIndex = 19
-        Me.Label5.Text = "mA"
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(6, 34)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(142, 21)
-        Me.RichTextBox1.TabIndex = 3
-        Me.RichTextBox1.Text = ""
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(271, 17)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 13)
-        Me.Label3.TabIndex = 17
-        Me.Label3.Text = "Current Mirror"
-        '
-        'lbl_board_3a_status
-        '
-        Me.lbl_board_3a_status.AutoSize = True
-        Me.lbl_board_3a_status.BackColor = System.Drawing.Color.Red
-        Me.lbl_board_3a_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_board_3a_status.ForeColor = System.Drawing.Color.White
-        Me.lbl_board_3a_status.Location = New System.Drawing.Point(6, 26)
-        Me.lbl_board_3a_status.Name = "lbl_board_3a_status"
-        Me.lbl_board_3a_status.Size = New System.Drawing.Size(47, 15)
-        Me.lbl_board_3a_status.TabIndex = 16
-        Me.lbl_board_3a_status.Text = "Inactive"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.ComboBox1.Location = New System.Drawing.Point(373, 151)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(54, 21)
-        Me.ComboBox1.TabIndex = 4
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.ErrorImage = CType(resources.GetObject("PictureBox2.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(86, 58)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(476, 340)
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
-        '
         'Board_2
         '
         Me.Board_2.Controls.Add(Me.lbl_board_2)
@@ -1593,7 +1484,6 @@ Partial Class Form1
         Me.Board1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Board1.Controls.Add(Me.Board_1)
         Me.Board1.Controls.Add(Me.Board_2)
-        Me.Board1.Controls.Add(Me.Board3a)
         Me.Board1.Controls.Add(Me.Board3b)
         Me.Board1.Controls.Add(Me.Board4)
         Me.Board1.Controls.Add(Me.Board5)
@@ -1640,11 +1530,6 @@ Partial Class Form1
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Board3a.ResumeLayout(False)
-        Me.Board3a.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board_2.ResumeLayout(False)
         Me.Board_2.PerformLayout()
         Me.board_2_Circuit_Control.ResumeLayout(False)
@@ -1702,11 +1587,6 @@ Partial Class Form1
     Friend WithEvents ComboBox21 As ComboBox
     Friend WithEvents ComboBox23 As ComboBox
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents Board3a As TabPage
-    Friend WithEvents Label3 As Label
-    Friend WithEvents lbl_board_3a_status As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Board_2 As TabPage
     Friend WithEvents lbl_board_2 As Label
     Friend WithEvents lbl_board_2_status As Label
@@ -1788,10 +1668,6 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents RichTextBox2 As RichTextBox
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label5 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
 
     Public Sub New()
 
