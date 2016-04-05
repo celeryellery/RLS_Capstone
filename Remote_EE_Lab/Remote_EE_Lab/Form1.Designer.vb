@@ -142,6 +142,8 @@ Partial Class Form1
         Me.lbl_C = New System.Windows.Forms.Label()
         Me.Board_1_Image = New System.Windows.Forms.PictureBox()
         Me.Board1 = New System.Windows.Forms.TabControl()
+        Me.ResetZ80 = New System.Windows.Forms.GroupBox()
+        Me.ResetZ80_Button = New System.Windows.Forms.Button()
         Me.CommControlGroup.SuspendLayout()
         Me.Board7.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -168,6 +170,7 @@ Partial Class Form1
         Me.brd_1_ch1.SuspendLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board1.SuspendLayout()
+        Me.ResetZ80.SuspendLayout()
         Me.SuspendLayout()
         '
         'board_detect
@@ -499,6 +502,7 @@ Partial Class Form1
         '
         'Board6
         '
+        Me.Board6.Controls.Add(Me.ResetZ80)
         Me.Board6.Controls.Add(Me.SelectProgram)
         Me.Board6.Controls.Add(Me.Label19)
         Me.Board6.Controls.Add(Me.lbl_board_6_status)
@@ -1495,6 +1499,25 @@ Partial Class Form1
         Me.Board1.Size = New System.Drawing.Size(911, 440)
         Me.Board1.TabIndex = 5
         '
+        'ResetZ80
+        '
+        Me.ResetZ80.Controls.Add(Me.ResetZ80_Button)
+        Me.ResetZ80.Location = New System.Drawing.Point(736, 214)
+        Me.ResetZ80.Name = "ResetZ80"
+        Me.ResetZ80.Size = New System.Drawing.Size(109, 78)
+        Me.ResetZ80.TabIndex = 19
+        Me.ResetZ80.TabStop = False
+        Me.ResetZ80.Text = "Reset Z80"
+        '
+        'ResetZ80_Button
+        '
+        Me.ResetZ80_Button.Location = New System.Drawing.Point(6, 32)
+        Me.ResetZ80_Button.Name = "ResetZ80_Button"
+        Me.ResetZ80_Button.Size = New System.Drawing.Size(97, 23)
+        Me.ResetZ80_Button.TabIndex = 0
+        Me.ResetZ80_Button.Text = "Reset"
+        Me.ResetZ80_Button.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1547,6 +1570,7 @@ Partial Class Form1
         Me.brd_1_ch1.PerformLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board1.ResumeLayout(False)
+        Me.ResetZ80.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1679,4 +1703,7 @@ Partial Class Form1
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
+
+    Friend WithEvents ResetZ80 As GroupBox
+    Friend WithEvents ResetZ80_Button As Button
 End Class
