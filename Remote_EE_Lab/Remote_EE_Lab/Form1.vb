@@ -25,12 +25,10 @@
     Dim Board_2_Scope_Ch1_gain As String = "01"
     Dim Board_2_Scope_Ch2_gain As String = "01"
 
-    'Declare the variables for Board_3, parts a and b
-    Dim Board_3_Serial_Message As String = "board_3,1,1,1,1,1" 'default message
-    'Dim Board_3_Serial_Message
-
-    'Declare the variables for Board_3b
-    Dim Board_3b_Serial_Message As String = "board_3b,1,1,1,1,1" 'default message
+    'Declare the variables for Board_3
+    Dim Board_3_Serial_Message As String = "board_3,1,1" 'default message
+    Dim Board_3_R2_State As String = "1"
+    Dim Board_3_R3_State As String = "1"
 
     'Declare the variables for Board_4
     Dim Board_4_Serial_Message As String = "board_4,1,1,1" 'default message
@@ -99,16 +97,23 @@
                     lbl_board_2_status.BackColor = Color.Green
                     lbl_board_2_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
+                Case "00000011" 'Daughterboard 3: Current Mirror or Widlar Reducing Current Source
+                    'do something
+                    Board1.SelectTab(2)
+                    Deactivate()
+                    lbl_board_3_status.BackColor = Color.Green
+                    lbl_board_3_status.Text = "Active"
+                    Serial_Text_Test.Text = Board_IDNFR
                 Case "00000100" 'Daughterboard 4: Half-Wave Rectifier
                     ' do something
-                    Board1.SelectTab(4)
+                    Board1.SelectTab(3)
                     Deactivate()
                     lbl_board_4_status.BackColor = Color.Green
                     lbl_board_4_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "00000101" 'Daughterboard 5: Integrator/Low-Pass Filter
                     'do something
-                    Board1.SelectTab(5)
+                    Board1.SelectTab(4)
                     Deactivate()
                     lbl_board_5_status.BackColor = Color.Green
                     lbl_board_5_status.Text = "Active"
@@ -128,10 +133,8 @@
         lbl_board_1_status.Text = "Inactive"
         lbl_board_2_status.BackColor = Color.Red
         lbl_board_2_status.Text = "Inactive"
-        lbl_board_3a_status.BackColor = Color.Red
-        lbl_board_3a_status.Text = "Inactive"
-        lbl_board_3b_status.BackColor = Color.Red
-        lbl_board_3b_status.Text = "Inactive"
+        lbl_board_3_status.BackColor = Color.Red
+        lbl_board_3_status.Text = "Inactive"
         lbl_board_4_status.BackColor = Color.Red
         lbl_board_4_status.Text = "Inactive"
         lbl_board_5_status.BackColor = Color.Red
@@ -173,6 +176,8 @@
                     Serial_Message = Board_1_Serial_Message
                 Case "00000010"
                     Serial_Message = Board_2_Serial_Message
+                Case "00000011"
+                    Serial_Message = Board_3_Serial_Message
                 Case "00000100"
                     Serial_Message = Board_4_Serial_Message
                 Case "00000101"
@@ -206,7 +211,7 @@
 
     'Board 2 Subroutines 
 
-    'Board_3: Serial Message Compiler
+    'Board_2: Serial Message Compiler
     'This subroutine takes the individual board_2 variables and
     'combines them into one string.
     Sub Board_1_Compile_Serial_Message()

@@ -77,15 +77,15 @@ Partial Class Form1
         Me.lbl_board_4_status = New System.Windows.Forms.Label()
         Me.board_4_R1 = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Board3b = New System.Windows.Forms.TabPage()
+        Me.Board3 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.board_3_multimeter_refresh = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.board_3_multimeter_output = New System.Windows.Forms.RichTextBox()
         Me.Label31 = New System.Windows.Forms.Label()
-        Me.lbl_board_3b_status = New System.Windows.Forms.Label()
-        Me.ComboBox21 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox23 = New System.Windows.Forms.ComboBox()
+        Me.lbl_board_3_status = New System.Windows.Forms.Label()
+        Me.board_3_R3 = New System.Windows.Forms.ComboBox()
+        Me.board_3_R2 = New System.Windows.Forms.ComboBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Board_2 = New System.Windows.Forms.TabPage()
         Me.lbl_board_2 = New System.Windows.Forms.Label()
@@ -154,7 +154,7 @@ Partial Class Form1
         Me.Diode2.SuspendLayout()
         Me.Diode1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Board3b.SuspendLayout()
+        Me.Board3.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board_2.SuspendLayout()
@@ -771,42 +771,42 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
-        'Board3b
+        'Board3
         '
-        Me.Board3b.Controls.Add(Me.GroupBox3)
-        Me.Board3b.Controls.Add(Me.Label31)
-        Me.Board3b.Controls.Add(Me.lbl_board_3b_status)
-        Me.Board3b.Controls.Add(Me.ComboBox21)
-        Me.Board3b.Controls.Add(Me.ComboBox23)
-        Me.Board3b.Controls.Add(Me.PictureBox6)
-        Me.Board3b.Location = New System.Drawing.Point(4, 22)
-        Me.Board3b.Name = "Board3b"
-        Me.Board3b.Padding = New System.Windows.Forms.Padding(3)
-        Me.Board3b.Size = New System.Drawing.Size(903, 414)
-        Me.Board3b.TabIndex = 7
-        Me.Board3b.Text = "Experiment 3b"
-        Me.Board3b.UseVisualStyleBackColor = True
+        Me.Board3.Controls.Add(Me.GroupBox3)
+        Me.Board3.Controls.Add(Me.Label31)
+        Me.Board3.Controls.Add(Me.lbl_board_3_status)
+        Me.Board3.Controls.Add(Me.board_3_R3)
+        Me.Board3.Controls.Add(Me.board_3_R2)
+        Me.Board3.Controls.Add(Me.PictureBox6)
+        Me.Board3.Location = New System.Drawing.Point(4, 22)
+        Me.Board3.Name = "Board3"
+        Me.Board3.Padding = New System.Windows.Forms.Padding(3)
+        Me.Board3.Size = New System.Drawing.Size(903, 414)
+        Me.Board3.TabIndex = 7
+        Me.Board3.Text = "Experiment 3"
+        Me.Board3.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.Button3)
+        Me.GroupBox3.Controls.Add(Me.board_3_multimeter_refresh)
         Me.GroupBox3.Controls.Add(Me.Label6)
-        Me.GroupBox3.Controls.Add(Me.RichTextBox2)
-        Me.GroupBox3.Location = New System.Drawing.Point(551, 151)
+        Me.GroupBox3.Controls.Add(Me.board_3_multimeter_output)
+        Me.GroupBox3.Location = New System.Drawing.Point(586, 151)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(200, 100)
         Me.GroupBox3.TabIndex = 19
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Multimeter Reading"
         '
-        'Button3
+        'board_3_multimeter_refresh
         '
-        Me.Button3.Location = New System.Drawing.Point(7, 62)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(141, 23)
-        Me.Button3.TabIndex = 20
-        Me.Button3.Text = "Refresh Output"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.board_3_multimeter_refresh.Location = New System.Drawing.Point(7, 62)
+        Me.board_3_multimeter_refresh.Name = "board_3_multimeter_refresh"
+        Me.board_3_multimeter_refresh.Size = New System.Drawing.Size(141, 23)
+        Me.board_3_multimeter_refresh.TabIndex = 20
+        Me.board_3_multimeter_refresh.Text = "Refresh Output"
+        Me.board_3_multimeter_refresh.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -817,58 +817,58 @@ Partial Class Form1
         Me.Label6.TabIndex = 19
         Me.Label6.Text = "mA"
         '
-        'RichTextBox2
+        'board_3_multimeter_output
         '
-        Me.RichTextBox2.Location = New System.Drawing.Point(6, 34)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(142, 21)
-        Me.RichTextBox2.TabIndex = 3
-        Me.RichTextBox2.Text = ""
+        Me.board_3_multimeter_output.Location = New System.Drawing.Point(6, 34)
+        Me.board_3_multimeter_output.Name = "board_3_multimeter_output"
+        Me.board_3_multimeter_output.Size = New System.Drawing.Size(142, 21)
+        Me.board_3_multimeter_output.TabIndex = 3
+        Me.board_3_multimeter_output.Text = ""
         '
         'Label31
         '
         Me.Label31.AutoSize = True
         Me.Label31.Location = New System.Drawing.Point(271, 17)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(160, 13)
+        Me.Label31.Size = New System.Drawing.Size(238, 13)
         Me.Label31.TabIndex = 17
-        Me.Label31.Text = "Widlar Reducing Current Source"
+        Me.Label31.Text = "Current Mirror or Widlar Reducing Current Source"
         '
-        'lbl_board_3b_status
+        'lbl_board_3_status
         '
-        Me.lbl_board_3b_status.AutoSize = True
-        Me.lbl_board_3b_status.BackColor = System.Drawing.Color.Red
-        Me.lbl_board_3b_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_board_3b_status.ForeColor = System.Drawing.Color.White
-        Me.lbl_board_3b_status.Location = New System.Drawing.Point(6, 26)
-        Me.lbl_board_3b_status.Name = "lbl_board_3b_status"
-        Me.lbl_board_3b_status.Size = New System.Drawing.Size(47, 15)
-        Me.lbl_board_3b_status.TabIndex = 16
-        Me.lbl_board_3b_status.Text = "Inactive"
+        Me.lbl_board_3_status.AutoSize = True
+        Me.lbl_board_3_status.BackColor = System.Drawing.Color.Red
+        Me.lbl_board_3_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_board_3_status.ForeColor = System.Drawing.Color.White
+        Me.lbl_board_3_status.Location = New System.Drawing.Point(6, 26)
+        Me.lbl_board_3_status.Name = "lbl_board_3_status"
+        Me.lbl_board_3_status.Size = New System.Drawing.Size(47, 15)
+        Me.lbl_board_3_status.TabIndex = 16
+        Me.lbl_board_3_status.Text = "Inactive"
         '
-        'ComboBox21
+        'board_3_R3
         '
-        Me.ComboBox21.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox21.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox21.FormattingEnabled = True
-        Me.ComboBox21.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.ComboBox21.Location = New System.Drawing.Point(377, 320)
-        Me.ComboBox21.Name = "ComboBox21"
-        Me.ComboBox21.Size = New System.Drawing.Size(54, 21)
-        Me.ComboBox21.TabIndex = 4
+        Me.board_3_R3.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.board_3_R3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_3_R3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.board_3_R3.FormattingEnabled = True
+        Me.board_3_R3.Items.AddRange(New Object() {"short (for current mirror only)", "1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.board_3_R3.Location = New System.Drawing.Point(377, 320)
+        Me.board_3_R3.Name = "board_3_R3"
+        Me.board_3_R3.Size = New System.Drawing.Size(166, 21)
+        Me.board_3_R3.TabIndex = 4
         '
-        'ComboBox23
+        'board_3_R2
         '
-        Me.ComboBox23.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox23.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox23.FormattingEnabled = True
-        Me.ComboBox23.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
-        Me.ComboBox23.Location = New System.Drawing.Point(377, 151)
-        Me.ComboBox23.Name = "ComboBox23"
-        Me.ComboBox23.Size = New System.Drawing.Size(54, 21)
-        Me.ComboBox23.TabIndex = 6
+        Me.board_3_R2.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.board_3_R2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.board_3_R2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.board_3_R2.FormattingEnabled = True
+        Me.board_3_R2.Items.AddRange(New Object() {"1 K", "5.1 K", "10 K", "20 K", "27 K"})
+        Me.board_3_R2.Location = New System.Drawing.Point(377, 151)
+        Me.board_3_R2.Name = "board_3_R2"
+        Me.board_3_R2.Size = New System.Drawing.Size(54, 21)
+        Me.board_3_R2.TabIndex = 6
         '
         'PictureBox6
         '
@@ -876,7 +876,7 @@ Partial Class Form1
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
         Me.PictureBox6.Location = New System.Drawing.Point(81, 54)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(464, 348)
+        Me.PictureBox6.Size = New System.Drawing.Size(482, 348)
         Me.PictureBox6.TabIndex = 3
         Me.PictureBox6.TabStop = False
         '
@@ -1484,7 +1484,7 @@ Partial Class Form1
         Me.Board1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Board1.Controls.Add(Me.Board_1)
         Me.Board1.Controls.Add(Me.Board_2)
-        Me.Board1.Controls.Add(Me.Board3b)
+        Me.Board1.Controls.Add(Me.Board3)
         Me.Board1.Controls.Add(Me.Board4)
         Me.Board1.Controls.Add(Me.Board5)
         Me.Board1.Controls.Add(Me.Board6)
@@ -1525,8 +1525,8 @@ Partial Class Form1
         Me.Diode1.ResumeLayout(False)
         Me.Diode1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Board3b.ResumeLayout(False)
-        Me.Board3b.PerformLayout()
+        Me.Board3.ResumeLayout(False)
+        Me.Board3.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1581,11 +1581,11 @@ Partial Class Form1
     Friend WithEvents lbl_board_4_status As Label
     Friend WithEvents board_4_R1 As ComboBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Board3b As TabPage
+    Friend WithEvents Board3 As TabPage
     Friend WithEvents Label31 As Label
-    Friend WithEvents lbl_board_3b_status As Label
-    Friend WithEvents ComboBox21 As ComboBox
-    Friend WithEvents ComboBox23 As ComboBox
+    Friend WithEvents lbl_board_3_status As Label
+    Friend WithEvents board_3_R3 As ComboBox
+    Friend WithEvents board_3_R2 As ComboBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents Board_2 As TabPage
     Friend WithEvents lbl_board_2 As Label
@@ -1665,9 +1665,9 @@ Partial Class Form1
     Friend WithEvents ComboBox15 As ComboBox
     Friend WithEvents ComboBox13 As ComboBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Button3 As Button
+    Friend WithEvents board_3_multimeter_refresh As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents board_3_multimeter_output As RichTextBox
 
     Public Sub New()
 
