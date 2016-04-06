@@ -2,7 +2,7 @@
     Dim Serial_Message As String = "test_message"
     Dim boardID As String = "null"
     Dim temp_read As String = "null"
-    Dim USB_port As String = "COM3"
+    Dim USB_port As String = "COM4"
 
     'Declare the variables for Board_1
     Dim Board_1_Serial_Message As String = "board_1,01,1,4,4,01,01" 'default message
@@ -77,7 +77,7 @@
 
     Sub Panel_Enable(ByVal board As String)
         Try
-            Dim Board_IDNFR As String = board.Substring(19, 8)
+            Dim Board_IDNFR As String = board.Substring(9, 8) 'CHANGE BACK TO (19,8) LATER THIS IS VERY IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             Select Case Board_IDNFR
                 Case "00000000"
                     'do something
@@ -165,7 +165,7 @@
         End Try
 
         Try
-            Select Case boardID.Substring(19, 8)
+            Select Case boardID.Substring(9, 8) 'CHANGE BACK TO (19,8) LATER THIS IS VERY IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 Case "00000000"
                     lbl_board_1_status.BackColor = Color.Red
                     lbl_board_1_status.Text = "Inactive"
