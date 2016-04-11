@@ -77,7 +77,7 @@
 
     Sub Panel_Enable(ByVal board As String)
         Try
-            Dim Board_IDNFR As String = board.Substring(19, 8)
+            Dim Board_IDNFR As String = board.Substring(9, 8)
             Select Case Board_IDNFR
                 Case "00000000"
                     'do something
@@ -165,7 +165,7 @@
         End Try
 
         Try
-            Select Case boardID.Substring(19, 8)
+            Select Case boardID.Substring(9, 8)
                 Case "00000000"
                     lbl_board_1_status.BackColor = Color.Red
                     lbl_board_1_status.Text = "Inactive"
