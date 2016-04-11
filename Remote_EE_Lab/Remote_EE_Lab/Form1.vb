@@ -43,8 +43,26 @@
     Dim Board_5_C1_State As String = "1"
 
     'Declare the variables for Board_6
+    Dim Board_6_Serial_Message As String = "board_6,1" 'default message
+    Dim ProgramSelector_State As String = "1" 'default value
 
     'Declare the variables for Board_7
+    Dim Board_7_Serial_Message As String = "board_7,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" 'default message
+    Dim Board_7_Preset_D8_State = "1"
+    Dim Board_7_Preset_D7_State = "1"
+    Dim Board_7_Preset_D6_State = "1"
+    Dim Board_7_Preset_D5_State = "1"
+    Dim Board_7_Preset_D4_State = "1"
+    Dim Board_7_Preset_D3_State = "1"
+    Dim Board_7_Preset_D2_State = "1"
+    Dim Board_7_Preset_D1_State = "1"
+    Dim Board_7_Connect_XOR_7_State = "1"
+    Dim Board_7_Connect_XOR_6_State = "1"
+    Dim Board_7_Connect_XOR_5_State = "1"
+    Dim Board_7_Connect_XOR_4_State = "1"
+    Dim Board_7_Connect_XOR_3_State = "1"
+    Dim Board_7_Connect_XOR_2_State = "1"
+    Dim Board_7_Connect_XOR_1_State = "1"
 
     Private Sub btn_Dev_Test_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Dev_Test.Click
         Shell("C:\Program Files (x86)\Velleman\PcLab2000LT\PcLab2000LT.exe")
@@ -77,7 +95,7 @@
 
     Sub Panel_Enable(ByVal board As String)
         Try
-            Dim Board_IDNFR As String = board.Substring(9, 8)
+            Dim Board_IDNFR As String = board.Substring(9, 8) 'If there is a problem transmitting board ID, it's likely to be due to the indices of this substring
             Select Case Board_IDNFR
                 Case "00000000"
                     'do something
@@ -114,6 +132,20 @@
                 Case "00000101" 'Daughterboard 5: Integrator/Low-Pass Filter
                     'do something
                     Board1.SelectTab(4)
+                    Deactivate()
+                    lbl_board_5_status.BackColor = Color.Green
+                    lbl_board_5_status.Text = "Active"
+                    Serial_Text_Test.Text = Board_IDNFR
+                Case "00000110" 'Daughterboard 6: Debugging a Z80 circuit
+                    'do something
+                    Board1.SelectTab(5)
+                    Deactivate()
+                    lbl_board_5_status.BackColor = Color.Green
+                    lbl_board_5_status.Text = "Active"
+                    Serial_Text_Test.Text = Board_IDNFR
+                Case "00000111" 'Daughterboard 7: Learning to use the Logic Analyzer with Flipflops
+                    'do something
+                    Board1.SelectTab(6)
                     Deactivate()
                     lbl_board_5_status.BackColor = Color.Green
                     lbl_board_5_status.Text = "Active"
@@ -165,7 +197,7 @@
         End Try
 
         Try
-            Select Case boardID.Substring(9, 8)
+            Select Case boardID.Substring(9, 8) 'If there is a problem transmitting board ID, it's likely to be due to the indices of this substring
                 Case "00000000"
                     lbl_board_1_status.BackColor = Color.Red
                     lbl_board_1_status.Text = "Inactive"
@@ -182,6 +214,10 @@
                     Serial_Message = Board_4_Serial_Message
                 Case "00000101"
                     Serial_Message = Board_5_Serial_Message
+                Case "00000110"
+                    Serial_Message = Board_6_Serial_Message
+                Case "00000111"
+                    Serial_Message = Board_7_Serial_Message
                 Case Else
                     'don't do anything
                     Serial_Text_Test.Text = "WARNING: No board is present"
