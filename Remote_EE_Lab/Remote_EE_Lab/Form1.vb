@@ -2,7 +2,7 @@
     Dim Serial_Message As String = "test_message"
     Dim boardID As String = "null"
     Dim temp_read As String = "null"
-    Dim USB_port As String = "COM3"
+    Dim USB_port As String = "COM12"
 
     'Declare the variables for Board_1
     Dim Board_1_Serial_Message As String = "board_1,01,1,4,4,01,01" 'default message
@@ -665,7 +665,7 @@
 
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Clear.Click
 
     End Sub
 
@@ -673,4 +673,7 @@
 
     End Sub
 
+    Private Sub Board7_Click(sender As Object, e As EventArgs) Handles Board7.Click
+
+    End Sub
 End Class

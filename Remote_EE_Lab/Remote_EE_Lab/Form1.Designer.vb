@@ -34,26 +34,21 @@ Partial Class Form1
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.Board7 = New System.Windows.Forms.TabPage()
-        Me.ComboBox22 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox17 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox16 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox15 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Clear = New System.Windows.Forms.Button()
+        Me.PresetD1 = New System.Windows.Forms.ComboBox()
+        Me.PresetD2 = New System.Windows.Forms.ComboBox()
+        Me.PresetD3 = New System.Windows.Forms.ComboBox()
+        Me.PresetD4 = New System.Windows.Forms.ComboBox()
+        Me.PresetD5 = New System.Windows.Forms.ComboBox()
+        Me.PresetD6 = New System.Windows.Forms.ComboBox()
+        Me.PresetD7 = New System.Windows.Forms.ComboBox()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.lbl_board_7_status = New System.Windows.Forms.Label()
-        Me.ComboBox19 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox20 = New System.Windows.Forms.ComboBox()
+        Me.PresetD8 = New System.Windows.Forms.ComboBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Board6 = New System.Windows.Forms.TabPage()
+        Me.ResetZ80 = New System.Windows.Forms.GroupBox()
+        Me.ResetZ80_Button = New System.Windows.Forms.Button()
         Me.SelectProgram = New System.Windows.Forms.GroupBox()
         Me.ComboBox14 = New System.Windows.Forms.ComboBox()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -142,12 +137,32 @@ Partial Class Form1
         Me.lbl_C = New System.Windows.Forms.Label()
         Me.Board_1_Image = New System.Windows.Forms.PictureBox()
         Me.Board1 = New System.Windows.Forms.TabControl()
-        Me.ResetZ80 = New System.Windows.Forms.GroupBox()
-        Me.ResetZ80_Button = New System.Windows.Forms.Button()
+        Me.ConnectXOR7 = New System.Windows.Forms.RadioButton()
+        Me.BypassXOR7 = New System.Windows.Forms.RadioButton()
+        Me.XOR7 = New System.Windows.Forms.GroupBox()
+        Me.XOR6 = New System.Windows.Forms.GroupBox()
+        Me.ConnectXOR6 = New System.Windows.Forms.RadioButton()
+        Me.BypassXOR6 = New System.Windows.Forms.RadioButton()
+        Me.XOR5 = New System.Windows.Forms.GroupBox()
+        Me.ConnectXOR5 = New System.Windows.Forms.RadioButton()
+        Me.BypassXOR5 = New System.Windows.Forms.RadioButton()
+        Me.XOR4 = New System.Windows.Forms.GroupBox()
+        Me.ConnectXOR4 = New System.Windows.Forms.RadioButton()
+        Me.BypassXOR4 = New System.Windows.Forms.RadioButton()
+        Me.XOR3 = New System.Windows.Forms.GroupBox()
+        Me.ConnectXOR3 = New System.Windows.Forms.RadioButton()
+        Me.BypassXOR3 = New System.Windows.Forms.RadioButton()
+        Me.XOR2 = New System.Windows.Forms.GroupBox()
+        Me.ConnectXOR2 = New System.Windows.Forms.RadioButton()
+        Me.BypassXOR2 = New System.Windows.Forms.RadioButton()
+        Me.XOR1 = New System.Windows.Forms.GroupBox()
+        Me.ConnectXOR1 = New System.Windows.Forms.RadioButton()
+        Me.BypassXOR1 = New System.Windows.Forms.RadioButton()
         Me.CommControlGroup.SuspendLayout()
         Me.Board7.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board6.SuspendLayout()
+        Me.ResetZ80.SuspendLayout()
         Me.SelectProgram.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board5.SuspendLayout()
@@ -170,7 +185,13 @@ Partial Class Form1
         Me.brd_1_ch1.SuspendLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board1.SuspendLayout()
-        Me.ResetZ80.SuspendLayout()
+        Me.XOR7.SuspendLayout()
+        Me.XOR6.SuspendLayout()
+        Me.XOR5.SuspendLayout()
+        Me.XOR4.SuspendLayout()
+        Me.XOR3.SuspendLayout()
+        Me.XOR2.SuspendLayout()
+        Me.XOR1.SuspendLayout()
         Me.SuspendLayout()
         '
         'board_detect
@@ -253,24 +274,24 @@ Partial Class Form1
         '
         'Board7
         '
-        Me.Board7.Controls.Add(Me.ComboBox22)
-        Me.Board7.Controls.Add(Me.ComboBox18)
-        Me.Board7.Controls.Add(Me.ComboBox17)
-        Me.Board7.Controls.Add(Me.ComboBox16)
-        Me.Board7.Controls.Add(Me.ComboBox15)
-        Me.Board7.Controls.Add(Me.ComboBox13)
-        Me.Board7.Controls.Add(Me.Button1)
-        Me.Board7.Controls.Add(Me.ComboBox11)
-        Me.Board7.Controls.Add(Me.ComboBox7)
-        Me.Board7.Controls.Add(Me.ComboBox6)
-        Me.Board7.Controls.Add(Me.ComboBox5)
-        Me.Board7.Controls.Add(Me.ComboBox4)
-        Me.Board7.Controls.Add(Me.ComboBox3)
-        Me.Board7.Controls.Add(Me.ComboBox2)
+        Me.Board7.Controls.Add(Me.XOR1)
+        Me.Board7.Controls.Add(Me.XOR2)
+        Me.Board7.Controls.Add(Me.XOR3)
+        Me.Board7.Controls.Add(Me.XOR4)
+        Me.Board7.Controls.Add(Me.XOR5)
+        Me.Board7.Controls.Add(Me.XOR6)
+        Me.Board7.Controls.Add(Me.XOR7)
+        Me.Board7.Controls.Add(Me.Clear)
+        Me.Board7.Controls.Add(Me.PresetD1)
+        Me.Board7.Controls.Add(Me.PresetD2)
+        Me.Board7.Controls.Add(Me.PresetD3)
+        Me.Board7.Controls.Add(Me.PresetD4)
+        Me.Board7.Controls.Add(Me.PresetD5)
+        Me.Board7.Controls.Add(Me.PresetD6)
+        Me.Board7.Controls.Add(Me.PresetD7)
         Me.Board7.Controls.Add(Me.Label25)
         Me.Board7.Controls.Add(Me.lbl_board_7_status)
-        Me.Board7.Controls.Add(Me.ComboBox19)
-        Me.Board7.Controls.Add(Me.ComboBox20)
+        Me.Board7.Controls.Add(Me.PresetD8)
         Me.Board7.Controls.Add(Me.PictureBox5)
         Me.Board7.Location = New System.Drawing.Point(4, 22)
         Me.Board7.Name = "Board7"
@@ -280,170 +301,98 @@ Partial Class Form1
         Me.Board7.Text = "Experiment 7"
         Me.Board7.UseVisualStyleBackColor = True
         '
-        'ComboBox22
+        'Clear
         '
-        Me.ComboBox22.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox22.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox22.FormattingEnabled = True
-        Me.ComboBox22.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
-        Me.ComboBox22.Location = New System.Drawing.Point(1019, 222)
-        Me.ComboBox22.Name = "ComboBox22"
-        Me.ComboBox22.Size = New System.Drawing.Size(96, 21)
-        Me.ComboBox22.TabIndex = 31
+        Me.Clear.Location = New System.Drawing.Point(75, 284)
+        Me.Clear.Name = "Clear"
+        Me.Clear.Size = New System.Drawing.Size(41, 32)
+        Me.Clear.TabIndex = 25
+        Me.Clear.Text = "Clear"
+        Me.Clear.UseVisualStyleBackColor = True
         '
-        'ComboBox18
+        'PresetD1
         '
-        Me.ComboBox18.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox18.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox18.FormattingEnabled = True
-        Me.ComboBox18.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
-        Me.ComboBox18.Location = New System.Drawing.Point(868, 222)
-        Me.ComboBox18.Name = "ComboBox18"
-        Me.ComboBox18.Size = New System.Drawing.Size(96, 21)
-        Me.ComboBox18.TabIndex = 30
+        Me.PresetD1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.PresetD1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PresetD1.FormattingEnabled = True
+        Me.PresetD1.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD1.Location = New System.Drawing.Point(1205, 121)
+        Me.PresetD1.Name = "PresetD1"
+        Me.PresetD1.Size = New System.Drawing.Size(40, 21)
+        Me.PresetD1.TabIndex = 24
         '
-        'ComboBox17
+        'PresetD2
         '
-        Me.ComboBox17.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox17.FormattingEnabled = True
-        Me.ComboBox17.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
-        Me.ComboBox17.Location = New System.Drawing.Point(709, 222)
-        Me.ComboBox17.Name = "ComboBox17"
-        Me.ComboBox17.Size = New System.Drawing.Size(96, 21)
-        Me.ComboBox17.TabIndex = 29
+        Me.PresetD2.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.PresetD2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PresetD2.FormattingEnabled = True
+        Me.PresetD2.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD2.Location = New System.Drawing.Point(1044, 121)
+        Me.PresetD2.Name = "PresetD2"
+        Me.PresetD2.Size = New System.Drawing.Size(40, 21)
+        Me.PresetD2.TabIndex = 23
         '
-        'ComboBox16
+        'PresetD3
         '
-        Me.ComboBox16.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox16.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox16.FormattingEnabled = True
-        Me.ComboBox16.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
-        Me.ComboBox16.Location = New System.Drawing.Point(559, 222)
-        Me.ComboBox16.Name = "ComboBox16"
-        Me.ComboBox16.Size = New System.Drawing.Size(96, 21)
-        Me.ComboBox16.TabIndex = 28
+        Me.PresetD3.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.PresetD3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PresetD3.FormattingEnabled = True
+        Me.PresetD3.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD3.Location = New System.Drawing.Point(884, 121)
+        Me.PresetD3.Name = "PresetD3"
+        Me.PresetD3.Size = New System.Drawing.Size(40, 21)
+        Me.PresetD3.TabIndex = 22
         '
-        'ComboBox15
+        'PresetD4
         '
-        Me.ComboBox15.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox15.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox15.FormattingEnabled = True
-        Me.ComboBox15.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
-        Me.ComboBox15.Location = New System.Drawing.Point(415, 222)
-        Me.ComboBox15.Name = "ComboBox15"
-        Me.ComboBox15.Size = New System.Drawing.Size(96, 21)
-        Me.ComboBox15.TabIndex = 27
+        Me.PresetD4.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.PresetD4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PresetD4.FormattingEnabled = True
+        Me.PresetD4.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD4.Location = New System.Drawing.Point(721, 121)
+        Me.PresetD4.Name = "PresetD4"
+        Me.PresetD4.Size = New System.Drawing.Size(40, 21)
+        Me.PresetD4.TabIndex = 21
         '
-        'ComboBox13
+        'PresetD5
         '
-        Me.ComboBox13.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox13.FormattingEnabled = True
-        Me.ComboBox13.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
-        Me.ComboBox13.Location = New System.Drawing.Point(258, 222)
-        Me.ComboBox13.Name = "ComboBox13"
-        Me.ComboBox13.Size = New System.Drawing.Size(96, 21)
-        Me.ComboBox13.TabIndex = 26
+        Me.PresetD5.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.PresetD5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PresetD5.FormattingEnabled = True
+        Me.PresetD5.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD5.Location = New System.Drawing.Point(560, 121)
+        Me.PresetD5.Name = "PresetD5"
+        Me.PresetD5.Size = New System.Drawing.Size(40, 21)
+        Me.PresetD5.TabIndex = 20
         '
-        'Button1
+        'PresetD6
         '
-        Me.Button1.Location = New System.Drawing.Point(69, 240)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(41, 32)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "Clear"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.PresetD6.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.PresetD6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PresetD6.FormattingEnabled = True
+        Me.PresetD6.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD6.Location = New System.Drawing.Point(398, 121)
+        Me.PresetD6.Name = "PresetD6"
+        Me.PresetD6.Size = New System.Drawing.Size(40, 21)
+        Me.PresetD6.TabIndex = 19
         '
-        'ComboBox11
+        'PresetD7
         '
-        Me.ComboBox11.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox11.FormattingEnabled = True
-        Me.ComboBox11.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox11.Location = New System.Drawing.Point(1129, 89)
-        Me.ComboBox11.Name = "ComboBox11"
-        Me.ComboBox11.Size = New System.Drawing.Size(40, 21)
-        Me.ComboBox11.TabIndex = 24
-        '
-        'ComboBox7
-        '
-        Me.ComboBox7.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox7.FormattingEnabled = True
-        Me.ComboBox7.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox7.Location = New System.Drawing.Point(978, 89)
-        Me.ComboBox7.Name = "ComboBox7"
-        Me.ComboBox7.Size = New System.Drawing.Size(40, 21)
-        Me.ComboBox7.TabIndex = 23
-        '
-        'ComboBox6
-        '
-        Me.ComboBox6.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox6.Location = New System.Drawing.Point(826, 89)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(40, 21)
-        Me.ComboBox6.TabIndex = 22
-        '
-        'ComboBox5
-        '
-        Me.ComboBox5.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox5.Location = New System.Drawing.Point(674, 89)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(40, 21)
-        Me.ComboBox5.TabIndex = 21
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox4.Location = New System.Drawing.Point(523, 89)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(40, 21)
-        Me.ComboBox4.TabIndex = 20
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox3.Location = New System.Drawing.Point(373, 89)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(40, 21)
-        Me.ComboBox3.TabIndex = 19
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox2.Location = New System.Drawing.Point(221, 89)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(40, 21)
-        Me.ComboBox2.TabIndex = 18
+        Me.PresetD7.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.PresetD7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PresetD7.FormattingEnabled = True
+        Me.PresetD7.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD7.Location = New System.Drawing.Point(237, 121)
+        Me.PresetD7.Name = "PresetD7"
+        Me.PresetD7.Size = New System.Drawing.Size(40, 21)
+        Me.PresetD7.TabIndex = 18
         '
         'Label25
         '
@@ -466,29 +415,17 @@ Partial Class Form1
         Me.lbl_board_7_status.TabIndex = 16
         Me.lbl_board_7_status.Text = "Inactive"
         '
-        'ComboBox19
+        'PresetD8
         '
-        Me.ComboBox19.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox19.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox19.FormattingEnabled = True
-        Me.ComboBox19.Items.AddRange(New Object() {"Connect XOR", "Bypass XOR"})
-        Me.ComboBox19.Location = New System.Drawing.Point(113, 222)
-        Me.ComboBox19.Name = "ComboBox19"
-        Me.ComboBox19.Size = New System.Drawing.Size(96, 21)
-        Me.ComboBox19.TabIndex = 6
-        '
-        'ComboBox20
-        '
-        Me.ComboBox20.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ComboBox20.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox20.FormattingEnabled = True
-        Me.ComboBox20.Items.AddRange(New Object() {"0", "1"})
-        Me.ComboBox20.Location = New System.Drawing.Point(70, 89)
-        Me.ComboBox20.Name = "ComboBox20"
-        Me.ComboBox20.Size = New System.Drawing.Size(40, 21)
-        Me.ComboBox20.TabIndex = 8
+        Me.PresetD8.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.PresetD8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PresetD8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PresetD8.FormattingEnabled = True
+        Me.PresetD8.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD8.Location = New System.Drawing.Point(75, 121)
+        Me.PresetD8.Name = "PresetD8"
+        Me.PresetD8.Size = New System.Drawing.Size(40, 21)
+        Me.PresetD8.TabIndex = 8
         '
         'PictureBox5
         '
@@ -496,7 +433,7 @@ Partial Class Form1
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
         Me.PictureBox5.Location = New System.Drawing.Point(3, 44)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(1196, 340)
+        Me.PictureBox5.Size = New System.Drawing.Size(1280, 320)
         Me.PictureBox5.TabIndex = 3
         Me.PictureBox5.TabStop = False
         '
@@ -514,6 +451,25 @@ Partial Class Form1
         Me.Board6.TabIndex = 5
         Me.Board6.Text = "Experiment 6"
         Me.Board6.UseVisualStyleBackColor = True
+        '
+        'ResetZ80
+        '
+        Me.ResetZ80.Controls.Add(Me.ResetZ80_Button)
+        Me.ResetZ80.Location = New System.Drawing.Point(736, 214)
+        Me.ResetZ80.Name = "ResetZ80"
+        Me.ResetZ80.Size = New System.Drawing.Size(109, 78)
+        Me.ResetZ80.TabIndex = 19
+        Me.ResetZ80.TabStop = False
+        Me.ResetZ80.Text = "Reset Z80"
+        '
+        'ResetZ80_Button
+        '
+        Me.ResetZ80_Button.Location = New System.Drawing.Point(6, 32)
+        Me.ResetZ80_Button.Name = "ResetZ80_Button"
+        Me.ResetZ80_Button.Size = New System.Drawing.Size(97, 23)
+        Me.ResetZ80_Button.TabIndex = 0
+        Me.ResetZ80_Button.Text = "Reset"
+        Me.ResetZ80_Button.UseVisualStyleBackColor = True
         '
         'SelectProgram
         '
@@ -1485,7 +1441,6 @@ Partial Class Form1
         '
         'Board1
         '
-        Me.Board1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Board1.Controls.Add(Me.Board_1)
         Me.Board1.Controls.Add(Me.Board_2)
         Me.Board1.Controls.Add(Me.Board3)
@@ -1499,31 +1454,257 @@ Partial Class Form1
         Me.Board1.Size = New System.Drawing.Size(911, 440)
         Me.Board1.TabIndex = 5
         '
-        'ResetZ80
+        'ConnectXOR7
         '
-        Me.ResetZ80.Controls.Add(Me.ResetZ80_Button)
-        Me.ResetZ80.Location = New System.Drawing.Point(736, 214)
-        Me.ResetZ80.Name = "ResetZ80"
-        Me.ResetZ80.Size = New System.Drawing.Size(109, 78)
-        Me.ResetZ80.TabIndex = 19
-        Me.ResetZ80.TabStop = False
-        Me.ResetZ80.Text = "Reset Z80"
+        Me.ConnectXOR7.AutoSize = True
+        Me.ConnectXOR7.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ConnectXOR7.Location = New System.Drawing.Point(6, 11)
+        Me.ConnectXOR7.Name = "ConnectXOR7"
+        Me.ConnectXOR7.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR7.TabIndex = 32
+        Me.ConnectXOR7.TabStop = True
+        Me.ConnectXOR7.Text = "Connect"
+        Me.ConnectXOR7.UseVisualStyleBackColor = True
         '
-        'ResetZ80_Button
+        'BypassXOR7
         '
-        Me.ResetZ80_Button.Location = New System.Drawing.Point(6, 32)
-        Me.ResetZ80_Button.Name = "ResetZ80_Button"
-        Me.ResetZ80_Button.Size = New System.Drawing.Size(97, 23)
-        Me.ResetZ80_Button.TabIndex = 0
-        Me.ResetZ80_Button.Text = "Reset"
-        Me.ResetZ80_Button.UseVisualStyleBackColor = True
+        Me.BypassXOR7.AutoSize = True
+        Me.BypassXOR7.ForeColor = System.Drawing.Color.Red
+        Me.BypassXOR7.Location = New System.Drawing.Point(6, 29)
+        Me.BypassXOR7.Name = "BypassXOR7"
+        Me.BypassXOR7.Size = New System.Drawing.Size(59, 17)
+        Me.BypassXOR7.TabIndex = 33
+        Me.BypassXOR7.TabStop = True
+        Me.BypassXOR7.Text = "Bypass"
+        Me.BypassXOR7.UseVisualStyleBackColor = True
+        '
+        'XOR7
+        '
+        Me.XOR7.Controls.Add(Me.ConnectXOR7)
+        Me.XOR7.Controls.Add(Me.BypassXOR7)
+        Me.XOR7.Location = New System.Drawing.Point(130, 202)
+        Me.XOR7.Name = "XOR7"
+        Me.XOR7.Size = New System.Drawing.Size(72, 51)
+        Me.XOR7.TabIndex = 34
+        Me.XOR7.TabStop = False
+        Me.XOR7.Text = "XOR 7"
+        '
+        'XOR6
+        '
+        Me.XOR6.Controls.Add(Me.ConnectXOR6)
+        Me.XOR6.Controls.Add(Me.BypassXOR6)
+        Me.XOR6.Location = New System.Drawing.Point(293, 202)
+        Me.XOR6.Name = "XOR6"
+        Me.XOR6.Size = New System.Drawing.Size(72, 51)
+        Me.XOR6.TabIndex = 35
+        Me.XOR6.TabStop = False
+        Me.XOR6.Text = "XOR 6"
+        '
+        'ConnectXOR6
+        '
+        Me.ConnectXOR6.AutoSize = True
+        Me.ConnectXOR6.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ConnectXOR6.Location = New System.Drawing.Point(6, 11)
+        Me.ConnectXOR6.Name = "ConnectXOR6"
+        Me.ConnectXOR6.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR6.TabIndex = 32
+        Me.ConnectXOR6.TabStop = True
+        Me.ConnectXOR6.Text = "Connect"
+        Me.ConnectXOR6.UseVisualStyleBackColor = True
+        '
+        'BypassXOR6
+        '
+        Me.BypassXOR6.AutoSize = True
+        Me.BypassXOR6.ForeColor = System.Drawing.Color.Red
+        Me.BypassXOR6.Location = New System.Drawing.Point(6, 29)
+        Me.BypassXOR6.Name = "BypassXOR6"
+        Me.BypassXOR6.Size = New System.Drawing.Size(59, 17)
+        Me.BypassXOR6.TabIndex = 33
+        Me.BypassXOR6.TabStop = True
+        Me.BypassXOR6.Text = "Bypass"
+        Me.BypassXOR6.UseVisualStyleBackColor = True
+        '
+        'XOR5
+        '
+        Me.XOR5.Controls.Add(Me.ConnectXOR5)
+        Me.XOR5.Controls.Add(Me.BypassXOR5)
+        Me.XOR5.Location = New System.Drawing.Point(452, 202)
+        Me.XOR5.Name = "XOR5"
+        Me.XOR5.Size = New System.Drawing.Size(72, 51)
+        Me.XOR5.TabIndex = 36
+        Me.XOR5.TabStop = False
+        Me.XOR5.Text = "XOR 5"
+        '
+        'ConnectXOR5
+        '
+        Me.ConnectXOR5.AutoSize = True
+        Me.ConnectXOR5.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ConnectXOR5.Location = New System.Drawing.Point(6, 11)
+        Me.ConnectXOR5.Name = "ConnectXOR5"
+        Me.ConnectXOR5.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR5.TabIndex = 32
+        Me.ConnectXOR5.TabStop = True
+        Me.ConnectXOR5.Text = "Connect"
+        Me.ConnectXOR5.UseVisualStyleBackColor = True
+        '
+        'BypassXOR5
+        '
+        Me.BypassXOR5.AutoSize = True
+        Me.BypassXOR5.ForeColor = System.Drawing.Color.Red
+        Me.BypassXOR5.Location = New System.Drawing.Point(6, 29)
+        Me.BypassXOR5.Name = "BypassXOR5"
+        Me.BypassXOR5.Size = New System.Drawing.Size(59, 17)
+        Me.BypassXOR5.TabIndex = 33
+        Me.BypassXOR5.TabStop = True
+        Me.BypassXOR5.Text = "Bypass"
+        Me.BypassXOR5.UseVisualStyleBackColor = True
+        '
+        'XOR4
+        '
+        Me.XOR4.Controls.Add(Me.ConnectXOR4)
+        Me.XOR4.Controls.Add(Me.BypassXOR4)
+        Me.XOR4.Location = New System.Drawing.Point(616, 202)
+        Me.XOR4.Name = "XOR4"
+        Me.XOR4.Size = New System.Drawing.Size(72, 51)
+        Me.XOR4.TabIndex = 36
+        Me.XOR4.TabStop = False
+        Me.XOR4.Text = "XOR 4"
+        '
+        'ConnectXOR4
+        '
+        Me.ConnectXOR4.AutoSize = True
+        Me.ConnectXOR4.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ConnectXOR4.Location = New System.Drawing.Point(6, 11)
+        Me.ConnectXOR4.Name = "ConnectXOR4"
+        Me.ConnectXOR4.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR4.TabIndex = 32
+        Me.ConnectXOR4.TabStop = True
+        Me.ConnectXOR4.Text = "Connect"
+        Me.ConnectXOR4.UseVisualStyleBackColor = True
+        '
+        'BypassXOR4
+        '
+        Me.BypassXOR4.AutoSize = True
+        Me.BypassXOR4.ForeColor = System.Drawing.Color.Red
+        Me.BypassXOR4.Location = New System.Drawing.Point(6, 29)
+        Me.BypassXOR4.Name = "BypassXOR4"
+        Me.BypassXOR4.Size = New System.Drawing.Size(59, 17)
+        Me.BypassXOR4.TabIndex = 33
+        Me.BypassXOR4.TabStop = True
+        Me.BypassXOR4.Text = "Bypass"
+        Me.BypassXOR4.UseVisualStyleBackColor = True
+        '
+        'XOR3
+        '
+        Me.XOR3.Controls.Add(Me.ConnectXOR3)
+        Me.XOR3.Controls.Add(Me.BypassXOR3)
+        Me.XOR3.Location = New System.Drawing.Point(775, 202)
+        Me.XOR3.Name = "XOR3"
+        Me.XOR3.Size = New System.Drawing.Size(72, 51)
+        Me.XOR3.TabIndex = 36
+        Me.XOR3.TabStop = False
+        Me.XOR3.Text = "XOR 3"
+        '
+        'ConnectXOR3
+        '
+        Me.ConnectXOR3.AutoSize = True
+        Me.ConnectXOR3.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ConnectXOR3.Location = New System.Drawing.Point(6, 11)
+        Me.ConnectXOR3.Name = "ConnectXOR3"
+        Me.ConnectXOR3.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR3.TabIndex = 32
+        Me.ConnectXOR3.TabStop = True
+        Me.ConnectXOR3.Text = "Connect"
+        Me.ConnectXOR3.UseVisualStyleBackColor = True
+        '
+        'BypassXOR3
+        '
+        Me.BypassXOR3.AutoSize = True
+        Me.BypassXOR3.ForeColor = System.Drawing.Color.Red
+        Me.BypassXOR3.Location = New System.Drawing.Point(6, 29)
+        Me.BypassXOR3.Name = "BypassXOR3"
+        Me.BypassXOR3.Size = New System.Drawing.Size(59, 17)
+        Me.BypassXOR3.TabIndex = 33
+        Me.BypassXOR3.TabStop = True
+        Me.BypassXOR3.Text = "Bypass"
+        Me.BypassXOR3.UseVisualStyleBackColor = True
+        '
+        'XOR2
+        '
+        Me.XOR2.Controls.Add(Me.ConnectXOR2)
+        Me.XOR2.Controls.Add(Me.BypassXOR2)
+        Me.XOR2.Location = New System.Drawing.Point(942, 202)
+        Me.XOR2.Name = "XOR2"
+        Me.XOR2.Size = New System.Drawing.Size(72, 51)
+        Me.XOR2.TabIndex = 36
+        Me.XOR2.TabStop = False
+        Me.XOR2.Text = "XOR 2"
+        '
+        'ConnectXOR2
+        '
+        Me.ConnectXOR2.AutoSize = True
+        Me.ConnectXOR2.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ConnectXOR2.Location = New System.Drawing.Point(6, 11)
+        Me.ConnectXOR2.Name = "ConnectXOR2"
+        Me.ConnectXOR2.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR2.TabIndex = 32
+        Me.ConnectXOR2.TabStop = True
+        Me.ConnectXOR2.Text = "Connect"
+        Me.ConnectXOR2.UseVisualStyleBackColor = True
+        '
+        'BypassXOR2
+        '
+        Me.BypassXOR2.AutoSize = True
+        Me.BypassXOR2.ForeColor = System.Drawing.Color.Red
+        Me.BypassXOR2.Location = New System.Drawing.Point(6, 29)
+        Me.BypassXOR2.Name = "BypassXOR2"
+        Me.BypassXOR2.Size = New System.Drawing.Size(59, 17)
+        Me.BypassXOR2.TabIndex = 33
+        Me.BypassXOR2.TabStop = True
+        Me.BypassXOR2.Text = "Bypass"
+        Me.BypassXOR2.UseVisualStyleBackColor = True
+        '
+        'XOR1
+        '
+        Me.XOR1.Controls.Add(Me.ConnectXOR1)
+        Me.XOR1.Controls.Add(Me.BypassXOR1)
+        Me.XOR1.Location = New System.Drawing.Point(1104, 202)
+        Me.XOR1.Name = "XOR1"
+        Me.XOR1.Size = New System.Drawing.Size(72, 51)
+        Me.XOR1.TabIndex = 36
+        Me.XOR1.TabStop = False
+        Me.XOR1.Text = "XOR 1"
+        '
+        'ConnectXOR1
+        '
+        Me.ConnectXOR1.AutoSize = True
+        Me.ConnectXOR1.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ConnectXOR1.Location = New System.Drawing.Point(6, 11)
+        Me.ConnectXOR1.Name = "ConnectXOR1"
+        Me.ConnectXOR1.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR1.TabIndex = 32
+        Me.ConnectXOR1.TabStop = True
+        Me.ConnectXOR1.Text = "Connect"
+        Me.ConnectXOR1.UseVisualStyleBackColor = True
+        '
+        'BypassXOR1
+        '
+        Me.BypassXOR1.AutoSize = True
+        Me.BypassXOR1.ForeColor = System.Drawing.Color.Red
+        Me.BypassXOR1.Location = New System.Drawing.Point(6, 29)
+        Me.BypassXOR1.Name = "BypassXOR1"
+        Me.BypassXOR1.Size = New System.Drawing.Size(59, 17)
+        Me.BypassXOR1.TabIndex = 33
+        Me.BypassXOR1.TabStop = True
+        Me.BypassXOR1.Text = "Bypass"
+        Me.BypassXOR1.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(961, 535)
+        Me.ClientSize = New System.Drawing.Size(948, 535)
         Me.Controls.Add(Me.Board1)
         Me.Controls.Add(Me.CommControlGroup)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1536,6 +1717,7 @@ Partial Class Form1
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board6.ResumeLayout(False)
         Me.Board6.PerformLayout()
+        Me.ResetZ80.ResumeLayout(False)
         Me.SelectProgram.ResumeLayout(False)
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board5.ResumeLayout(False)
@@ -1570,7 +1752,20 @@ Partial Class Form1
         Me.brd_1_ch1.PerformLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board1.ResumeLayout(False)
-        Me.ResetZ80.ResumeLayout(False)
+        Me.XOR7.ResumeLayout(False)
+        Me.XOR7.PerformLayout()
+        Me.XOR6.ResumeLayout(False)
+        Me.XOR6.PerformLayout()
+        Me.XOR5.ResumeLayout(False)
+        Me.XOR5.PerformLayout()
+        Me.XOR4.ResumeLayout(False)
+        Me.XOR4.PerformLayout()
+        Me.XOR3.ResumeLayout(False)
+        Me.XOR3.PerformLayout()
+        Me.XOR2.ResumeLayout(False)
+        Me.XOR2.PerformLayout()
+        Me.XOR1.ResumeLayout(False)
+        Me.XOR1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1586,7 +1781,6 @@ Partial Class Form1
     Friend WithEvents Board7 As TabPage
     Friend WithEvents Label25 As Label
     Friend WithEvents lbl_board_7_status As Label
-    Friend WithEvents ComboBox19 As ComboBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Board6 As TabPage
     Friend WithEvents Label19 As Label
@@ -1673,21 +1867,15 @@ Partial Class Form1
     Friend WithEvents board4_Diode1_RadioButton2 As RadioButton
     Friend WithEvents board4_Diode1_RadioButton1 As RadioButton
     Friend WithEvents SelectProgram As GroupBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ComboBox11 As ComboBox
-    Friend WithEvents ComboBox7 As ComboBox
-    Friend WithEvents ComboBox6 As ComboBox
-    Friend WithEvents ComboBox5 As ComboBox
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox20 As ComboBox
-    Friend WithEvents ComboBox22 As ComboBox
-    Friend WithEvents ComboBox18 As ComboBox
-    Friend WithEvents ComboBox17 As ComboBox
-    Friend WithEvents ComboBox16 As ComboBox
-    Friend WithEvents ComboBox15 As ComboBox
-    Friend WithEvents ComboBox13 As ComboBox
+    Friend WithEvents Clear As Button
+    Friend WithEvents PresetD1 As ComboBox
+    Friend WithEvents PresetD2 As ComboBox
+    Friend WithEvents PresetD3 As ComboBox
+    Friend WithEvents PresetD4 As ComboBox
+    Friend WithEvents PresetD5 As ComboBox
+    Friend WithEvents PresetD6 As ComboBox
+    Friend WithEvents PresetD7 As ComboBox
+    Friend WithEvents PresetD8 As ComboBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents board_3_multimeter_refresh As Button
     Friend WithEvents Label6 As Label
@@ -1706,4 +1894,25 @@ Partial Class Form1
 
     Friend WithEvents ResetZ80 As GroupBox
     Friend WithEvents ResetZ80_Button As Button
+    Friend WithEvents BypassXOR7 As RadioButton
+    Friend WithEvents ConnectXOR7 As RadioButton
+    Friend WithEvents XOR7 As GroupBox
+    Friend WithEvents XOR1 As GroupBox
+    Friend WithEvents ConnectXOR1 As RadioButton
+    Friend WithEvents BypassXOR1 As RadioButton
+    Friend WithEvents XOR2 As GroupBox
+    Friend WithEvents ConnectXOR2 As RadioButton
+    Friend WithEvents BypassXOR2 As RadioButton
+    Friend WithEvents XOR3 As GroupBox
+    Friend WithEvents ConnectXOR3 As RadioButton
+    Friend WithEvents BypassXOR3 As RadioButton
+    Friend WithEvents XOR4 As GroupBox
+    Friend WithEvents ConnectXOR4 As RadioButton
+    Friend WithEvents BypassXOR4 As RadioButton
+    Friend WithEvents XOR5 As GroupBox
+    Friend WithEvents ConnectXOR5 As RadioButton
+    Friend WithEvents BypassXOR5 As RadioButton
+    Friend WithEvents XOR6 As GroupBox
+    Friend WithEvents ConnectXOR6 As RadioButton
+    Friend WithEvents BypassXOR6 As RadioButton
 End Class
