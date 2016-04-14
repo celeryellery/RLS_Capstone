@@ -2,7 +2,7 @@
     Dim Serial_Message As String = "test_message"
     Dim boardID As String = "null"
     Dim temp_read As String = "null"
-    Dim USB_port As String = "COM12"
+    Dim USB_port As String = "COM4"
 
     'Declare the variables for Board_1
     Dim Board_1_Serial_Message As String = "board_1,01,1,4,4,01,01" 'default message
@@ -141,15 +141,15 @@
                     'do something
                     Board1.SelectTab(5)
                     Deactivate()
-                    lbl_board_5_status.BackColor = Color.Green
-                    lbl_board_5_status.Text = "Active"
+                    lbl_board_6_status.BackColor = Color.Green
+                    lbl_board_6_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "00000111" 'Daughterboard 7: Learning to use the Logic Analyzer with Flipflops
                     'do something
                     Board1.SelectTab(6)
                     Deactivate()
-                    lbl_board_5_status.BackColor = Color.Green
-                    lbl_board_5_status.Text = "Active"
+                    lbl_board_7_status.BackColor = Color.Green
+                    lbl_board_7_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case Else
                     'don't do anything
