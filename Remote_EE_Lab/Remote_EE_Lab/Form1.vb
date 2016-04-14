@@ -47,22 +47,23 @@
     Dim ProgramSelector_State As String = "1" 'default value
 
     'Declare the variables for Board_7
-    Dim Board_7_Serial_Message As String = "board_7,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" 'default message
-    Dim Board_7_Preset_D8_State = "1"
-    Dim Board_7_Preset_D7_State = "1"
-    Dim Board_7_Preset_D6_State = "1"
-    Dim Board_7_Preset_D5_State = "1"
-    Dim Board_7_Preset_D4_State = "1"
-    Dim Board_7_Preset_D3_State = "1"
-    Dim Board_7_Preset_D2_State = "1"
-    Dim Board_7_Preset_D1_State = "1"
-    Dim Board_7_Connect_XOR_7_State = "1"
-    Dim Board_7_Connect_XOR_6_State = "1"
-    Dim Board_7_Connect_XOR_5_State = "1"
-    Dim Board_7_Connect_XOR_4_State = "1"
-    Dim Board_7_Connect_XOR_3_State = "1"
-    Dim Board_7_Connect_XOR_2_State = "1"
-    Dim Board_7_Connect_XOR_1_State = "1"
+    Dim Board_7_Serial_Message As String = "board_7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" 'default message
+    Dim Board_7_Connect_XOR_1_State = "0"
+    Dim Board_7_Connect_XOR_2_State = "0"
+    Dim Board_7_Connect_XOR_3_State = "0"
+    Dim Board_7_Connect_XOR_4_State = "0"
+    Dim Board_7_Connect_XOR_5_State = "0"
+    Dim Board_7_Connect_XOR_6_State = "0"
+    Dim Board_7_Connect_XOR_7_State = "0"
+    Dim Board_7_Preset_D1_State = "0"
+    Dim Board_7_Preset_D2_State = "0"
+    Dim Board_7_Preset_D3_State = "0"
+    Dim Board_7_Preset_D4_State = "0"
+    Dim Board_7_Preset_D5_State = "0"
+    Dim Board_7_Preset_D6_State = "0"
+    Dim Board_7_Preset_D7_State = "0"
+    Dim Board_7_Preset_D8_State = "0"
+
 
     Private Sub btn_Dev_Test_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Dev_Test.Click
         Shell("C:\Program Files (x86)\Velleman\PcLab2000LT\PcLab2000LT.exe")
@@ -623,6 +624,17 @@
         'Call the message compiler
         Board_4_Compile_Serial_Message()
     End Sub
+    'You actually DO need a function for BOTH radio buttons; if you only have a function for RadioButton1,
+    'then RadioButton2 will not work until AFTER RadioButton1 has been clicked, which is confusing and undesirable
+    Private Sub board4_Diode1_RadioButton2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board4_Diode1_RadioButton2.CheckedChanged
+        If board4_Diode1_RadioButton2.Checked = True Then
+            Board_4_Diode1_State = "0"
+        Else
+            Board_4_Diode1_State = "1"
+        End If
+        'Call the message compiler
+        Board_4_Compile_Serial_Message()
+    End Sub
 
     'Board 4: Diode 2 control
     Private Sub board4_Diode2_RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board4_Diode2_RadioButton1.CheckedChanged
@@ -630,6 +642,15 @@
             Board_4_Diode2_State = "1"
         Else
             Board_4_Diode2_State = "0"
+        End If
+        'Call the message compiler
+        Board_4_Compile_Serial_Message()
+    End Sub
+    Private Sub board4_Diode2_RadioButton2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board4_Diode2_RadioButton2.CheckedChanged
+        If board4_Diode2_RadioButton2.Checked = True Then
+            Board_4_Diode2_State = "0"
+        Else
+            Board_4_Diode2_State = "1"
         End If
         'Call the message compiler
         Board_4_Compile_Serial_Message()
@@ -689,6 +710,311 @@
         Board_5_Compile_Serial_Message()
     End Sub
 
+
+
+
+
+
+
+
+
+
+
+
+
+    'Board 7 Subroutines
+    'Board_7: Serial Message Compiler
+    'This subroutine takes the individual board_7 variables and
+    'combines them into one string.
+    Sub Board_7_Compile_Serial_Message()
+        Board_7_Serial_Message = "board_7," +
+        Board_7_Connect_XOR_1_State + "," +
+        Board_7_Connect_XOR_2_State + "," +
+        Board_7_Connect_XOR_3_State + "," +
+        Board_7_Connect_XOR_4_State + "," +
+        Board_7_Connect_XOR_5_State + "," +
+        Board_7_Connect_XOR_6_State + "," +
+        Board_7_Connect_XOR_7_State + "," +
+        Board_7_Preset_D1_State + "," +
+        Board_7_Preset_D2_State + "," +
+        Board_7_Preset_D3_State + "," +
+        Board_7_Preset_D4_State + "," +
+        Board_7_Preset_D5_State + "," +
+        Board_7_Preset_D6_State + "," +
+        Board_7_Preset_D7_State + "," +
+        Board_7_Preset_D8_State
+        'this statement exists exclusively for debuginng purposes
+        Serial_Text_Test.Text = Board_7_Serial_Message
+        'Change the 'Send Data' button collor to orange, to indicate that
+        'a change in the board configuration has occured.
+        btn_Send_Config.BackColor = Color.Orange
+    End Sub
+
+
+    'Flipflop presets
+    'Board 7: dff1 control
+    Private Sub board_7_PresetD1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD1.SelectedIndexChanged
+        If PresetD1.SelectedIndex = 0 Then
+            Board_7_Preset_D1_State = "0"
+        ElseIf PresetD1.SelectedIndex = 1 Then
+            Board_7_Preset_D1_State = "1"
+        Else 'If selected index is -1 or something weird, don't bother to recompile serial message
+            Return
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    'Board 7: dff2 control
+    Private Sub board_7_PresetD2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD2.SelectedIndexChanged
+        If PresetD2.SelectedIndex = 0 Then
+            Board_7_Preset_D2_State = "0"
+        ElseIf PresetD2.SelectedIndex = 1 Then
+            Board_7_Preset_D2_State = "1"
+        Else 'If selected index is -1 or something weird, don't bother to recompile serial message
+            Return
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    'Board 7: dff3 control
+    Private Sub board_7_PresetD3_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD3.SelectedIndexChanged
+        If PresetD3.SelectedIndex = 0 Then
+            Board_7_Preset_D3_State = "0"
+        ElseIf PresetD3.SelectedIndex = 1 Then
+            Board_7_Preset_D3_State = "1"
+        Else 'If selected index is -1 or something weird, don't bother to recompile serial message
+            Return
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    'Board 7: dff4 control
+    Private Sub board_7_PresetD4_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD4.SelectedIndexChanged
+        If PresetD4.SelectedIndex = 0 Then
+            Board_7_Preset_D4_State = "0"
+        ElseIf PresetD4.SelectedIndex = 1 Then
+            Board_7_Preset_D4_State = "1"
+        Else 'If selected index is -1 or something weird, don't bother to recompile serial message
+            Return
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    'Board 7: dff5 control
+    Private Sub board_7_PresetD5_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD5.SelectedIndexChanged
+        If PresetD5.SelectedIndex = 0 Then
+            Board_7_Preset_D5_State = "0"
+        ElseIf PresetD5.SelectedIndex = 1 Then
+            Board_7_Preset_D5_State = "1"
+        Else 'If selected index is -1 or something weird, don't bother to recompile serial message
+            Return
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    'Board 7: dff6 control
+    Private Sub board_7_PresetD6_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD6.SelectedIndexChanged
+        If PresetD6.SelectedIndex = 0 Then
+            Board_7_Preset_D6_State = "0"
+        ElseIf PresetD6.SelectedIndex = 1 Then
+            Board_7_Preset_D6_State = "1"
+        Else 'If selected index is -1 or something weird, don't bother to recompile serial message
+            Return
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    'Board 7: dff7 control
+    Private Sub board_7_PresetD7_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD7.SelectedIndexChanged
+        If PresetD7.SelectedIndex = 0 Then
+            Board_7_Preset_D7_State = "0"
+        ElseIf PresetD7.SelectedIndex = 1 Then
+            Board_7_Preset_D7_State = "1"
+        Else 'If selected index is -1 or something weird, don't bother to recompile serial message
+            Return
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    'Board 7: dff8 control
+    Private Sub board_7_PresetD8_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD8.SelectedIndexChanged
+        If PresetD8.SelectedIndex = 0 Then
+            Board_7_Preset_D8_State = "0"
+        ElseIf PresetD8.SelectedIndex = 1 Then
+            Board_7_Preset_D8_State = "1"
+        Else 'If selected index is -1 or something weird, don't bother to recompile serial message
+            Return
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+
+
+    'XOR Connection Controls
+    'Board 7: XOR 1 control
+    Private Sub board7_ConnectXOR1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConnectXOR1.CheckedChanged
+        If ConnectXOR1.Checked = True Then
+            Board_7_Connect_XOR_1_State = "0" 'Connect XOR
+        Else
+            Board_7_Connect_XOR_1_State = "1" 'Bypass XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    Private Sub board7_BypassXOR1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BypassXOR1.CheckedChanged
+        If BypassXOR1.Checked = True Then
+            Board_7_Connect_XOR_1_State = "1" 'Bypass XOR
+        Else
+            Board_7_Connect_XOR_1_State = "0" 'Connect XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+
+    'Board 7: XOR 2 control
+    Private Sub board7_ConnectXOR2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConnectXOR2.CheckedChanged
+        If ConnectXOR2.Checked = True Then
+            Board_7_Connect_XOR_2_State = "0" 'Connect XOR
+        Else
+            Board_7_Connect_XOR_2_State = "1" 'Bypass XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    Private Sub board7_BypassXOR2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BypassXOR2.CheckedChanged
+        If BypassXOR2.Checked = True Then
+            Board_7_Connect_XOR_2_State = "1" 'Bypass XOR
+        Else
+            Board_7_Connect_XOR_2_State = "0" 'Connect XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+
+    'Board 7: XOR 3 control
+    Private Sub board7_ConnectXOR3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConnectXOR3.CheckedChanged
+        If ConnectXOR3.Checked = True Then
+            Board_7_Connect_XOR_3_State = "0" 'Connect XOR
+        Else
+            Board_7_Connect_XOR_3_State = "1" 'Bypass XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    Private Sub board7_BypassXOR3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BypassXOR3.CheckedChanged
+        If BypassXOR3.Checked = True Then
+            Board_7_Connect_XOR_3_State = "1" 'Bypass XOR
+        Else
+            Board_7_Connect_XOR_3_State = "0" 'Connect XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+
+    'Board 7: XOR 4 control
+    Private Sub board7_ConnectXOR4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConnectXOR4.CheckedChanged
+        If ConnectXOR4.Checked = True Then
+            Board_7_Connect_XOR_4_State = "0" 'Connect XOR
+        Else
+            Board_7_Connect_XOR_4_State = "1" 'Bypass XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    Private Sub board7_BypassXOR4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BypassXOR4.CheckedChanged
+        If BypassXOR4.Checked = True Then
+            Board_7_Connect_XOR_4_State = "1" 'Bypass XOR
+        Else
+            Board_7_Connect_XOR_4_State = "0" 'Connect XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+
+    'Board 7: XOR 5 control
+    Private Sub board7_ConnectXOR5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConnectXOR5.CheckedChanged
+        If ConnectXOR5.Checked = True Then
+            Board_7_Connect_XOR_5_State = "0" 'Connect XOR
+        Else
+            Board_7_Connect_XOR_5_State = "1" 'Bypass XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    Private Sub board7_BypassXOR5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BypassXOR5.CheckedChanged
+        If BypassXOR5.Checked = True Then
+            Board_7_Connect_XOR_5_State = "1" 'Bypass XOR
+        Else
+            Board_7_Connect_XOR_5_State = "0" 'Connect XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+
+    'Board 7: XOR 6 control
+    Private Sub board7_ConnectXOR6_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConnectXOR6.CheckedChanged
+        If ConnectXOR6.Checked = True Then
+            Board_7_Connect_XOR_6_State = "0" 'Connect XOR
+        Else
+            Board_7_Connect_XOR_6_State = "1" 'Bypass XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    Private Sub board7_BypassXOR6_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BypassXOR6.CheckedChanged
+        If BypassXOR6.Checked = True Then
+            Board_7_Connect_XOR_6_State = "1" 'Bypass XOR
+        Else
+            Board_7_Connect_XOR_6_State = "0" 'Connect XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+
+    'Board 7: XOR 7 control
+    Private Sub board7_ConnectXOR7_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConnectXOR7.CheckedChanged
+        If ConnectXOR7.Checked = True Then
+            Board_7_Connect_XOR_7_State = "0" 'Connect XOR
+        Else
+            Board_7_Connect_XOR_7_State = "1" 'Bypass XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    Private Sub board7_BypassXOR7_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BypassXOR7.CheckedChanged
+        If BypassXOR7.Checked = True Then
+            Board_7_Connect_XOR_7_State = "1" 'Bypass XOR
+        Else
+            Board_7_Connect_XOR_7_State = "0" 'Connect XOR
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+
+    'Set up behavior for the "Clear" button, which resets all the DFF presets back to 0
+    Private Sub btn_Board7_Clear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Board7_Clear.Click
+        'Change the serial message
+        Board_7_Preset_D1_State = "0"
+        Board_7_Preset_D2_State = "0"
+        Board_7_Preset_D3_State = "0"
+        Board_7_Preset_D4_State = "0"
+        Board_7_Preset_D5_State = "0"
+        Board_7_Preset_D6_State = "0"
+        Board_7_Preset_D7_State = "0"
+        Board_7_Preset_D8_State = "0"
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+        'Reset all the drop-down boxes to default
+        PresetD1.SelectedIndex = -1
+        PresetD2.SelectedIndex = -1
+        PresetD3.SelectedIndex = -1
+        PresetD4.SelectedIndex = -1
+        PresetD5.SelectedIndex = -1
+        PresetD6.SelectedIndex = -1
+        PresetD7.SelectedIndex = -1
+        PresetD8.SelectedIndex = -1
+    End Sub
+
     Private Sub Label3_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -701,7 +1027,7 @@
 
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Clear.Click
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Board7_Clear.Click
 
     End Sub
 

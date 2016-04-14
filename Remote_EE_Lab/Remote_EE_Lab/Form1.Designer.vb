@@ -55,7 +55,7 @@ Partial Class Form1
         Me.XOR7 = New System.Windows.Forms.GroupBox()
         Me.ConnectXOR7 = New System.Windows.Forms.RadioButton()
         Me.BypassXOR7 = New System.Windows.Forms.RadioButton()
-        Me.Clear = New System.Windows.Forms.Button()
+        Me.Board7_Clear = New System.Windows.Forms.Button()
         Me.PresetD1 = New System.Windows.Forms.ComboBox()
         Me.PresetD2 = New System.Windows.Forms.ComboBox()
         Me.PresetD3 = New System.Windows.Forms.ComboBox()
@@ -281,7 +281,7 @@ Partial Class Form1
         Me.Board7.Controls.Add(Me.XOR5)
         Me.Board7.Controls.Add(Me.XOR6)
         Me.Board7.Controls.Add(Me.XOR7)
-        Me.Board7.Controls.Add(Me.Clear)
+        Me.Board7.Controls.Add(Me.Board7_Clear)
         Me.Board7.Controls.Add(Me.PresetD1)
         Me.Board7.Controls.Add(Me.PresetD2)
         Me.Board7.Controls.Add(Me.PresetD3)
@@ -546,14 +546,14 @@ Partial Class Form1
         Me.BypassXOR7.Text = "Bypass"
         Me.BypassXOR7.UseVisualStyleBackColor = True
         '
-        'Clear
+        'Board7_Clear
         '
-        Me.Clear.Location = New System.Drawing.Point(75, 284)
-        Me.Clear.Name = "Clear"
-        Me.Clear.Size = New System.Drawing.Size(41, 32)
-        Me.Clear.TabIndex = 25
-        Me.Clear.Text = "Clear"
-        Me.Clear.UseVisualStyleBackColor = True
+        Me.Board7_Clear.Location = New System.Drawing.Point(75, 284)
+        Me.Board7_Clear.Name = "Board7_Clear"
+        Me.Board7_Clear.Size = New System.Drawing.Size(41, 32)
+        Me.Board7_Clear.TabIndex = 25
+        Me.Board7_Clear.Text = "Clear"
+        Me.Board7_Clear.UseVisualStyleBackColor = True
         '
         'PresetD1
         '
@@ -1867,7 +1867,7 @@ Partial Class Form1
     Friend WithEvents board4_Diode1_RadioButton2 As RadioButton
     Friend WithEvents board4_Diode1_RadioButton1 As RadioButton
     Friend WithEvents SelectProgram As GroupBox
-    Friend WithEvents Clear As Button
+    Friend WithEvents Board7_Clear As Button
     Friend WithEvents PresetD1 As ComboBox
     Friend WithEvents PresetD2 As ComboBox
     Friend WithEvents PresetD3 As ComboBox
