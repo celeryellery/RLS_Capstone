@@ -158,6 +158,12 @@ Partial Class Form1
         Me.lbl_C = New System.Windows.Forms.Label()
         Me.Board_1_Image = New System.Windows.Forms.PictureBox()
         Me.Board1 = New System.Windows.Forms.TabControl()
+        Me.TabPageSetup = New System.Windows.Forms.TabPage()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.CommControlGroup.SuspendLayout()
         Me.Board7.SuspendLayout()
         Me.XOR1.SuspendLayout()
@@ -192,6 +198,8 @@ Partial Class Form1
         Me.brd_1_ch1.SuspendLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Board1.SuspendLayout()
+        Me.TabPageSetup.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'board_detect
@@ -1693,11 +1701,71 @@ Partial Class Form1
         Me.Board1.Controls.Add(Me.Board5)
         Me.Board1.Controls.Add(Me.Board6)
         Me.Board1.Controls.Add(Me.Board7)
+        Me.Board1.Controls.Add(Me.TabPageSetup)
         Me.Board1.Location = New System.Drawing.Point(21, 83)
         Me.Board1.Name = "Board1"
         Me.Board1.SelectedIndex = 0
         Me.Board1.Size = New System.Drawing.Size(911, 440)
         Me.Board1.TabIndex = 5
+        '
+        'TabPageSetup
+        '
+        Me.TabPageSetup.Controls.Add(Me.Label3)
+        Me.TabPageSetup.Controls.Add(Me.GroupBox1)
+        Me.TabPageSetup.Controls.Add(Me.Label2)
+        Me.TabPageSetup.Location = New System.Drawing.Point(4, 22)
+        Me.TabPageSetup.Name = "TabPageSetup"
+        Me.TabPageSetup.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPageSetup.Size = New System.Drawing.Size(903, 414)
+        Me.TabPageSetup.TabIndex = 8
+        Me.TabPageSetup.Text = "Setup"
+        Me.TabPageSetup.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.RichTextBox1)
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Location = New System.Drawing.Point(173, 234)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(513, 78)
+        Me.GroupBox1.TabIndex = 19
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Enter COM Port Name"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(6, 32)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(97, 23)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Submit"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(360, 24)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(148, 13)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "Setup for Remote Lab System"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(170, 62)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(516, 143)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = resources.GetString("Label3.Text")
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(127, 32)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(361, 23)
+        Me.RichTextBox1.TabIndex = 3
+        Me.RichTextBox1.Text = ""
         '
         'Form1
         '
@@ -1766,6 +1834,9 @@ Partial Class Form1
         Me.brd_1_ch1.PerformLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Board1.ResumeLayout(False)
+        Me.TabPageSetup.ResumeLayout(False)
+        Me.TabPageSetup.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1915,4 +1986,10 @@ Partial Class Form1
     Friend WithEvents XOR6 As GroupBox
     Friend WithEvents ConnectXOR6 As RadioButton
     Friend WithEvents BypassXOR6 As RadioButton
+    Friend WithEvents TabPageSetup As TabPage
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class
