@@ -157,13 +157,13 @@ Partial Class Form1
         Me.lbl_D = New System.Windows.Forms.Label()
         Me.lbl_C = New System.Windows.Forms.Label()
         Me.Board_1_Image = New System.Windows.Forms.PictureBox()
-        Me.Board1 = New System.Windows.Forms.TabControl()
+        Me.Setup = New System.Windows.Forms.TabControl()
         Me.TabPageSetup = New System.Windows.Forms.TabPage()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComPortTextBox = New System.Windows.Forms.RichTextBox()
+        Me.SubmitButton = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.CommControlGroup.SuspendLayout()
         Me.Board7.SuspendLayout()
         Me.XOR1.SuspendLayout()
@@ -197,7 +197,7 @@ Partial Class Form1
         Me.brd_1_ch2.SuspendLayout()
         Me.brd_1_ch1.SuspendLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Board1.SuspendLayout()
+        Me.Setup.SuspendLayout()
         Me.TabPageSetup.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -1692,21 +1692,21 @@ Partial Class Form1
         Me.Board_1_Image.TabIndex = 0
         Me.Board_1_Image.TabStop = False
         '
-        'Board1
+        'Setup
         '
-        Me.Board1.Controls.Add(Me.Board_1)
-        Me.Board1.Controls.Add(Me.Board_2)
-        Me.Board1.Controls.Add(Me.Board3)
-        Me.Board1.Controls.Add(Me.Board4)
-        Me.Board1.Controls.Add(Me.Board5)
-        Me.Board1.Controls.Add(Me.Board6)
-        Me.Board1.Controls.Add(Me.Board7)
-        Me.Board1.Controls.Add(Me.TabPageSetup)
-        Me.Board1.Location = New System.Drawing.Point(21, 83)
-        Me.Board1.Name = "Board1"
-        Me.Board1.SelectedIndex = 0
-        Me.Board1.Size = New System.Drawing.Size(911, 440)
-        Me.Board1.TabIndex = 5
+        Me.Setup.Controls.Add(Me.Board_1)
+        Me.Setup.Controls.Add(Me.Board_2)
+        Me.Setup.Controls.Add(Me.Board3)
+        Me.Setup.Controls.Add(Me.Board4)
+        Me.Setup.Controls.Add(Me.Board5)
+        Me.Setup.Controls.Add(Me.Board6)
+        Me.Setup.Controls.Add(Me.Board7)
+        Me.Setup.Controls.Add(Me.TabPageSetup)
+        Me.Setup.Location = New System.Drawing.Point(21, 83)
+        Me.Setup.Name = "Setup"
+        Me.Setup.SelectedIndex = 0
+        Me.Setup.Size = New System.Drawing.Size(911, 440)
+        Me.Setup.TabIndex = 5
         '
         'TabPageSetup
         '
@@ -1721,10 +1721,19 @@ Partial Class Form1
         Me.TabPageSetup.Text = "Setup"
         Me.TabPageSetup.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(170, 62)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(516, 143)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = resources.GetString("Label3.Text")
+        '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.RichTextBox1)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.ComPortTextBox)
+        Me.GroupBox1.Controls.Add(Me.SubmitButton)
         Me.GroupBox1.Location = New System.Drawing.Point(173, 234)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(513, 78)
@@ -1732,14 +1741,22 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Enter COM Port Name"
         '
-        'Button1
+        'ComPortTextBox
         '
-        Me.Button1.Location = New System.Drawing.Point(6, 32)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(97, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Submit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ComPortTextBox.Location = New System.Drawing.Point(127, 32)
+        Me.ComPortTextBox.Name = "ComPortTextBox"
+        Me.ComPortTextBox.Size = New System.Drawing.Size(361, 23)
+        Me.ComPortTextBox.TabIndex = 3
+        Me.ComPortTextBox.Text = ""
+        '
+        'SubmitButton
+        '
+        Me.SubmitButton.Location = New System.Drawing.Point(6, 32)
+        Me.SubmitButton.Name = "SubmitButton"
+        Me.SubmitButton.Size = New System.Drawing.Size(97, 23)
+        Me.SubmitButton.TabIndex = 0
+        Me.SubmitButton.Text = "Submit"
+        Me.SubmitButton.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -1750,30 +1767,13 @@ Partial Class Form1
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "Setup for Remote Lab System"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(170, 62)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(516, 143)
-        Me.Label3.TabIndex = 20
-        Me.Label3.Text = resources.GetString("Label3.Text")
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(127, 32)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(361, 23)
-        Me.RichTextBox1.TabIndex = 3
-        Me.RichTextBox1.Text = ""
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(948, 535)
-        Me.Controls.Add(Me.Board1)
+        Me.Controls.Add(Me.Setup)
         Me.Controls.Add(Me.CommControlGroup)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
@@ -1833,7 +1833,7 @@ Partial Class Form1
         Me.brd_1_ch1.ResumeLayout(False)
         Me.brd_1_ch1.PerformLayout()
         CType(Me.Board_1_Image, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Board1.ResumeLayout(False)
+        Me.Setup.ResumeLayout(False)
         Me.TabPageSetup.ResumeLayout(False)
         Me.TabPageSetup.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -1930,7 +1930,7 @@ Partial Class Form1
     Friend WithEvents lbl_D As Label
     Friend WithEvents lbl_C As Label
     Friend WithEvents Board_1_Image As PictureBox
-    Friend WithEvents Board1 As TabControl
+    Friend WithEvents Setup As TabControl
     Friend WithEvents Diode2 As GroupBox
     Friend WithEvents board4_Diode2_RadioButton2 As RadioButton
     Friend WithEvents board4_Diode2_RadioButton1 As RadioButton
@@ -1988,8 +1988,8 @@ Partial Class Form1
     Friend WithEvents BypassXOR6 As RadioButton
     Friend WithEvents TabPageSetup As TabPage
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents SubmitButton As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents ComPortTextBox As RichTextBox
 End Class

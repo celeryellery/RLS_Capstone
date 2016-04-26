@@ -2,7 +2,7 @@
     Dim Serial_Message As String = "test_message"
     Dim boardID As String = "null"
     Dim temp_read As String = "null"
-    Dim USB_port As String = "COM4"
+    Dim USB_port As String = "COM4" 'default COM port; this can be changed later using Setup tab
 
     'Declare the variables for Board_1
     Dim Board_1_Serial_Message As String = "board_1,01,1,4,4,01,01" 'default message
@@ -76,6 +76,12 @@
         Shell("C:\Program Files (x86)\LogicPort\LogicPort.exe")
     End Sub
 
+    'Setup COM port
+    Private Sub setup_COM_port(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SubmitButton.Click
+        USB_port = ComPortTextBox.Text
+        MessageBox.Show("COM Port Successfully Set to " + USB_port)
+    End Sub
+
 
     'Board ID Check
     Private Sub board_detect_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles board_detect.Click
@@ -104,49 +110,49 @@
                     Serial_Text_Test.Text = "No board is present: " + Board_IDNFR
                 Case "00000001"
                     'do something
-                    Board1.SelectTab(0)
+                    Setup.SelectTab(0)
                     Deactivate()
                     lbl_board_1_status.BackColor = Color.Green
                     lbl_board_1_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "00000010"
                     'do something
-                    Board1.SelectTab(1)
+                    Setup.SelectTab(1)
                     Deactivate()
                     lbl_board_2_status.BackColor = Color.Green
                     lbl_board_2_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "00000011" 'Daughterboard 3: Current Mirror or Widlar Reducing Current Source
                     'do something
-                    Board1.SelectTab(2)
+                    Setup.SelectTab(2)
                     Deactivate()
                     lbl_board_3_status.BackColor = Color.Green
                     lbl_board_3_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "00000100" 'Daughterboard 4: Half-Wave Rectifier
                     ' do something
-                    Board1.SelectTab(3)
+                    Setup.SelectTab(3)
                     Deactivate()
                     lbl_board_4_status.BackColor = Color.Green
                     lbl_board_4_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "00000101" 'Daughterboard 5: Integrator/Low-Pass Filter
                     'do something
-                    Board1.SelectTab(4)
+                    Setup.SelectTab(4)
                     Deactivate()
                     lbl_board_5_status.BackColor = Color.Green
                     lbl_board_5_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "00000110" 'Daughterboard 6: Debugging a Z80 circuit
                     'do something
-                    Board1.SelectTab(5)
+                    Setup.SelectTab(5)
                     Deactivate()
                     lbl_board_6_status.BackColor = Color.Green
                     lbl_board_6_status.Text = "Active"
                     Serial_Text_Test.Text = Board_IDNFR
                 Case "00000111" 'Daughterboard 7: Learning to use the Logic Analyzer with Flipflops
                     'do something
-                    Board1.SelectTab(6)
+                    Setup.SelectTab(6)
                     Deactivate()
                     lbl_board_7_status.BackColor = Color.Green
                     lbl_board_7_status.Text = "Active"
@@ -1015,35 +1021,4 @@
         PresetD8.SelectedIndex = -1
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles SelectProgram.Enter
-
-    End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Board7_Clear.Click
-
-    End Sub
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Board7_Click(sender As Object, e As EventArgs) Handles Board7.Click
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
-
-    Private Sub Label3_Click_1(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
 End Class
