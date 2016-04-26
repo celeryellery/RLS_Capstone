@@ -47,7 +47,7 @@
     Dim ProgramSelector_State As String = "1" 'default value
 
     'Declare the variables for Board_7
-    Dim Board_7_Serial_Message As String = "board_7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" 'default message
+    Dim Board_7_Serial_Message As String = "board_7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" 'default message
     Dim Board_7_Connect_XOR_1_State = "0"
     Dim Board_7_Connect_XOR_2_State = "0"
     Dim Board_7_Connect_XOR_3_State = "0"
@@ -63,7 +63,8 @@
     Dim Board_7_Preset_D6_State = "0"
     Dim Board_7_Preset_D7_State = "0"
     Dim Board_7_Preset_D8_State = "0"
-
+    Dim Board_7_Clock_State = "0"
+    Dim Board_7_Clear_All = "0" '0 means no signal is not sent; 1 means clear all flipflops now
 
     Private Sub btn_Dev_Test_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Dev_Test.Click
         Shell("C:\Program Files (x86)\Velleman\PcLab2000LT\PcLab2000LT.exe")
@@ -748,7 +749,9 @@
         Board_7_Preset_D5_State + "," +
         Board_7_Preset_D6_State + "," +
         Board_7_Preset_D7_State + "," +
-        Board_7_Preset_D8_State
+        Board_7_Preset_D8_State + "," +
+        Board_7_Clock_State + "," +
+        Board_7_Clear_All
         'this statement exists exclusively for debuginng purposes
         Serial_Text_Test.Text = Board_7_Serial_Message
         'Change the 'Send Data' button collor to orange, to indicate that
@@ -761,8 +764,6 @@
     'Board 7: dff1 control
     Private Sub board_7_PresetD1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD1.SelectedIndexChanged
         If PresetD1.SelectedIndex = 0 Then
-            Board_7_Preset_D1_State = "0"
-        ElseIf PresetD1.SelectedIndex = 1 Then
             Board_7_Preset_D1_State = "1"
         Else 'If selected index is -1 or something weird, don't bother to recompile serial message
             Return
@@ -773,8 +774,6 @@
     'Board 7: dff2 control
     Private Sub board_7_PresetD2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD2.SelectedIndexChanged
         If PresetD2.SelectedIndex = 0 Then
-            Board_7_Preset_D2_State = "0"
-        ElseIf PresetD2.SelectedIndex = 1 Then
             Board_7_Preset_D2_State = "1"
         Else 'If selected index is -1 or something weird, don't bother to recompile serial message
             Return
@@ -785,8 +784,6 @@
     'Board 7: dff3 control
     Private Sub board_7_PresetD3_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD3.SelectedIndexChanged
         If PresetD3.SelectedIndex = 0 Then
-            Board_7_Preset_D3_State = "0"
-        ElseIf PresetD3.SelectedIndex = 1 Then
             Board_7_Preset_D3_State = "1"
         Else 'If selected index is -1 or something weird, don't bother to recompile serial message
             Return
@@ -797,8 +794,6 @@
     'Board 7: dff4 control
     Private Sub board_7_PresetD4_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD4.SelectedIndexChanged
         If PresetD4.SelectedIndex = 0 Then
-            Board_7_Preset_D4_State = "0"
-        ElseIf PresetD4.SelectedIndex = 1 Then
             Board_7_Preset_D4_State = "1"
         Else 'If selected index is -1 or something weird, don't bother to recompile serial message
             Return
@@ -809,8 +804,6 @@
     'Board 7: dff5 control
     Private Sub board_7_PresetD5_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD5.SelectedIndexChanged
         If PresetD5.SelectedIndex = 0 Then
-            Board_7_Preset_D5_State = "0"
-        ElseIf PresetD5.SelectedIndex = 1 Then
             Board_7_Preset_D5_State = "1"
         Else 'If selected index is -1 or something weird, don't bother to recompile serial message
             Return
@@ -821,8 +814,6 @@
     'Board 7: dff6 control
     Private Sub board_7_PresetD6_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD6.SelectedIndexChanged
         If PresetD6.SelectedIndex = 0 Then
-            Board_7_Preset_D6_State = "0"
-        ElseIf PresetD6.SelectedIndex = 1 Then
             Board_7_Preset_D6_State = "1"
         Else 'If selected index is -1 or something weird, don't bother to recompile serial message
             Return
@@ -833,8 +824,6 @@
     'Board 7: dff7 control
     Private Sub board_7_PresetD7_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD7.SelectedIndexChanged
         If PresetD7.SelectedIndex = 0 Then
-            Board_7_Preset_D7_State = "0"
-        ElseIf PresetD7.SelectedIndex = 1 Then
             Board_7_Preset_D7_State = "1"
         Else 'If selected index is -1 or something weird, don't bother to recompile serial message
             Return
@@ -845,8 +834,6 @@
     'Board 7: dff8 control
     Private Sub board_7_PresetD8_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PresetD8.SelectedIndexChanged
         If PresetD8.SelectedIndex = 0 Then
-            Board_7_Preset_D8_State = "0"
-        ElseIf PresetD8.SelectedIndex = 1 Then
             Board_7_Preset_D8_State = "1"
         Else 'If selected index is -1 or something weird, don't bother to recompile serial message
             Return
@@ -854,6 +841,28 @@
         'Call the message compiler
         Board_7_Compile_Serial_Message()
     End Sub
+
+    'Clock Connection Controls
+    'Board 7: Clock control
+    Private Sub board7_ConnectClock_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConnectClock.CheckedChanged
+        If ConnectClock.Checked = True Then
+            Board_7_Clock_State = "1" 'Connect Clock
+        Else
+            Board_7_Clock_State = "0" 'Bypass Clock
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+    Private Sub board7_DisconnectClock_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DisconnectClock.CheckedChanged
+        If DisconnectClock.Checked = True Then
+            Board_7_Clock_State = "0" 'Disconnect Clock
+        Else
+            Board_7_Clock_State = "1" 'Connected Clock
+        End If
+        'Call the message compiler
+        Board_7_Compile_Serial_Message()
+    End Sub
+
 
 
     'XOR Connection Controls
@@ -999,6 +1008,8 @@
 
     'Set up behavior for the "Clear" button, which resets all the DFF presets back to 0
     Private Sub btn_Board7_Clear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Board7_Clear.Click
+        'Send the signal to clear all flipflops
+        Board_7_Clear_All = "1"
         'Change the serial message
         Board_7_Preset_D1_State = "0"
         Board_7_Preset_D2_State = "0"

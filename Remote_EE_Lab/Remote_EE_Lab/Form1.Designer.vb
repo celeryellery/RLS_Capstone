@@ -34,6 +34,9 @@ Partial Class Form1
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.Board7 = New System.Windows.Forms.TabPage()
+        Me.ClockBox = New System.Windows.Forms.GroupBox()
+        Me.ConnectClock = New System.Windows.Forms.RadioButton()
+        Me.DisconnectClock = New System.Windows.Forms.RadioButton()
         Me.XOR1 = New System.Windows.Forms.GroupBox()
         Me.ConnectXOR1 = New System.Windows.Forms.RadioButton()
         Me.BypassXOR1 = New System.Windows.Forms.RadioButton()
@@ -166,6 +169,7 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CommControlGroup.SuspendLayout()
         Me.Board7.SuspendLayout()
+        Me.ClockBox.SuspendLayout()
         Me.XOR1.SuspendLayout()
         Me.XOR2.SuspendLayout()
         Me.XOR3.SuspendLayout()
@@ -282,6 +286,7 @@ Partial Class Form1
         '
         'Board7
         '
+        Me.Board7.Controls.Add(Me.ClockBox)
         Me.Board7.Controls.Add(Me.XOR1)
         Me.Board7.Controls.Add(Me.XOR2)
         Me.Board7.Controls.Add(Me.XOR3)
@@ -308,6 +313,41 @@ Partial Class Form1
         Me.Board7.TabIndex = 6
         Me.Board7.Text = "Experiment 7"
         Me.Board7.UseVisualStyleBackColor = True
+        '
+        'ClockBox
+        '
+        Me.ClockBox.Controls.Add(Me.ConnectClock)
+        Me.ClockBox.Controls.Add(Me.DisconnectClock)
+        Me.ClockBox.Location = New System.Drawing.Point(11, 346)
+        Me.ClockBox.Name = "ClockBox"
+        Me.ClockBox.Size = New System.Drawing.Size(117, 51)
+        Me.ClockBox.TabIndex = 37
+        Me.ClockBox.TabStop = False
+        Me.ClockBox.Text = "Clock"
+        '
+        'ConnectClock
+        '
+        Me.ConnectClock.AutoSize = True
+        Me.ConnectClock.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.ConnectClock.Location = New System.Drawing.Point(6, 11)
+        Me.ConnectClock.Name = "ConnectClock"
+        Me.ConnectClock.Size = New System.Drawing.Size(95, 17)
+        Me.ConnectClock.TabIndex = 32
+        Me.ConnectClock.TabStop = True
+        Me.ConnectClock.Text = "Connect Clock"
+        Me.ConnectClock.UseVisualStyleBackColor = True
+        '
+        'DisconnectClock
+        '
+        Me.DisconnectClock.AutoSize = True
+        Me.DisconnectClock.ForeColor = System.Drawing.Color.Red
+        Me.DisconnectClock.Location = New System.Drawing.Point(6, 29)
+        Me.DisconnectClock.Name = "DisconnectClock"
+        Me.DisconnectClock.Size = New System.Drawing.Size(109, 17)
+        Me.DisconnectClock.TabIndex = 33
+        Me.DisconnectClock.TabStop = True
+        Me.DisconnectClock.Text = "Disconnect Clock"
+        Me.DisconnectClock.UseVisualStyleBackColor = True
         '
         'XOR1
         '
@@ -569,7 +609,7 @@ Partial Class Form1
         Me.PresetD1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.PresetD1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD1.FormattingEnabled = True
-        Me.PresetD1.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD1.Items.AddRange(New Object() {"1"})
         Me.PresetD1.Location = New System.Drawing.Point(1205, 121)
         Me.PresetD1.Name = "PresetD1"
         Me.PresetD1.Size = New System.Drawing.Size(40, 21)
@@ -581,7 +621,7 @@ Partial Class Form1
         Me.PresetD2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.PresetD2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD2.FormattingEnabled = True
-        Me.PresetD2.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD2.Items.AddRange(New Object() {"1"})
         Me.PresetD2.Location = New System.Drawing.Point(1044, 121)
         Me.PresetD2.Name = "PresetD2"
         Me.PresetD2.Size = New System.Drawing.Size(40, 21)
@@ -593,7 +633,7 @@ Partial Class Form1
         Me.PresetD3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.PresetD3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD3.FormattingEnabled = True
-        Me.PresetD3.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD3.Items.AddRange(New Object() {"1"})
         Me.PresetD3.Location = New System.Drawing.Point(884, 121)
         Me.PresetD3.Name = "PresetD3"
         Me.PresetD3.Size = New System.Drawing.Size(40, 21)
@@ -605,7 +645,7 @@ Partial Class Form1
         Me.PresetD4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.PresetD4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD4.FormattingEnabled = True
-        Me.PresetD4.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD4.Items.AddRange(New Object() {"1"})
         Me.PresetD4.Location = New System.Drawing.Point(721, 121)
         Me.PresetD4.Name = "PresetD4"
         Me.PresetD4.Size = New System.Drawing.Size(40, 21)
@@ -617,7 +657,7 @@ Partial Class Form1
         Me.PresetD5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.PresetD5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD5.FormattingEnabled = True
-        Me.PresetD5.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD5.Items.AddRange(New Object() {"1"})
         Me.PresetD5.Location = New System.Drawing.Point(560, 121)
         Me.PresetD5.Name = "PresetD5"
         Me.PresetD5.Size = New System.Drawing.Size(40, 21)
@@ -629,7 +669,7 @@ Partial Class Form1
         Me.PresetD6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.PresetD6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD6.FormattingEnabled = True
-        Me.PresetD6.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD6.Items.AddRange(New Object() {"1"})
         Me.PresetD6.Location = New System.Drawing.Point(398, 121)
         Me.PresetD6.Name = "PresetD6"
         Me.PresetD6.Size = New System.Drawing.Size(40, 21)
@@ -641,7 +681,7 @@ Partial Class Form1
         Me.PresetD7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.PresetD7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD7.FormattingEnabled = True
-        Me.PresetD7.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD7.Items.AddRange(New Object() {"1"})
         Me.PresetD7.Location = New System.Drawing.Point(237, 121)
         Me.PresetD7.Name = "PresetD7"
         Me.PresetD7.Size = New System.Drawing.Size(40, 21)
@@ -674,7 +714,7 @@ Partial Class Form1
         Me.PresetD8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.PresetD8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PresetD8.FormattingEnabled = True
-        Me.PresetD8.Items.AddRange(New Object() {"0", "1"})
+        Me.PresetD8.Items.AddRange(New Object() {"1"})
         Me.PresetD8.Location = New System.Drawing.Point(75, 121)
         Me.PresetD8.Name = "PresetD8"
         Me.PresetD8.Size = New System.Drawing.Size(40, 21)
@@ -686,7 +726,7 @@ Partial Class Form1
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
         Me.PictureBox5.Location = New System.Drawing.Point(3, 44)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(1280, 320)
+        Me.PictureBox5.Size = New System.Drawing.Size(1290, 364)
         Me.PictureBox5.TabIndex = 3
         Me.PictureBox5.TabStop = False
         '
@@ -1772,7 +1812,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(948, 535)
+        Me.ClientSize = New System.Drawing.Size(939, 535)
         Me.Controls.Add(Me.Setup)
         Me.Controls.Add(Me.CommControlGroup)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1782,6 +1822,8 @@ Partial Class Form1
         Me.CommControlGroup.PerformLayout()
         Me.Board7.ResumeLayout(False)
         Me.Board7.PerformLayout()
+        Me.ClockBox.ResumeLayout(False)
+        Me.ClockBox.PerformLayout()
         Me.XOR1.ResumeLayout(False)
         Me.XOR1.PerformLayout()
         Me.XOR2.ResumeLayout(False)
@@ -1992,4 +2034,7 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents ComPortTextBox As RichTextBox
+    Friend WithEvents ClockBox As GroupBox
+    Friend WithEvents ConnectClock As RadioButton
+    Friend WithEvents DisconnectClock As RadioButton
 End Class
