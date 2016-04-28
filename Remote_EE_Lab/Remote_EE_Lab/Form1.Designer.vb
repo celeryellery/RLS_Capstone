@@ -1766,7 +1766,7 @@ Partial Class Form1
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(170, 62)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(516, 143)
+        Me.Label3.Size = New System.Drawing.Size(547, 221)
         Me.Label3.TabIndex = 20
         Me.Label3.Text = resources.GetString("Label3.Text")
         '
@@ -1774,7 +1774,7 @@ Partial Class Form1
         '
         Me.GroupBox1.Controls.Add(Me.ComPortTextBox)
         Me.GroupBox1.Controls.Add(Me.SubmitButton)
-        Me.GroupBox1.Location = New System.Drawing.Point(173, 234)
+        Me.GroupBox1.Location = New System.Drawing.Point(173, 308)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(513, 78)
         Me.GroupBox1.TabIndex = 19
