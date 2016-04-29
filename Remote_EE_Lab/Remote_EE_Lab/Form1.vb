@@ -64,7 +64,7 @@
     Dim Board_7_Preset_D7_State = "0"
     Dim Board_7_Preset_D8_State = "0"
     Dim Board_7_Clock_State = "0"
-    Dim Board_7_Clear_All = "0" '0 means no signal is not sent; 1 means clear all flipflops now
+    Dim Board_7_Clear_All = "0" '0 means no signal is not sent; 1 means clear all flipflops when Update button is pressed
 
     Private Sub btn_Dev_Test_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Dev_Test.Click
         Shell("C:\Program Files (x86)\Velleman\PcLab2000LT\PcLab2000LT.exe")
@@ -1006,8 +1006,8 @@
         Board_7_Compile_Serial_Message()
     End Sub
 
-    'Set up behavior for the "Clear" button, which resets all the DFF presets back to 0
-    Private Sub btn_Board7_Clear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Board7_Clear.Click
+    'Set up behavior for the "Clear" checkbox, which resets all the DFF presets back to 0
+    Private Sub (ByVal sender As System.Object, ByVal e As System.EventArgs)
         'Send the signal to clear all flipflops
         Board_7_Clear_All = "1"
         'Change the serial message

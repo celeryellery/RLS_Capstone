@@ -58,7 +58,6 @@ Partial Class Form1
         Me.XOR7 = New System.Windows.Forms.GroupBox()
         Me.ConnectXOR7 = New System.Windows.Forms.RadioButton()
         Me.BypassXOR7 = New System.Windows.Forms.RadioButton()
-        Me.Board7_Clear = New System.Windows.Forms.Button()
         Me.PresetD1 = New System.Windows.Forms.ComboBox()
         Me.PresetD2 = New System.Windows.Forms.ComboBox()
         Me.PresetD3 = New System.Windows.Forms.ComboBox()
@@ -167,6 +166,7 @@ Partial Class Form1
         Me.ComPortTextBox = New System.Windows.Forms.RichTextBox()
         Me.SubmitButton = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.ClearCheckBox = New System.Windows.Forms.CheckBox()
         Me.CommControlGroup.SuspendLayout()
         Me.Board7.SuspendLayout()
         Me.ClockBox.SuspendLayout()
@@ -265,6 +265,7 @@ Partial Class Form1
         '
         Me.Serial_Text_Test.Location = New System.Drawing.Point(330, 19)
         Me.Serial_Text_Test.Name = "Serial_Text_Test"
+        Me.Serial_Text_Test.ReadOnly = True
         Me.Serial_Text_Test.Size = New System.Drawing.Size(255, 23)
         Me.Serial_Text_Test.TabIndex = 2
         Me.Serial_Text_Test.Text = ""
@@ -277,7 +278,7 @@ Partial Class Form1
         Me.btn_Send_Config.Name = "btn_Send_Config"
         Me.btn_Send_Config.Size = New System.Drawing.Size(105, 23)
         Me.btn_Send_Config.TabIndex = 1
-        Me.btn_Send_Config.Text = "Send Data"
+        Me.btn_Send_Config.Text = "Update Board"
         Me.btn_Send_Config.UseVisualStyleBackColor = False
         '
         'PrintDialog1
@@ -286,6 +287,7 @@ Partial Class Form1
         '
         'Board7
         '
+        Me.Board7.Controls.Add(Me.ClearCheckBox)
         Me.Board7.Controls.Add(Me.ClockBox)
         Me.Board7.Controls.Add(Me.XOR1)
         Me.Board7.Controls.Add(Me.XOR2)
@@ -294,7 +296,6 @@ Partial Class Form1
         Me.Board7.Controls.Add(Me.XOR5)
         Me.Board7.Controls.Add(Me.XOR6)
         Me.Board7.Controls.Add(Me.XOR7)
-        Me.Board7.Controls.Add(Me.Board7_Clear)
         Me.Board7.Controls.Add(Me.PresetD1)
         Me.Board7.Controls.Add(Me.PresetD2)
         Me.Board7.Controls.Add(Me.PresetD3)
@@ -593,15 +594,6 @@ Partial Class Form1
         Me.BypassXOR7.TabStop = True
         Me.BypassXOR7.Text = "Bypass"
         Me.BypassXOR7.UseVisualStyleBackColor = True
-        '
-        'Board7_Clear
-        '
-        Me.Board7_Clear.Location = New System.Drawing.Point(75, 284)
-        Me.Board7_Clear.Name = "Board7_Clear"
-        Me.Board7_Clear.Size = New System.Drawing.Size(41, 32)
-        Me.Board7_Clear.TabIndex = 25
-        Me.Board7_Clear.Text = "Clear"
-        Me.Board7_Clear.UseVisualStyleBackColor = True
         '
         'PresetD1
         '
@@ -1074,6 +1066,7 @@ Partial Class Form1
         '
         Me.board_3_multimeter_output.Location = New System.Drawing.Point(6, 34)
         Me.board_3_multimeter_output.Name = "board_3_multimeter_output"
+        Me.board_3_multimeter_output.ReadOnly = True
         Me.board_3_multimeter_output.Size = New System.Drawing.Size(142, 21)
         Me.board_3_multimeter_output.TabIndex = 3
         Me.board_3_multimeter_output.Text = ""
@@ -1766,7 +1759,7 @@ Partial Class Form1
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(170, 62)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(547, 221)
+        Me.Label3.Size = New System.Drawing.Size(533, 234)
         Me.Label3.TabIndex = 20
         Me.Label3.Text = resources.GetString("Label3.Text")
         '
@@ -1806,6 +1799,15 @@ Partial Class Form1
         Me.Label2.Size = New System.Drawing.Size(148, 13)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "Setup for Remote Lab System"
+        '
+        'ClearCheckBox
+        '
+        Me.ClearCheckBox.AutoSize = True
+        Me.ClearCheckBox.Location = New System.Drawing.Point(87, 301)
+        Me.ClearCheckBox.Name = "ClearCheckBox"
+        Me.ClearCheckBox.Size = New System.Drawing.Size(15, 14)
+        Me.ClearCheckBox.TabIndex = 38
+        Me.ClearCheckBox.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -1980,7 +1982,6 @@ Partial Class Form1
     Friend WithEvents board4_Diode1_RadioButton2 As RadioButton
     Friend WithEvents board4_Diode1_RadioButton1 As RadioButton
     Friend WithEvents SelectProgram As GroupBox
-    Friend WithEvents Board7_Clear As Button
     Friend WithEvents PresetD1 As ComboBox
     Friend WithEvents PresetD2 As ComboBox
     Friend WithEvents PresetD3 As ComboBox
@@ -2037,4 +2038,5 @@ Partial Class Form1
     Friend WithEvents ClockBox As GroupBox
     Friend WithEvents ConnectClock As RadioButton
     Friend WithEvents DisconnectClock As RadioButton
+    Friend WithEvents ClearCheckBox As CheckBox
 End Class
