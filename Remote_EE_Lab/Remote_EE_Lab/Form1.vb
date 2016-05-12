@@ -1007,29 +1007,35 @@
     End Sub
 
     'Set up behavior for the "Clear" checkbox, which resets all the DFF presets back to 0
-    Private Sub (ByVal sender As System.Object, ByVal e As System.EventArgs)
-        'Send the signal to clear all flipflops
-        Board_7_Clear_All = "1"
-        'Change the serial message
-        Board_7_Preset_D1_State = "0"
-        Board_7_Preset_D2_State = "0"
-        Board_7_Preset_D3_State = "0"
-        Board_7_Preset_D4_State = "0"
-        Board_7_Preset_D5_State = "0"
-        Board_7_Preset_D6_State = "0"
-        Board_7_Preset_D7_State = "0"
-        Board_7_Preset_D8_State = "0"
-        'Call the message compiler
-        Board_7_Compile_Serial_Message()
-        'Reset all the drop-down boxes to default
-        PresetD1.SelectedIndex = -1
-        PresetD2.SelectedIndex = -1
-        PresetD3.SelectedIndex = -1
-        PresetD4.SelectedIndex = -1
-        PresetD5.SelectedIndex = -1
-        PresetD6.SelectedIndex = -1
-        PresetD7.SelectedIndex = -1
-        PresetD8.SelectedIndex = -1
+    Private Sub checkBoxChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClearCheckBox.CheckedChanged
+        If ClearCheckBox.Checked = True Then 'User wants to clear all flipflops
+            'Send the signal to clear all flipflops
+            Board_7_Clear_All = "1"
+            'Change the serial message
+            Board_7_Preset_D1_State = "0"
+            Board_7_Preset_D2_State = "0"
+            Board_7_Preset_D3_State = "0"
+            Board_7_Preset_D4_State = "0"
+            Board_7_Preset_D5_State = "0"
+            Board_7_Preset_D6_State = "0"
+            Board_7_Preset_D7_State = "0"
+            Board_7_Preset_D8_State = "0"
+            'Call the message compiler
+            Board_7_Compile_Serial_Message()
+            'Reset all the drop-down boxes to default
+            PresetD1.SelectedIndex = -1
+            PresetD2.SelectedIndex = -1
+            PresetD3.SelectedIndex = -1
+            PresetD4.SelectedIndex = -1
+            PresetD5.SelectedIndex = -1
+            PresetD6.SelectedIndex = -1
+            PresetD7.SelectedIndex = -1
+            PresetD8.SelectedIndex = -1
+        Else 'User wants to make sure flipflops don't get cleared on next cycle
+            Board_7_Clear_All = "0"
+            'Call the message compiler
+            Board_7_Compile_Serial_Message()
+        End If
     End Sub
 
 End Class
