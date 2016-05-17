@@ -226,6 +226,8 @@
                     Serial_Message = Board_6_Serial_Message
                 Case "00000111"
                     Serial_Message = Board_7_Serial_Message
+                    'Remove the check mark from the box on Board 7 so user doesn't accidentally clear it again next time
+                    ClearCheckBox.Checked = False
                 Case Else
                     'don't do anything
                     Serial_Text_Test.Text = "WARNING: No board is present"

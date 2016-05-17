@@ -34,6 +34,7 @@ Partial Class Form1
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.Board7 = New System.Windows.Forms.TabPage()
+        Me.ClearCheckBox = New System.Windows.Forms.CheckBox()
         Me.ClockBox = New System.Windows.Forms.GroupBox()
         Me.ConnectClock = New System.Windows.Forms.RadioButton()
         Me.DisconnectClock = New System.Windows.Forms.RadioButton()
@@ -166,7 +167,6 @@ Partial Class Form1
         Me.ComPortTextBox = New System.Windows.Forms.RichTextBox()
         Me.SubmitButton = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ClearCheckBox = New System.Windows.Forms.CheckBox()
         Me.CommControlGroup.SuspendLayout()
         Me.Board7.SuspendLayout()
         Me.ClockBox.SuspendLayout()
@@ -315,6 +315,15 @@ Partial Class Form1
         Me.Board7.Text = "Experiment 7"
         Me.Board7.UseVisualStyleBackColor = True
         '
+        'ClearCheckBox
+        '
+        Me.ClearCheckBox.AutoSize = True
+        Me.ClearCheckBox.Location = New System.Drawing.Point(87, 301)
+        Me.ClearCheckBox.Name = "ClearCheckBox"
+        Me.ClearCheckBox.Size = New System.Drawing.Size(15, 14)
+        Me.ClearCheckBox.TabIndex = 38
+        Me.ClearCheckBox.UseVisualStyleBackColor = True
+        '
         'ClockBox
         '
         Me.ClockBox.Controls.Add(Me.ConnectClock)
@@ -367,10 +376,10 @@ Partial Class Form1
         Me.ConnectXOR1.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR1.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR1.Name = "ConnectXOR1"
-        Me.ConnectXOR1.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR1.Size = New System.Drawing.Size(60, 17)
         Me.ConnectXOR1.TabIndex = 32
         Me.ConnectXOR1.TabStop = True
-        Me.ConnectXOR1.Text = "Connect"
+        Me.ConnectXOR1.Text = "Include"
         Me.ConnectXOR1.UseVisualStyleBackColor = True
         '
         'BypassXOR1
@@ -402,10 +411,10 @@ Partial Class Form1
         Me.ConnectXOR2.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR2.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR2.Name = "ConnectXOR2"
-        Me.ConnectXOR2.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR2.Size = New System.Drawing.Size(60, 17)
         Me.ConnectXOR2.TabIndex = 32
         Me.ConnectXOR2.TabStop = True
-        Me.ConnectXOR2.Text = "Connect"
+        Me.ConnectXOR2.Text = "Include"
         Me.ConnectXOR2.UseVisualStyleBackColor = True
         '
         'BypassXOR2
@@ -437,10 +446,10 @@ Partial Class Form1
         Me.ConnectXOR3.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR3.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR3.Name = "ConnectXOR3"
-        Me.ConnectXOR3.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR3.Size = New System.Drawing.Size(60, 17)
         Me.ConnectXOR3.TabIndex = 32
         Me.ConnectXOR3.TabStop = True
-        Me.ConnectXOR3.Text = "Connect"
+        Me.ConnectXOR3.Text = "Include"
         Me.ConnectXOR3.UseVisualStyleBackColor = True
         '
         'BypassXOR3
@@ -472,10 +481,10 @@ Partial Class Form1
         Me.ConnectXOR4.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR4.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR4.Name = "ConnectXOR4"
-        Me.ConnectXOR4.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR4.Size = New System.Drawing.Size(60, 17)
         Me.ConnectXOR4.TabIndex = 32
         Me.ConnectXOR4.TabStop = True
-        Me.ConnectXOR4.Text = "Connect"
+        Me.ConnectXOR4.Text = "Include"
         Me.ConnectXOR4.UseVisualStyleBackColor = True
         '
         'BypassXOR4
@@ -507,10 +516,10 @@ Partial Class Form1
         Me.ConnectXOR5.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR5.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR5.Name = "ConnectXOR5"
-        Me.ConnectXOR5.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR5.Size = New System.Drawing.Size(60, 17)
         Me.ConnectXOR5.TabIndex = 32
         Me.ConnectXOR5.TabStop = True
-        Me.ConnectXOR5.Text = "Connect"
+        Me.ConnectXOR5.Text = "Include"
         Me.ConnectXOR5.UseVisualStyleBackColor = True
         '
         'BypassXOR5
@@ -542,10 +551,10 @@ Partial Class Form1
         Me.ConnectXOR6.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR6.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR6.Name = "ConnectXOR6"
-        Me.ConnectXOR6.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR6.Size = New System.Drawing.Size(60, 17)
         Me.ConnectXOR6.TabIndex = 32
         Me.ConnectXOR6.TabStop = True
-        Me.ConnectXOR6.Text = "Connect"
+        Me.ConnectXOR6.Text = "Include"
         Me.ConnectXOR6.UseVisualStyleBackColor = True
         '
         'BypassXOR6
@@ -577,10 +586,10 @@ Partial Class Form1
         Me.ConnectXOR7.ForeColor = System.Drawing.SystemColors.MenuHighlight
         Me.ConnectXOR7.Location = New System.Drawing.Point(6, 11)
         Me.ConnectXOR7.Name = "ConnectXOR7"
-        Me.ConnectXOR7.Size = New System.Drawing.Size(65, 17)
+        Me.ConnectXOR7.Size = New System.Drawing.Size(60, 17)
         Me.ConnectXOR7.TabIndex = 32
         Me.ConnectXOR7.TabStop = True
-        Me.ConnectXOR7.Text = "Connect"
+        Me.ConnectXOR7.Text = "Include"
         Me.ConnectXOR7.UseVisualStyleBackColor = True
         '
         'BypassXOR7
@@ -1799,15 +1808,6 @@ Partial Class Form1
         Me.Label2.Size = New System.Drawing.Size(148, 13)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "Setup for Remote Lab System"
-        '
-        'ClearCheckBox
-        '
-        Me.ClearCheckBox.AutoSize = True
-        Me.ClearCheckBox.Location = New System.Drawing.Point(87, 301)
-        Me.ClearCheckBox.Name = "ClearCheckBox"
-        Me.ClearCheckBox.Size = New System.Drawing.Size(15, 14)
-        Me.ClearCheckBox.TabIndex = 38
-        Me.ClearCheckBox.UseVisualStyleBackColor = True
         '
         'Form1
         '
